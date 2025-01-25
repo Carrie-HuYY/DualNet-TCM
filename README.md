@@ -10,8 +10,8 @@ NBSD：分别从中医和西医维度对中药进行“以靶找药”和“以�
 
 - [Auxiliary Code](#auxiliary-code)
   - [pubmed的xml的爬虫、解压及处理](#pubmed_downloadpy)
-  - [TCMSSD数据库的各种爬虫](#TCMSSD_Formula&TCMSSD_HERB)
-  - [清洗各类数据](#wash_formula&wash_zh)
+  - [TCMSSD数据库的各种爬虫](#TCMSSD_Code)
+  - [清洗各类数据](#WASH_Data)
   - [uniport上各种数据的下载](#crawler_uniportpy)
 
 - [致谢](#致谢)
@@ -33,13 +33,13 @@ NBSD：分别从中医和西医维度对中药进行“以靶找药”和“以�
 
 ### Auxiliary Code
 
-#### crawler_uniport.py
-
 #### pubmed_download.py
 
-#### TCMSSD_Formula&TCMSSD_HERB
+#### TCMSSD_Code
 
-#### wash_formula&wash_zh
+#### WASH_Data
+
+#### crawler_uniport.py
 
 ### 致谢
 
