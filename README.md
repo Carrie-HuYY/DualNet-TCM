@@ -1,6 +1,11 @@
-## NBSD
+## MGM
 
-NBSD：分别从中医和西医维度对中药进行“以靶找药”和“以药找靶”的新型中药网络药理学
+MGM(Traditional Chinese Medical Classics And Genes Driven Translational Medicine):
+从网络药理学和中医理论双重视角出发，构建"方剂-中药-成分-靶点-病症"和"方剂-对症-症状-病证"双重关联网络。
+同时，结合基因研究和文献计量学方法，开展转化医学研究：通过药物可用性评估和文献挖掘技术，对大量候选蛋白或基因进行系统筛选和分类，
+从而精准缩小需要实验验证的目标范围，为中药现代化研究提供新的思路和方法。
+
+
 
 - [安装](#安装)
 
@@ -12,7 +17,16 @@ NBSD：分别从中医和西医维度对中药进行“以靶找药”和“以�
 
 ### 安装
 
-暂时还未上传，未来将设计可通过pip下载
+#### 数据下载 
+整体大小为9个G，由于百度网盘限制，所以拆分成三个压缩包，解压后放data/文件夹即可
+
+[下载链接1](https://pan.baidu.com/s/1zIlTjstJMscKdZnP30wc1g?pwd=2n2t) 
+
+[下载链接2](https://pan.baidu.com/s/1tg8WQtJiJi70A8HIRYG_PA?pwd=9bvh) 
+
+[下载链接3](https://pan.baidu.com/s/1tg8WQtJiJi70A8HIRYG_PA?pwd=9bvh) 
+
+#### pip下载
 
 ### 使用
 
