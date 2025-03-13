@@ -3,11 +3,25 @@
   <component name="JupyterPersistentConnectionParameters">
     <option name="moduleParameters">
       <map>
+        <entry key="$PROJECT_DIR$/../7_17_herbiv/.idea/7_17_herbiv.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../HerbiV/stw/.idea/stw.iml">
           <value>
             <JupyterConnectionParameters>
               <option name="managed" value="true" />
               <option name="sdkHomePath" value="C:\Python38\python.exe" />
+            </JupyterConnectionParameters>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MGM/.idea/MGM.iml">
+          <value>
+            <JupyterConnectionParameters>
+              <option name="managed" value="true" />
             </JupyterConnectionParameters>
           </value>
         </entry>

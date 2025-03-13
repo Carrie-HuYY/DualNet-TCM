@@ -51,8 +51,6 @@ def from_tcm_or_formula(tcm_or_formula_id,
             >>> from_tcm_or_formula(['HVP1625'],['ENSP00000381588', 'ENSP00000252519'], score=400)# medium confidence in STITCH
     """
 
-    
-
     if tcm_or_formula_id[0][2] == 'P':  # 判断输入是否为复方的HVPID
         formula = get.get_formula('HVPID', tcm_or_formula_id)  # 获取该复方的信息
         formula_tcm_links = get.get_formula_tcm_links('HVPID', formula['HVPID'])
@@ -138,13 +136,13 @@ def from_proteins(proteins,
 
     """
 
-
     proteins = get.get_proteins('Ensembl_ID', proteins)
     chem_protein_links = get.get_chem_protein_links('Ensembl_ID', proteins['Ensembl_ID'], score)
 
     # **新增的异常处理代码**
     if chem_protein_links.empty:
-        raise ValueError(f"No compound-protein links found based on the set score value (score={score}). Please try lowering the score to obtain more results.")
+        raise ValueError(
+            f"No compound-protein links found based on the set score value (score={score}). Please try lowering the score to obtain more results.")
 
     chem = get.get_chemicals('HVCID', chem_protein_links['HVCID'])
     tcm_chem_links = get.get_tcm_chem_links('HVCID', chem['HVCID'])
@@ -204,7 +202,6 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
 
     """
 
-
     formula_id = set()
     tcm_id = set()
     chem_id = set()
@@ -213,7 +210,7 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
     # 深度优先搜索得到有效节点的ID
     for f in formula['HVPID'] if (formula_tcm_links is not None) else [0]:
         for m in tcm['HVMID'] if (formula_tcm_links is None) else set(formula_tcm_links.loc[
-                                                                        formula_tcm_links['HVPID'] == f]['HVMID']):
+                                                                          formula_tcm_links['HVPID'] == f]['HVMID']):
             for c in set(tcm_chem_links.loc[tcm_chem_links['HVMID'] == m]['HVCID']):
                 for p in set(chem_protein_links.loc[chem_protein_links['HVCID'] == c]['Ensembl_ID']):
                     if p in proteins['Ensembl_ID'].tolist():

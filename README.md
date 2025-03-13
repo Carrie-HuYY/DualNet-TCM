@@ -1,6 +1,6 @@
-## MGM
+## DualNet-TCM
 
-MGM(Traditional Chinese Medical Classics And Genes Driven Translational Medicine):
+***DualNet-TCM***(TCM (中药) + Dual (双重网络) + Net (网络药理学)):
 从网络药理学和中医理论双重视角出发，构建"方剂-中药-成分-靶点-病症"和"方剂-对症-症状-病证"双重关联网络。
 同时，结合基因研究和文献计量学方法，开展转化医学研究：通过药物可用性评估和文献挖掘技术，对大量候选蛋白或基因进行系统筛选和分类，
 从而精准缩小需要实验验证的目标范围，为中药现代化研究提供新的思路和方法。
