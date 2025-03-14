@@ -39,6 +39,10 @@
 - requests
 - os
 
+### 下载
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Carrie-HuYY/DualNet-TCM&type=Date)](https://star-history.com/#Carrie-HuYY/DualNet-TCM&Date)
+
 ### 致谢
 
 - 感谢HerbiV项目负责人[老王哥Wesady](https://github.com/Wesady)作为交叉学科领路人的指点！
