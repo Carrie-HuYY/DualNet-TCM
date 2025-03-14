@@ -172,3 +172,6 @@ def get_SD_Formula_links(by, items) -> pd.DataFrame:
 
     return formula_tcm_links
 
+if __name__ == '__main__':
+    get_formula(['DNF102324'], 'DNFID')
+
