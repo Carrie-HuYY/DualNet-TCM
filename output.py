@@ -153,22 +153,83 @@ def vis(tcm, tcm_chem_links, chem, chem_protein_links, protein, path='result'):
         .render(path=os.path.join(path, "Graph.html"))
 
 
-if __name__ == '__main__':
-    import get
+def tcm_vis(formula_df, formula_tcm_links_df, formula_SD_links_df, path):
+    nodes = []
+    links = []
 
-    formula_info = get.get_formula('HVPID', ['HVP1625'])
-    formula_tcm_links_info = get.get_formula_tcm_links('HVPID', formula_info['HVPID'])
-    tcm_info = get.get_tcm('HVMID', formula_tcm_links_info['HVMID'])
-    tcm_chem_links_info = get.get_tcm_chem_links('HVMID', tcm_info['HVMID'])
-    chem_info = get.get_chemicals('HVCID', tcm_chem_links_info['HVCID'])
-    chem_protein_links_info = get.get_chem_protein_links('HVCID', chem_info['HVCID'], 990)
-    protein_info = get.get_proteins('Ensembl_ID', chem_protein_links_info['Ensembl_ID'])
+    # 添加复方节点
+    for index, row in formula_df.iterrows():
+        formula_id = row['DNFID']
+        nodes.append({'name': str(formula_id), 'symbol_size': 40, 'category': 0})
 
-    chem_info = chem_info.loc[chem_info.loc[:, 'HVCID'].isin(chem_protein_links_info['HVCID'])]
-    tcm_chem_links_info = tcm_chem_links_info.loc[tcm_chem_links_info.loc[:, 'HVCID'].isin(chem_info['HVCID'])]
-    tcm_info = tcm_info.loc[tcm_info.loc[:, 'HVMID'].isin(tcm_chem_links_info['HVMID'])]
-    # 重新编号（chem和tcm在计算score时会重新编号，此处不再重新编号）
-    tcm_chem_links_info.index = range(tcm_chem_links_info.shape[0])
+    # 添加中药节点
+    for tcm_id in formula_tcm_links_df['DNHID'].tolist():
+        nodes.append({'name': str(tcm_id), 'symbol_size': 20, 'category': 1})
 
-    vis(tcm_info, tcm_chem_links_info, chem_info, chem_protein_links_info, protein_info)
-    out_for_cyto(tcm_info, tcm_chem_links_info, chem_info, chem_protein_links_info, protein_info)
+    # 添加SD节点
+    for sd_id in formula_SD_links_df['DNSID'].tolist():
+        nodes.append({'name': str(sd_id), 'symbol_size': 40, 'category': 2})
+
+    # 添加复方-中药边
+    for index, row in formula_tcm_links_df.iloc[0:].iterrows():
+        formula = row.iloc[0]
+        tcm = row.iloc[1]
+        links.append({'source': str(formula), 'target': str(tcm)})
+
+    for index, row in formula_SD_links_df.iloc[0:].iterrows():
+        SD = row.iloc[0]
+        formula = row.iloc[1]
+        links.append({'source': str(formula), 'target': str(SD)})
+
+    # 去重节点
+    unique_list = list(set(tuple(item.items()) for item in nodes))
+    nodes = [dict(item) for item in unique_list]
+
+    # 创建图表
+    graph_network = (
+        Graph(init_opts=opts.InitOpts(width="2400px", height="1200px"))  # 使用百分比设置宽高
+        .add(
+            series_name="",
+            nodes=nodes,
+            links=links,
+            categories=[
+                {"name": "复方"},  # 对应category 0
+                {"name": "中药"},  # 对应category 1
+                {"name": "辩证"}  # 对应category 2
+            ],
+            repulsion=8000,  # 节点之间的斥力
+            layout="force",  # 使用力导向布局
+            linestyle_opts=opts.LineStyleOpts(),  # 边的样式
+            label_opts=opts.LabelOpts(is_show=True, position="inside"),  # 节点标签
+        )
+        .set_global_opts(
+            title_opts=opts.TitleOpts(title="网络图示例"),  # 图表标题
+            tooltip_opts=opts.TooltipOpts(trigger="item", formatter="{b}")  # 鼠标悬停提示
+        )
+    )
+
+    graph_circle = (
+        Graph(init_opts=opts.InitOpts(width="2400px", height="1200px"))  # 使用百分比设置宽高
+        .add(
+            series_name="",
+            nodes=nodes,
+            links=links,
+            repulsion=8000,
+            layout="circular",
+            is_rotate_label=True,
+            linestyle_opts=opts.LineStyleOpts(color="source", curve=0.3),
+            label_opts=opts.LabelOpts(position="right"),
+            categories=[
+                {"name": "复方"},  # 对应category 0
+                {"name": "中药"},  # 对应category 1
+                {"name": "辩证"}  # 对应category 2
+            ],
+        )
+        .set_global_opts(
+            title_opts=opts.TitleOpts(title="网络图示例"),  # 图表标题
+            tooltip_opts=opts.TooltipOpts(trigger="item", formatter="{b}")  # 鼠标悬停提示
+        )
+    )
+
+    graph_network.render(f"{path}/graph_network.html")
+    graph_circle.render(f"{path}/graph_circle.html")

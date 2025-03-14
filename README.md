@@ -17,16 +17,32 @@
 
 ### 安装
 
-#### 数据下载 
+### 注意
+
+#### 1.关于Python版本
+
+由于在 Python 3.9 之前的版本中，`tuple[...]` 和 `list[...]` 
+这样的类型注解语法不被支持。
+Python 3.9 引入了原生的类型注解支持（PEP 585），
+但在早期版本中，需要使用 typing 模块中的 Tuple、List 等类型. 所以需要Python≥3.9，如果＜3.9的话，
+可将`compute.py`函数中修改如下：
+
+```python
+from typing import Tuple, Union
+
+def score(weights: Union[dict, None] = None) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    # 函数逻辑
+    pass
+```
+
+#### 2.数据下载 
 整体大小为9个G，由于百度网盘限制，所以拆分成三个压缩包，解压后放data/文件夹即可
 
 [下载链接1](https://pan.baidu.com/s/1zIlTjstJMscKdZnP30wc1g?pwd=2n2t) 
 
 [下载链接2](https://pan.baidu.com/s/1tg8WQtJiJi70A8HIRYG_PA?pwd=9bvh) 
 
-[下载链接3](https://pan.baidu.com/s/1tg8WQtJiJi70A8HIRYG_PA?pwd=9bvh) 
-
-#### pip下载
+[下载链接3](https://pan.baidu.com/s/1tg8WQtJiJi70A8HIRYG_PA?pwd=9bvh)
 
 ### 使用
 
@@ -39,7 +55,7 @@
 - requests
 - os
 
-### 下载
+### Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Carrie-HuYY/DualNet-TCM&type=Date)](https://star-history.com/#Carrie-HuYY/DualNet-TCM&Date)
 

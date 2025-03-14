@@ -31,64 +31,6 @@ def score(tcm: pd.DataFrame,
             tcm_and_score: 中药信息及HerbiV Score。
             chem_and_score: 成分（化合物）信息及HerbiV Score。
             formula_and_score: 复方信息及HerbiV Score。
-
-        Examples:
-            >>> from herbiv import get
-            >>> protein_info = get.get_proteins('Ensembl_ID', ['ENSP00000381588', 'ENSP00000252519'])
-            >>> chem_protein_links_info = get.get_chem_protein_links('Ensembl_ID', protein_info['Ensembl_ID'], 0)
-            >>> chem_info = get.get_chemicals('HVCID', chem_protein_links_info['HVCID'])
-            >>> tcm_chem_links_info = get.get_tcm_chem_links('HVCID', chem_info['HVCID'])
-            >>> tcm_info = get.get_tcm('HVMID', tcm_chem_links_info['HVMID'])
-            >>> formula_tcm_links_info = get.get_formula_tcm_links('HVMID', tcm_info['HVMID'])
-            >>> formula_info = get.get_formula('HVPID', formula_tcm_links_info['HVPID'])
-            >>> tcm_info, chem_info, formula_info = score(tcm_info,\
-                                              tcm_chem_links_info,\
-                                              chem_info,\
-                                              chem_protein_links_info,\
-                                              formula_info,\
-                                              formula_tcm_links_info)
-            >>> tcm_info
-                    HVMID cn_name  ... ENSP00000252519 HerbiV Score Importance Score
-            0     HVM2997     肉苁蓉  ...                     0.984882         0.991978
-            1     HVM3101     沙苑子  ...                     0.995344         0.974194
-            2     HVM3090      沙棘  ...                     0.958420         0.972441
-            3     HVM2859      荞麦  ...                     0.955032         0.971191
-            4     HVM4195     薏苡仁  ...                     0.984882         0.962036
-            ...       ...     ...  ...                          ...              ...
-            1266  HVM2206      硫磺  ...                     0.000000         0.075000
-            1267  HVM1035   防己叶菝葜  ...                     0.000000         0.075000
-            1268  HVM1509    红三叶草  ...                     0.000000         0.075000
-            1269  HVM2625    南蛇藤根  ...                     0.000000         0.075000
-            1270  HVM3202     生槐角  ...                     0.000000         0.075000
-            [1271 rows x 22 columns]
-            >>> chem_info
-                   HVCID            Name  ... ENSP00000252519 HerbiV Score Importance Score
-            0    HVC0385       captopril  ...                        0.989           0.4945
-            1    HVC0689     aldosterone  ...                        0.883           0.4415
-            2    HVC0036         glucose  ...                        0.865           0.4325
-            3    HVC2094           Zn(II  ...                        0.854           0.4270
-            4    HVC0208          chitin  ...                        0.854           0.4270
-            ..       ...             ...  ...                          ...              ...
-            181  HVC5481       genistein  ...                        0.000           0.0750
-            182  HVC3501      triterpene  ...                        0.000           0.0750
-            183  HVC0414    cyclosporine  ...                        0.000           0.0750
-            184  HVC0359  benzo(a)pyrene  ...                        0.000           0.0750
-            185  HVC6130        selenium  ...                        0.000           0.0750
-            [186 rows x 11 columns]
-            >>> formula_info
-                    HVPID    name  ... ENSP00000252519 HerbiV Score Importance Score
-            0     HVP2511     独活汤  ...                     0.999999         1.000000
-            1     HVP1969   人参羌活散  ...                     0.999998         0.999999
-            2     HVP0344  十二味正气散  ...                     0.999998         0.999999
-            3     HVP3338   益气养元丸  ...                     0.999994         0.999997
-            4     HVP0929     全痘汤  ...                     0.999994         0.999997
-            ...       ...     ...  ...                          ...              ...
-            5879  HVP3479     灵砂丹  ...                     0.000000         0.075000
-            5880  HVP2284     硫黄膏  ...                     0.000000         0.075000
-            5881  HVP4321     虾蟆散  ...                     0.000000         0.075000
-            5882  HVP1083   治疥内消散  ...                     0.000000         0.075000
-            5883  HVP4643     黄蜡丸  ...                     0.000000         0.075000
-            [5884 rows x 9 columns]
     """
     formula_and_score = None
     if formula is not None:

@@ -1,7 +1,8 @@
-from herbiv import get
-from herbiv import compute
-from herbiv import output
-
+import get
+import compute
+import output
+from tqdm import tqdm
+import pandas as pd
 
 # TODO: 将文档修改为get中的格式。
 def from_tcm_or_formula(tcm_or_formula_id,
@@ -33,22 +34,6 @@ def from_tcm_or_formula(tcm_or_formula_id,
             chem: 化合物（中药成分）信息。
             chem_protein_links: 化合物（中药成分）-蛋白（靶点）连接信息。
             proteins: 蛋白（靶点）信息。
-
-
-        Examples:
-            **From Formula**
-
-            >>> from_tcm_or_formula(['HVP1625'])
-            See more at : demo.ipynb
-
-            **From TCM**
-
-            >>> from_tcm_or_formula(['HVM0367', 'HVM1695'])
-            See more at :demo
-
-            **From Formula and Proteins**
-
-            >>> from_tcm_or_formula(['HVP1625'],['ENSP00000381588', 'ENSP00000252519'], score=400)# medium confidence in STITCH
     """
 
     if tcm_or_formula_id[0][2] == 'P':  # 判断输入是否为复方的HVPID
@@ -123,17 +108,6 @@ def from_proteins(proteins,
             tcms: 包含优化模型得到的中药组合中各中药的ID、组合对疾病相关靶点集合的潜在作用、组合前后潜在作用的提升量。
             formulas: 包含优化模型得到的复方组合中各复方的ID、组合对疾病相关靶点集合的潜在作用、组合前后潜在作用的提升量。
 
-        Examples:
-            **From Proteins**
-
-            进行优化
-            >>> from_proteins(['ENSP00000381588', 'ENSP00000252519'],score=0,random_state=138192,num=100)
-            See more at : demo.ipynb
-
-            不进行优化
-            >>> from_proteins(['ENSP00000381588', 'ENSP00000252519'],score=0,tcm_component=False,formula_component=False,out_for_cytoscape=False)
-            See more at : demo.ipynb
-
     """
 
     proteins = get.get_proteins('Ensembl_ID', proteins)
@@ -167,6 +141,117 @@ def from_proteins(proteins,
 
     if re:
         return formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, proteins, tcms, formulas
+
+
+def from_tcm_formula(formula_id, out_graph=True, re=True, path='results'):
+    """
+    进行经典的正向网络药理学分析，并将结果保存到 Excel 中，同时使用 pyecharts 进行可视化。
+
+    Args:
+        formula_id: 复方的 ID。
+        out_graph (bool): 是否输出基于 pyecharts 的网络可视化图，默认为 True。
+        re (bool): 是否返回原始分析结果。
+        path (str): 存放结果的目录。
+    """
+    import os
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    with tqdm(total=1, desc="获取复方信息") as pbar:
+        formula = get.get_tcm_formula('DNFID', formula_id)  # 获取该复方的信息
+        pbar.update(1)
+
+    with tqdm(total=1, desc="获取复方-中药连接信息") as pbar:
+        formula_tcm_links = get.get_tcm_formula_tcm_links('DNFID', formula['DNFID'])
+        pbar.update(1)
+
+    with tqdm(total=1, desc="获取中药信息") as pbar:
+        tcm = get.get_tcm_tcm('DNHID', formula_tcm_links['DNHID'])
+        pbar.update(1)
+
+    with tqdm(total=1, desc="获取复方-辩证连接信息") as pbar:
+        formula_SD_links = get.get_tcm_SD_Formula_links('DNFID', formula['DNFID'])
+        pbar.update(1)
+
+    with tqdm(total=1, desc="获取辩证信息") as pbar:
+        SD = get.get_tcm_SD('DNSID', formula_SD_links['DNSID'])
+        pbar.update(1)
+
+    with tqdm(total=1, desc="保存结果到 Excel") as pbar:
+        formula_df = pd.DataFrame(formula)
+        formula_tcm_links_df = pd.DataFrame(formula_tcm_links)
+        tcm_df = pd.DataFrame(tcm)
+        formula_SD_links_df = pd.DataFrame(formula_SD_links)
+        SD_df = pd.DataFrame(SD)
+
+    if out_graph:
+        output.tcm_vis(formula_df, formula_tcm_links_df, formula_SD_links_df, path)
+
+    if re:
+        with pd.ExcelWriter(f"{path}/results.xlsx") as writer:
+            formula_df.to_excel(writer, sheet_name="复方信息", index=False)
+            formula_tcm_links_df.to_excel(writer, sheet_name="复方-中药连接信息", index=False)
+            tcm_df.to_excel(writer, sheet_name="中药信息", index=False)
+            formula_SD_links_df.to_excel(writer, sheet_name="复方-辩证连接信息", index=False)
+            SD_df.to_excel(writer, sheet_name="辩证信息", index=False)
+        pbar.update(1)
+
+
+def from_tcm_SD(SD_id, out_graph=True, re=True, path='results'):
+    """
+    进行经典的正向网络药理学分析，并将结果保存到 Excel 中，同时使用 pyecharts 进行可视化。
+
+    Args:
+        SD_id: 复方的 ID。
+        out_graph (bool): 是否输出基于 pyecharts 的网络可视化图，默认为 True。
+        re (bool): 是否返回原始分析结果。
+        path (str): 存放结果的目录。
+    """
+    import os
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    with tqdm(total=1, desc="获取辩证信息") as pbar:
+        SD = get.get_tcm_SD('DNSID', SD_id)
+        pbar.update(1)
+
+    with tqdm(total=1, desc="获取复方-辩证连接信息") as pbar:
+        formula_SD_links = get.get_tcm_SD_Formula_links('DNSID', SD['DNSID'])
+        pbar.update(1)
+
+    with tqdm(total=1, desc="获取复方信息") as pbar:
+        formula = get.get_tcm_formula('DNFID', formula_SD_links['DNFID'])  # 获取该复方的信息
+        pbar.update(1)
+
+    with tqdm(total=1, desc="获取复方-中药连接信息") as pbar:
+        formula_tcm_links = get.get_tcm_formula_tcm_links('DNFID', formula['DNFID'])
+        pbar.update(1)
+
+    with tqdm(total=1, desc="获取中药信息") as pbar:
+        tcm = get.get_tcm_tcm('DNHID', formula_tcm_links['DNHID'])
+        pbar.update(1)
+
+    formula_df = pd.DataFrame(formula)
+    formula_tcm_links_df = pd.DataFrame(formula_tcm_links)
+    tcm_df = pd.DataFrame(tcm)
+    formula_SD_links_df = pd.DataFrame(formula_SD_links)
+    SD_df = pd.DataFrame(SD)
+
+    if out_graph:
+        with tqdm(total=1, desc="生成可视化图表") as pbar:
+            output.tcm_vis(formula_df, formula_tcm_links_df, formula_SD_links_df, path)
+            pbar.update(1)
+
+    if re:
+        with tqdm(total=1, desc="保存结果到 Excel") as pbar:
+            with pd.ExcelWriter(f"{path}/results.xlsx") as writer:
+                formula_df.to_excel(writer, sheet_name="复方信息", index=False)
+                formula_tcm_links_df.to_excel(writer, sheet_name="复方-中药连接信息", index=False)
+                tcm_df.to_excel(writer, sheet_name="中药信息", index=False)
+                formula_SD_links_df.to_excel(writer, sheet_name="复方-辩证连接信息", index=False)
+                SD_df.to_excel(writer, sheet_name="辩证信息", index=False)
+            pbar.update(1)
+
 
 
 def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, proteins):
@@ -239,13 +324,5 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
 
 
 if __name__ == '__main__':
-    from_tcm_or_formula(['HVP1625'], ['ENSP00000381588', 'ENSP00000252519'], score=100000)
-    tcm_ft, tcm_chem_links_ft, chem_ft, chem_protein_links_ft, protein_ft = from_tcm_or_formula(['HVM0735'], )
-    formula_ff, formula_tcm_links_ff, tcm_ff, tcm_chem_links_ff, chem_ff, chem_protein_links_ff, protein_ff = \
-        from_tcm_or_formula(['HVP1625'], )
-    formula_fg, tcm_fg, tcm_chem_l_fg, chem_fg, chem_protein_l_fg, protein_fg, tcms_fg, formulas_fg, proteins_fg = from_proteins(
-        ['ENSP00000381588', 'ENSP00000252519'], num=3)
-    # tcm_ftp, tcm_chem_links_ftp, chem_ftp, chem_protein_links_ftp, protein_ftp = \
-    #     from_tcm_or_formula_proteins(['HVM0367', 'HVM1695'], ['ENSP00000381588', 'ENSP00000252519'])
-    # formula_ffp, formula_tcm_links_ffp, tcm_ffp, tcm_chem_links_ffp, chem_ffp, chem_protein_links_ffp, protein_ffp = \
-    #     from_tcm_or_formula_proteins(['HVP1625'], ['ENSP00000381588', 'ENSP00000252519'])
+    from_tcm_formula(['DNF102324'])
+    from_tcm_SD(['DNS001'])
