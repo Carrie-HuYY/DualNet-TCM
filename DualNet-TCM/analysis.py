@@ -36,18 +36,18 @@ def from_tcm_or_formula(tcm_or_formula_id,
             proteins: 蛋白（靶点）信息。
     """
 
-    if tcm_or_formula_id[0][2] == 'P':  # 判断输入是否为复方的HVPID
-        formula = get.get_formula('HVPID', tcm_or_formula_id)  # 获取该复方的信息
-        formula_tcm_links = get.get_formula_tcm_links('HVPID', formula['HVPID'])
-        tcm = get.get_tcm('HVMID', formula_tcm_links['HVMID'])
+    if tcm_or_formula_id[0][2] == 'F':  # 判断输入是否为复方的HVPID
+        formula = get.get_formula('DNFID', tcm_or_formula_id)  # 获取该复方的信息
+        formula_tcm_links = get.get_formula_tcm_links('DNFID', formula['DNFID'])
+        tcm = get.get_tcm('DNHID', formula_tcm_links['DNHID'])
     else:
         formula = None
         formula_tcm_links = None
-        tcm = get.get_tcm('HVMID', tcm_or_formula_id)
+        tcm = get.get_tcm('DNHID', tcm_or_formula_id)
 
-    tcm_chem_links = get.get_tcm_chem_links('HVMID', tcm['HVMID'])
-    chem = get.get_chemicals('HVCID', tcm_chem_links['HVCID'])
-    chem_protein_links = get.get_chem_protein_links('HVCID', chem['HVCID'], score)
+    tcm_chem_links = get.get_tcm_chem_links('DNHID', tcm['DNHID'])
+    chem = get.get_chemicals('DNCID', tcm_chem_links['DNCID'])
+    chem_protein_links = get.get_chem_protein_links('DNCID', chem['DNCID'], score)
 
     if proteins_id is None:
         proteins = get.get_proteins('Ensembl_ID', chem_protein_links['Ensembl_ID'])
@@ -92,7 +92,7 @@ def from_proteins(proteins,
             num (int):指定优化时需生成的解的组数。
             tcm_component (bool): 是否进行中药组合优化。
             formula_component (bool): 是否进行复方组合优化。
-            out_for_cytoscape (bool): 是否输出用于Cytoscape绘图的文件。
+            out_for_cytoscape (bool): 是否输出用于Cytoscape绘图的文件。i
             re (bool): 是否返回原始分析结果。
             path (str): 存放结果的目录。
 
@@ -324,5 +324,6 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
 
 
 if __name__ == '__main__':
-    from_tcm_formula(['DNF102324'])
-    from_tcm_SD(['DNS001'])
+    #from_tcm_formula(['DNF102324'])
+    #from_tcm_SD(['DNS001'])
+    from_tcm_or_formula(['DNF00000'])
