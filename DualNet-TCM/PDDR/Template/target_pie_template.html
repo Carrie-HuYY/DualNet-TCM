@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>ECharts</title>
+  <!-- 引入刚刚下载的 ECharts 文件 -->
+  <script src="../../../Template/echarts.js"></script>
+</head>
+
+<body>
+  <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+  <div id="chart-container" style="width: 1000px;height: 1000px;margin:auto"></div>
+  <script type="text/javascript">
+    var dom = document.getElementById('chart-container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'svg',
+      useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+      tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b}: {c} ({d}%)'
+      },
+      legend: {
+        data: [
+          'FDA Approved',
+          'Others',
+          'Clinical',
+
+        ]
+      },
+      series: [
+        {
+          name: 'Access From',
+          type: 'pie',
+          selectedMode: 'single',
+          radius: [0, '30%'],
+          label: {
+            position: 'inner',
+            fontSize: 20
+          },
+          labelLine: {
+            show: false
+          },
+          data: [
+          <!-- TODO name加上数量 字体加粗  三个独立的饼图  compound标签外挂-->
+            { value: 'Compound data', name: 'With-Drug' },   
+            { value: 'No-drug data', name: 'No-drug' }
+          ]
+        },
+        {
+          name: 'Access From',
+          type: 'pie',
+          radius: ['45%', '60%'],
+          labelLine: {
+            length: 20
+          },
+          label: {
+            formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+            backgroundColor: '#F6F8FC',
+            borderColor: '#8C8D8E',
+            borderWidth: 1,
+            borderRadius: 4,
+            rich: {
+              a: {
+                color: '#6E7079',
+                lineHeight: 22,
+                align: 'center'
+              },
+              hr: {
+                borderColor: '#8C8D8E',
+                width: '100%',
+                borderWidth: 1,
+                height: 0
+              },
+              b: {
+                color: '#4C5058',
+                fontSize: 14,
+                fontWeight: 'bold',
+                lineHeight: 33
+              },
+              per: {
+                color: '#fff',
+                backgroundColor: '#4C5058',
+                padding: [3, 4],
+                borderRadius: 4
+              }
+            }
+          },
+          data: [
+            { value: 'FDA Approved data', name: 'FDA Approved' },
+            { value: 'Clinical data', name: 'Clinical' },
+            { value: 'Others data', name: 'Others' },
+
+          ]
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+
+  </script>
+</body>
+
+</html>
