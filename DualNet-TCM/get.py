@@ -123,10 +123,10 @@ def get_chemicals(by, items) -> pd.DataFrame:
 
     # 读取HerbiV_chemical_protein_links数据集
     current_directory = os.path.dirname(os.path.abspath(__file__))
-    chem_all = pd.read_excel(current_directory + r'/Data/WM/Chemical_Protein_Links.xlsx')
+    chem_all = pd.read_excel(current_directory + r'/Data/WM/Chemical.xlsx')
 
     # 在数据集中获取items中化合物的信息
-    chem = chem_all.loc[chem_all[by].isin(items)].drop_duplicates(subset=['HVCID'])
+    chem = chem_all.loc[chem_all[by].isin(items)].copy()
 
     # 重新设置索引
     chem.index = range(chem.shape[0])

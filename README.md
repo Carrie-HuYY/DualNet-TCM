@@ -56,11 +56,3 @@ def score(weights: Union[dict, None] = None) -> Tuple[pd.DataFrame, pd.DataFrame
 ### Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Carrie-HuYY/DualNet-TCM&type=Date)](https://star-history.com/#Carrie-HuYY/DualNet-TCM&Date)
-
-### 致谢
-
-- 感谢HerbiV项目负责人[老王哥Wesady](https://github.com/Wesady)作为交叉学科领路人的指点！
-
-- [HerbiV](https://github.com/MLi-lab-Bioinformatics-NJUCM/HerbiV)也是我参与的中药网络药理学领域一个伟大的项目！欢迎star！
-
-- 感谢上海中医药大学/中科院上药所[张豪教授](https://iiimr.shutcm.edu.cn/2024/1223/c4069a164183/page.htm)开发的[OTTM](https://pmc.ncbi.nlm.nih.gov/articles/PMC10516341/)激发的思路！
