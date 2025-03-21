@@ -79,7 +79,7 @@ def score(
         formula_tcm_dict = formula_tcm_links.groupby('DNFID')['DNHID'].apply(list).to_dict()
 
     # 使用 tqdm 显示蛋白质计算的进度
-    for protein in tqdm(proteins_id, desc="Calculating HerbiV Scores"):
+    for protein in tqdm(proteins_id, desc="Calculating Chemical Scores"):
         # 计算每一个化合物的 HerbiV Score
         chem_scores = chem_protein_dict.get(protein, {})
         chem_and_score[f'{protein} HerbiV Score'] = chem['DNCID'].map(chem_scores).fillna(0).apply(
@@ -133,11 +133,11 @@ def component(items_and_score: pd.DataFrame, random_state=None, num=1000, c=10) 
     Returns:
         包含组合及其重要性评分的 DataFrame。
     """
-    if 'HVPID' in items_and_score.columns:
-        by = 'HVPID'
+    if 'DNFID' in items_and_score.columns:
+        by = 'DNFID'
         name = 'name'
     else:
-        by = 'HVMID'
+        by = 'DNHID'
         name = 'cn_name'
 
     dps = []

@@ -217,7 +217,6 @@ def get_tcm_formula(by, items) -> pd.DataFrame:
     # 在数据集中获取items中复方的信息
     formula = formula_all.loc[formula_all[by].isin(items)].copy()
 
-    # 重新设置索引
     formula.index = range(formula.shape[0])
 
     return formula
@@ -328,3 +327,53 @@ def get_tcm_SD_Formula_links(by, items) -> pd.DataFrame:
     formula_tcm_links.index = range(formula_tcm_links.shape[0])
 
     return formula_tcm_links
+
+def get_tcm_Formula_illness_links(by, items) -> pd.DataFrame:
+    """
+        读取HerbiV_formula_tcm_links数据集，返回items中复方/中药的复方-中药连接信息。
+        Read the HerbiV_formula_tcm_links dataset
+        and return the formula(s)-TCM connection information of formula(s)/TCM in items.
+
+        Args:
+            by (str):数据集中与items相匹配的列的列名。Column name of the column in the dataset that matches items.
+            items (collections.abc.Iterable): 要查询的复方/中药。Formula(s)/TCM to be queried.
+
+        Returns:
+            formula_tcm_links(pandas.DataFrame): items中复方/中药的复方-中药连接信息。
+            Formula(s)-TCM connection information of formula(s)/TCM in items.
+    """
+
+    # 读取HerbiV_formula_tcm_links数据集
+    sd_illness_links_all = pd.read_excel(os.path.dirname(os.path.abspath(__file__)) +
+                                        r'/Data/TCM/Formula_illness_links.xlsx')
+
+    # 在数据集中获取items中复方/中药的复方-中药连接信息
+    formula_tcm_links = sd_illness_links_all.loc[sd_illness_links_all[by].isin(items)].copy()
+
+    formula_tcm_links.index = range(formula_tcm_links.shape[0])
+
+    return formula_tcm_links
+
+
+def get_tcm_illness(by, items) -> pd.DataFrame:
+    """
+        读取HerbiV_tcm数据集，返回items中中药的信息。
+        Read the HerbiV_tcm dataset and return the TCM information in items.
+
+        Args:
+            by (str): 数据集中与items相匹配的列的列名。Column name of the column in the dataset that matches items.
+            items (collections.abc.Iterable): 要查询的中药。TCM to be queried.
+
+        Returns:
+            pandas.DataFrame: items中中药的信息。TCM information in items.
+    """
+
+    # 读取HerbiV_tcm数据集
+    tcm_all = pd.read_excel(os.path.dirname(os.path.abspath(__file__)) + r'/Data/TCM/illness.xlsx')
+
+    tcm = tcm_all.loc[tcm_all[by].isin(items)].copy()
+
+    # 重新设置索引
+    tcm.index = range(tcm.shape[0])
+
+    return tcm

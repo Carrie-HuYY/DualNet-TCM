@@ -50,8 +50,6 @@ def from_tcm_or_formula(tcm_or_formula_id,
     chem = get.get_chemicals('DNCID', tcm_chem_links['DNCID'])
     chem_protein_links = get.get_chem_protein_links('DNCID', chem['DNCID'], score)
 
-    print(formula, tcm, chem)
-
     if proteins_id is None:
         proteins = get.get_proteins('Ensembl_ID', chem_protein_links['Ensembl_ID'])
     else:
@@ -172,45 +170,56 @@ def from_tcm_formula(formula_id, out_graph=True, re=True, path='results'):
     if not os.path.exists(path):
         os.makedirs(path)
 
-    with tqdm(total=1, desc="获取复方信息") as pbar:
+    # 总进度条，分为 6 个阶段
+    with tqdm(total=8, desc="（中医维度）从复方进行分析") as pbar:
+        # 阶段 1：获取复方信息
         formula = get.get_tcm_formula('DNFID', formula_id)  # 获取该复方的信息
         pbar.update(1)
 
-    with tqdm(total=1, desc="获取复方-中药连接信息") as pbar:
+        # 阶段 2：获取复方-中药连接信息
         formula_tcm_links = get.get_tcm_formula_tcm_links('DNFID', formula['DNFID'])
         pbar.update(1)
 
-    with tqdm(total=1, desc="获取中药信息") as pbar:
+        # 阶段 3：获取中药信息
         tcm = get.get_tcm_tcm('DNHID', formula_tcm_links['DNHID'])
         pbar.update(1)
 
-    with tqdm(total=1, desc="获取复方-辩证连接信息") as pbar:
+        # 阶段 4：获取复方-辩证连接信息
         formula_SD_links = get.get_tcm_SD_Formula_links('DNFID', formula['DNFID'])
         pbar.update(1)
 
-    with tqdm(total=1, desc="获取辩证信息") as pbar:
+        # 阶段 5：获取辩证信息
         SD = get.get_tcm_SD('DNSID', formula_SD_links['DNSID'])
         pbar.update(1)
 
-    with tqdm(total=1, desc="保存结果到 Excel") as pbar:
+        Formula_illness_links = get.get_tcm_Formula_illness_links('DNFID', formula['DNFID'])
+        pbar.update(1)
+
+        illness = get.get_tcm_illness('DNIID', Formula_illness_links['DNIID'])
+        pbar.update(1)
+
+        # 阶段 6：保存结果到 Excel
         formula_df = pd.DataFrame(formula)
         formula_tcm_links_df = pd.DataFrame(formula_tcm_links)
         tcm_df = pd.DataFrame(tcm)
         formula_SD_links_df = pd.DataFrame(formula_SD_links)
         SD_df = pd.DataFrame(SD)
+        illness_df = pd.DataFrame(illness)
 
-    if out_graph:
-        output.tcm_vis(formula_df, formula_tcm_links_df, formula_SD_links_df, path)
+        if out_graph:
+            output.tcm_vis(formula_df, formula_tcm_links_df, formula_SD_links_df, path)
 
-    if re:
-        with pd.ExcelWriter(f"{path}/results.xlsx") as writer:
-            formula_df.to_excel(writer, sheet_name="复方信息", index=False)
-            formula_tcm_links_df.to_excel(writer, sheet_name="复方-中药连接信息", index=False)
-            tcm_df.to_excel(writer, sheet_name="中药信息", index=False)
-            formula_SD_links_df.to_excel(writer, sheet_name="复方-辩证连接信息", index=False)
-            SD_df.to_excel(writer, sheet_name="辩证信息", index=False)
-        pbar.update(1)
+        if re:
+            with pd.ExcelWriter(f"{path}/results.xlsx") as writer:
+                formula_df.to_excel(writer, sheet_name="复方信息", index=False)
+                formula_tcm_links_df.to_excel(writer, sheet_name="复方-中药连接信息", index=False)
+                tcm_df.to_excel(writer, sheet_name="中药信息", index=False)
+                formula_SD_links_df.to_excel(writer, sheet_name="复方-辩证连接信息", index=False)
+                SD_df.to_excel(writer, sheet_name="辩证信息", index=False)
+                illness_df.to_excel(writer, sheet_name="疾病信息", index=False)
+            pbar.update(1)
 
+    return None
 
 def from_tcm_SD(SD_id, out_graph=True, re=True, path='results'):
     """
@@ -226,47 +235,49 @@ def from_tcm_SD(SD_id, out_graph=True, re=True, path='results'):
     if not os.path.exists(path):
         os.makedirs(path)
 
-    with tqdm(total=1, desc="获取辩证信息") as pbar:
+    with tqdm(total=8, desc="（中医维度）从辩证进行分析") as pbar:
         SD = get.get_tcm_SD('DNSID', SD_id)
         pbar.update(1)
 
-    with tqdm(total=1, desc="获取复方-辩证连接信息") as pbar:
         formula_SD_links = get.get_tcm_SD_Formula_links('DNSID', SD['DNSID'])
         pbar.update(1)
 
-    with tqdm(total=1, desc="获取复方信息") as pbar:
         formula = get.get_tcm_formula('DNFID', formula_SD_links['DNFID'])  # 获取该复方的信息
         pbar.update(1)
 
-    with tqdm(total=1, desc="获取复方-中药连接信息") as pbar:
         formula_tcm_links = get.get_tcm_formula_tcm_links('DNFID', formula['DNFID'])
         pbar.update(1)
 
-    with tqdm(total=1, desc="获取中药信息") as pbar:
+        SD_illness_links = get.get_tcm_SD_illness_links('DNIID', SD['DNSID'])
+        pbar.update(1)
+
         tcm = get.get_tcm_tcm('DNHID', formula_tcm_links['DNHID'])
         pbar.update(1)
 
-    formula_df = pd.DataFrame(formula)
-    formula_tcm_links_df = pd.DataFrame(formula_tcm_links)
-    tcm_df = pd.DataFrame(tcm)
-    formula_SD_links_df = pd.DataFrame(formula_SD_links)
-    SD_df = pd.DataFrame(SD)
+        illness = get.get_tcm_illness('DNIID', SD_illness_links['DNIID'])
+        pbar.update(1)
 
-    if out_graph:
-        with tqdm(total=1, desc="生成可视化图表") as pbar:
-            output.tcm_vis(formula_df, formula_tcm_links_df, formula_SD_links_df, path)
-            pbar.update(1)
+        formula_df = pd.DataFrame(formula)
+        formula_tcm_links_df = pd.DataFrame(formula_tcm_links)
+        tcm_df = pd.DataFrame(tcm)
+        formula_SD_links_df = pd.DataFrame(formula_SD_links)
+        SD_df = pd.DataFrame(SD)
+        illness_df = pd.DataFrame(illness)
 
-    if re:
-        with tqdm(total=1, desc="保存结果到 Excel") as pbar:
+        if out_graph:
+                output.tcm_vis(formula_df, formula_tcm_links_df, formula_SD_links_df, path)
+                pbar.update(1)
+
+        if re:
             with pd.ExcelWriter(f"{path}/results.xlsx") as writer:
                 formula_df.to_excel(writer, sheet_name="复方信息", index=False)
                 formula_tcm_links_df.to_excel(writer, sheet_name="复方-中药连接信息", index=False)
                 tcm_df.to_excel(writer, sheet_name="中药信息", index=False)
                 formula_SD_links_df.to_excel(writer, sheet_name="复方-辩证连接信息", index=False)
                 SD_df.to_excel(writer, sheet_name="辩证信息", index=False)
+                illness_df.to_excel(writer, sheet_name="疾病信息", index=False)
+            return formula_df, formula_tcm_links_df, tcm_df, formula_SD_links_df, SD_df
             pbar.update(1)
-
 
 
 def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, proteins):
@@ -281,6 +292,10 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
     # ----------------------------------------------
     # 1. 预先生成映射关系，加速查询
     # ----------------------------------------------
+    # 确保 proteins 是 DataFrame
+    if isinstance(proteins, set):
+        raise TypeError("proteins 参数必须是一个 Pandas DataFrame，而不是集合。")
+
     # 目标蛋白质的集合（快速查找）
     target_proteins = set(proteins['Ensembl_ID'])
 
@@ -306,8 +321,8 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
             for m in formula_to_tcms.get(f, set()):
                 chems = tcm_to_chems.get(m, set())
                 for c in chems:
-                    proteins = chem_to_proteins.get(c, set())
-                    valid_proteins = proteins & target_proteins  # 直接取交集
+                    proteins_in_chem = chem_to_proteins.get(c, set())
+                    valid_proteins = proteins_in_chem & target_proteins  # 直接取交集
                     if valid_proteins:
                         formula_id.add(f)
                         tcm_id.add(m)
@@ -318,8 +333,8 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
         for m in tcm['DNHID']:
             chems = tcm_to_chems.get(m, set())
             for c in chems:
-                proteins = chem_to_proteins.get(c, set())
-                valid_proteins = proteins & target_proteins
+                proteins_in_chem = chem_to_proteins.get(c, set())
+                valid_proteins = proteins_in_chem & target_proteins
                 if valid_proteins:
                     tcm_id.add(m)
                     chem_id.add(c)
@@ -354,9 +369,8 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
 
     return formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, proteins
 
-
 if __name__ == '__main__':
-    #from_tcm_formula(['DNF102324'])
-    from_tcm_SD(['DNS001'])
-    #from_tcm_or_formula(['DNF109423'], score=900)
-    #from_proteins(['ENSP00000381588', 'ENSP00000252519'])
+    #from_tcm_formula(['DNF045905'])
+    #from_tcm_SD(['DNS001'])
+    #from_tcm_or_formula(['DNF109423'], score=990)
+    from_proteins(['ENSP00000381588', 'ENSP00000252519'])

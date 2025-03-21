@@ -65,7 +65,7 @@ def re_name(tcm, tcm_chem_links, chem, chem_protein_links, protein):
     return out_tcm, out_tcm_chem, out_chem, out_chem_protein_links, out_gene
 
 
-def out_for_cyto(tcm, tcm_chem_links, chem, chem_protein_links, protein, path='result'):
+def out_for_cyto(tcm, tcm_chem_links, chem, chem_protein_links, protein, path='results'):
     """
     输出Cytoscape用于作图的网络文件和属性文件
     :param protein:
