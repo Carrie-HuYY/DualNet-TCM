@@ -173,18 +173,26 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 
 ### out_graph
 
-`out_graph`提供了三种可交互的可视化方案，
-
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <div style="flex: 1; margin-right: 10px;">
-        <img src="https://github.com/Carrie-HuYY/DualNet-TCM/blob/main/README_pictures/out_graph_0.png" alt="Figure 1" style="width: 100%; height: auto;">
-    </div>
-    <div style="flex: 1; margin-left: 10px;">
-        <img src="https://github.com/Carrie-HuYY/DualNet-TCM/blob/main/README_pictures/out_graph_1.png" alt="Figure 2" style="width: 100%; height: auto;">
-    </div>
-</div>
+`out_graph`提供了两种可交互的可视化方案，[范例1](/README_pictures/out_graph_0.png)和[范例2](/README_pictures/out_graph_1.png)
 
 ### out_for_cytoscape
+
+`out_for_cytoscape`给出了可以直接用于cytoscape绘图的两个文件，`type.csv`和`network.csv`，其中格式分别如下：
+
+***type.csv***
+
+| Key        | Attribute  |
+|------------|------------|
+| glucose    | Chemicals  |
+| glucose    | Chemicals  |
+
+***network.csv***
+
+| SourceNode   | TargetNode          |
+|--------------|---------------------|
+| testosterone |  NR3C4              |
+| testosterone | SHBG                |
+| testosterone | IGFBP3              |
 
 ### out_for_excel
 
