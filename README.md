@@ -9,7 +9,7 @@
 
 - [1. 简介](#简介)
 
-![figure1](#README_pictures/图片1.tiff)
+![figure1](https://github.com/Carrie-HuYY/DualNet-TCM/blob/main/README_pictures/logo.tif)
 
 - [2. 安装](#安装)
 
