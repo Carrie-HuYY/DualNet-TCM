@@ -10,6 +10,7 @@
         <strong>DualNet-TCM</strong> (TCM (中药) + Dual (双重) + Net (网络结构) ): 从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络。 同时开发多样技术，1.对候选蛋白或基因进行系统筛选和分类，从而精准缩小需要实验验证的目标范围。 2.纳入安全性评估筛选算法，辅助构建中药毒理学网络。3.基于文本的辩证预测，辅助老药新用和靶点寻找。
     </div>
 </div>
+
 - [1. 简介](#简介)
 
 - [2. 安装](#安装)
@@ -171,6 +172,17 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 ## 结果展示
 
 ### out_graph
+
+`out_graph`提供了三种可交互的可视化方案，
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1; margin-right: 10px;">
+        <img src="https://github.com/Carrie-HuYY/DualNet-TCM/blob/main/README_pictures/out_graph_0.png" alt="Figure 1" style="width: 100%; height: auto;">
+    </div>
+    <div style="flex: 1; margin-left: 10px;">
+        <img src="https://github.com/Carrie-HuYY/DualNet-TCM/blob/main/README_pictures/out_graph_1.png" alt="Figure 2" style="width: 100%; height: auto;">
+    </div>
+</div>
 
 ### out_for_cytoscape
 
