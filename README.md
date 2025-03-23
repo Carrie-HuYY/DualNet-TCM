@@ -1,15 +1,16 @@
-# DualNet-TCM(中药整合药理学数据库)
+# DualNet-TCM (中药整合药理学数据库)
 
-***DualNet-TCM***(TCM (中药) + Dual (双重) + Net (网络结构) 的整合药理学):
-从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络。
-
-同时开发多样技术，1.对候选蛋白或基因进行系统筛选和分类，从而精准缩小需要实验验证的目标范围。
-2.纳入安全性评估筛选算法，辅助构建中药毒理学网络。3.基于文本的辩证预测，辅助老药新用和靶点寻找。
-
-
+<div style="display: flex; align-items: center;">
+    <!-- 图片占四分之一宽度 -->
+    <div style="flex: 1;">
+        <img src="https://github.com/Carrie-HuYY/DualNet-TCM/blob/main/README_pictures/logo.png" alt="figure1" style="width: 100%; max-width: 200px;">
+    </div>
+    <!-- 文字占四分之三宽度 -->
+    <div style="flex: 3; padding-left: 20px;">
+        <strong>DualNet-TCM</strong> (TCM (中药) + Dual (双重) + Net (网络结构) ): 从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络。 同时开发多样技术，1.对候选蛋白或基因进行系统筛选和分类，从而精准缩小需要实验验证的目标范围。 2.纳入安全性评估筛选算法，辅助构建中药毒理学网络。3.基于文本的辩证预测，辅助老药新用和靶点寻找。
+    </div>
+</div>
 - [1. 简介](#简介)
-
-![figure1](https://github.com/Carrie-HuYY/DualNet-TCM/blob/main/README_pictures/logo.png)
 
 - [2. 安装](#安装)
 
