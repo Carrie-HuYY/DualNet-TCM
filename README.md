@@ -1,13 +1,15 @@
 # DualNet-TCM(中药整合药理学数据库)
 
-***DualNet-TCM***(TCM (中药) + Dual (双重网络) + Net (网络药理学)):
-从网络药理学和中医理论双重视角出发，构建"方剂-中药-成分-靶点-病症"和"方剂-对症-症状-病证"双重关联网络。
-同时，结合基因研究和文献计量学方法，开展转化医学研究：通过药物可用性评估和文献挖掘技术，对大量候选蛋白或基因进行系统筛选和分类，
-从而精准缩小需要实验验证的目标范围，为中药现代化研究提供新的思路和方法。
+***DualNet-TCM***(TCM (中药) + Dual (双重) + Net (网络结构) 的整合药理学):
+从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络。
 
+同时开发多样技术，1.对候选蛋白或基因进行系统筛选和分类，从而精准缩小需要实验验证的目标范围。
+2.纳入安全性评估筛选算法，辅助构建中药毒理学网络。3.基于文本的辩证预测，辅助老药新用和靶点寻找。
 
 
 - [1. 简介](#简介)
+
+![figure1](#README_pictures/图片1.tiff)
 
 - [2. 安装](#安装)
 
@@ -28,6 +30,8 @@
   - [5.2 关于数据下载问题](#2关于数据下载)
 
 ## 简介
+
+
 
 ## 安装
 
@@ -55,7 +59,7 @@ numpy~=1.21.6
 ```python
 from DualNet-TCM import analysis
 analysis.from_SD(
-  SD, 
+  sd, 
   score=990, 
   out_graph=False, 
   out_for_cytoscape=False, 
@@ -67,7 +71,7 @@ analysis.from_SD(
 )
 ```
 
-`from_SD`需要一个必需形参SD：任何可以使用in判断一个元素是否在辩证数据集中的组合数据类型，
+`from_SD`需要一个必需形参sd：任何可以使用in判断一个元素是否在辩证数据集中的组合数据类型，
 存储拟分析的辩证的ID， 如['DNS001'],具体ID编号及SD信息可见于[SD辩证数据集](/DualNet-TCM/Data/SD.xlsx)
 
 `from_SD`的可选形参有：
@@ -104,7 +108,7 @@ analysis.from_TCM_or_Formula(
 
 `from_TCM_or_Formula`需要一个必需形参tcm_or_formula：任何可以使用in判断一个元素是否在其中的组合数据类型，
 存储拟分析的中药或复方的ID， 如['DNH0367', 'DNH1695']，具体ID编号及中药/方剂信息可见于[方剂数据集](/DualNet-TCM/Data/Formula.xlsx)
-和[中药数据集](/DualNet-TCM/Data/Herb.xlsx)
+和[中药数据集](/DualNet-TCM/Data/TCM.xlsx)
 
 `from_TCM_or_Formula`的可选形参有：
 - `score`: int类型，[Chemical_Protein_Links数据集](/DualNet-TCM/Data/Chemical_Protein_Links.xlsx)
@@ -159,8 +163,8 @@ analysis.from_Protein(
 - `safety_research`: boolean类型，是否对得到的靶点进行安全性研究，默认为`False`；
 - `re`: boolean类型，是否返回原始分析结果（辩证、复方、中药、化合物（中药成分）、蛋白（靶点）及其连接信息），
 默认为True。若re为True，则函数将返回运行结果sd、sd_formula_links.xlsx, formula、formula_tcm_links、tcm、tcm_chem_links、chem、
-chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了辩证信息、辩证-复方连接信息， 复方信息、复方-中药连接信息、中药信息、
-- 中药-化合物（中药成分）连接信息、化合物（中药成分）信息、 化合物（中药成分）-蛋白（靶点）连接信息和蛋白（靶点）信息；
+chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了辩证信息、辩证-复方连接信息， 复方信息、复方-中药连接信息、中药信息、中药-化合物（中药成分）连接信息、化合物（中药成分）信息、
+化合物（中药成分）-蛋白（靶点）连接信息和蛋白（靶点）信息；
 - `path`: str类型，存放结果的路径，默认为`results/`。若无此路径，将自动建立相应的目录。
 
 ## 结果展示
