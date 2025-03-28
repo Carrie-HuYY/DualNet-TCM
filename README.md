@@ -1,15 +1,11 @@
-# DualNet-TCM (中药整合药理学数据库)
+# 4DNet-TCM (中药整合药理学数据库)
 
-<div style="display: flex; align-items: center;">
-    <!-- 图片占四分之一宽度 -->
-    <div style="flex: 1;">
-        <img src="https://github.com/Carrie-HuYY/DualNet-TCM/blob/main/README_pictures/logo.png" alt="figure1" style="width: 100%; max-width: 200px;">
-    </div>
-    <!-- 文字占四分之三宽度 -->
-    <div style="flex: 3; padding-left: 20px;">
-        <strong>DualNet-TCM</strong> (TCM (中药) + Dual (双重) + Net (网络结构) ): 从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络。 同时开发多样技术，1.对候选蛋白或基因进行系统筛选和分类，从而精准缩小需要实验验证的目标范围。 2.纳入安全性评估筛选算法，辅助构建中药毒理学网络。3.基于文本的辩证预测，辅助老药新用和靶点寻找。
-    </div>
-</div>
+***4DNet-TCM*** (4D，Drug：中药及西药；Disease：中医辩证及西医病症；Detox：毒理学；Document：文本挖掘): 
+从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络，同时开发多种分析功能。
+- 1.基于文本挖掘对候选蛋白或基因进行筛选和分类，缩小实验验证范围。 
+- 2.纳入中药毒理学的安全性评估筛选算法，辅助构建中药毒理学网络。
+- 3.基于大量病历数据的中医辩证预测，中医角度辅助老药新用和靶点寻找。
+
 
 - [1. 简介](#简介)
 
@@ -37,10 +33,10 @@
 
 ## 安装
 
-可以使用pip安装DualNet-TCM
+可以使用pip安装4DNet-TCM
 
 ```cmd
-pip install DualNet-TCM
+pip install 4DNet-TCM
 ```
 
 requirement包括(Python版本需要≥3.9，其余没有强制要求)
@@ -59,9 +55,9 @@ numpy~=1.21.6
 从中医辩证开始，构建中药整合药理学
 
 ```python
-from DualNet-TCM import analysis
+from TCM-3 import analysis
 analysis.from_SD(
-  sd, 
+  SD_ID, 
   score=990, 
   out_graph=False, 
   out_for_cytoscape=False, 
@@ -73,7 +69,7 @@ analysis.from_SD(
 )
 ```
 
-`from_SD`需要一个必需形参sd：任何可以使用in判断一个元素是否在辩证数据集中的组合数据类型，
+`from_SD`需要一个必需形参`SD_ID`：任何可以使用in判断一个元素是否在辩证数据集中的组合数据类型，
 存储拟分析的辩证的ID， 如['DNS001'],具体ID编号及SD信息可见于[SD辩证数据集](/DualNet-TCM/Data/SD.xlsx)
 
 `from_SD`的可选形参有：
