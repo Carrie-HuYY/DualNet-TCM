@@ -185,11 +185,22 @@ def boost(row: pd.Series, items_and_score: pd.DataFrame, by: str) -> float:
         by: 用于匹配的列名。
 
     Returns:
-        重要性评分的提升量。
+        重要性评分的提升量。如果无法计算（没有匹配项），返回0。
     """
     ls = row['items'].split(';')
     scores = items_and_score.loc[items_and_score[by].isin(ls), 'Importance Score'].values
-    return (row['Importance Score'] - max(scores)) / max(scores)
+
+    # Handle empty case
+    if len(scores) == 0:
+        return 0.0
+
+    max_score = max(scores)
+
+    # Avoid division by zero
+    if max_score == 0:
+        return 0.0
+
+    return (row['Importance Score'] - max_score) / max_score
 
 
 def knapsack(weights: np.ndarray, n: int, forbidden_combinations: List[List[str]], names: np.ndarray, values: np.ndarray, c: int = 10) -> Tuple[float, List[str]]:

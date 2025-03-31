@@ -198,7 +198,7 @@ def classify_targets_html(target_have_drug, target_no_drug, target_FDA_approved,
         'Clinical data', str(len(target_clinical_trial)))
 
     soup = BeautifulSoup(text_html, 'html.parser')
-    with open('output/' + disease_name + ' reported_number_' + str(
+    with open('results/' + disease_name + ' reported_number_' + str(
             reported_number) + '/' + dir_name + '/Targets_pie_chart.html', 'w', encoding='utf-8') as fp:
         fp.write(str(soup))
 
@@ -313,9 +313,9 @@ def set_config_auto():
     interaction_num = config['interaction_num']
     target_max_number = config['target_max_number']  # 靶标推荐最大值,根据文献数量进行排序
 
-    os.makedirs('output/' + disease_name + ' reported_number_' + str(reported_number), exist_ok=True)
-    os.makedirs('output/' + disease_name + ' reported_number_' + str(reported_number) + '/Target', exist_ok=True)
-    os.makedirs('output/' + disease_name + ' reported_number_' + str(reported_number) + '/PPI_Target', exist_ok=True)
+    os.makedirs('results/' + disease_name + ' reported_number_' + str(reported_number), exist_ok=True)
+    os.makedirs('results/' + disease_name + ' reported_number_' + str(reported_number) + '/Target', exist_ok=True)
+    os.makedirs('results/' + disease_name + ' reported_number_' + str(reported_number) + '/PPI_Target', exist_ok=True)
 
     return disease_name, reported_number, interaction_num, target_max_number
 

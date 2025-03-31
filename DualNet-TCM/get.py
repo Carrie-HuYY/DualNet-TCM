@@ -200,7 +200,7 @@ def get_proteins(by, items) -> pd.DataFrame:
 
 
 
-def get_tcm_SD(by, items) -> pd.DataFrame:
+def get_SD(by, items) -> pd.DataFrame:
     """
         读取HerbiV_proteins数据集，返回items中蛋白的信息。
         Read the HerbiV_proteins dataset and return the protein(s) information in items.

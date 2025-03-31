@@ -1,11 +1,11 @@
-# 4DNet-TCM (中药整合药理学数据库)
+# TCM-IPD (中药整合药理学数据库)
 
-***4DNet-TCM*** (4D，Drug：中药及西药；Disease：中医辩证及西医病症；Detox：毒理学；Document：文本挖掘): 
-从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络，同时开发多种分析功能。
+***TCM-IPD*** (Traditional Chinese Medicine - Integrated Pharmacology Database): 一个基于整合药理学的中药网药靶点分析与毒性筛查自动化平台。
+
+从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络，同时开发多种分析功能的整合药理学数据库。
 - 1.基于文本挖掘对候选蛋白或基因进行筛选和分类，缩小实验验证范围。 
 - 2.纳入中药毒理学的安全性评估筛选算法，辅助构建中药毒理学网络。
 - 3.基于大量病历数据的中医辩证预测，中医角度辅助老药新用和靶点寻找。
-
 
 - [1. 简介](#简介)
 
@@ -33,10 +33,10 @@
 
 ## 安装
 
-可以使用pip安装4DNet-TCM
+可以使用pip安装TCM-IPD
 
 ```cmd
-pip install 4DNet-TCM
+pip install TCM-IPD
 ```
 
 requirement包括(Python版本需要≥3.9，其余没有强制要求)
@@ -55,7 +55,7 @@ numpy~=1.21.6
 从中医辩证开始，构建中药整合药理学
 
 ```python
-from TCM-3 import analysis
+from TCM-IPD import analysis
 analysis.from_SD(
   SD_ID, 
   score=990, 
@@ -90,7 +90,7 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 从中药或者方剂开始，构建中药整合药理学网络
 
 ```python
-from DualNet-TCM import analysis
+from TCM-IPD import analysis
 analysis.from_TCM_or_Formula(
   tcm_or_formula, 
   score=990, 
@@ -126,7 +126,7 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 从靶点开始，构建中药整合药理学
 
 ```python
-from DualNet-TCM import analysis
+from TCM-IPD import analysis
 analysis.from_Protein(
   protein,
   score=0,

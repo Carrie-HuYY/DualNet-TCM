@@ -4,7 +4,7 @@ import get
 import textwrap
 import pandas as pd
 from pyecharts import options as opts
-from pyecharts.charts import Sunburst ,Tree ,Bar ,Page, Graph
+from pyecharts.charts import Sunburst ,Tree ,Bar ,Page, Graph, Pie
 from elasticsearch import Elasticsearch
 
 
@@ -525,7 +525,8 @@ def re_name(SD, SD_Formula_Links, formula, formula_tcm_links, tcm, tcm_chem_link
     out_gene = protein_c[['gene_name']].rename(columns={'gene_name': 'Key'})
     out_gene['Attribute'] = 'Proteins'
 
-    return out_sd, out_sd_formula_links, out_formula, out_formula_tcm_links, out_tcm, out_tcm_chem, out_chem, out_chem_protein_links, out_gene
+    return (out_sd, out_sd_formula_links, out_formula, out_formula_tcm_links, out_tcm,
+            out_tcm_chem, out_chem, out_chem_protein_links, out_gene)
 
 
 def out_for_cyto(SD,
@@ -561,57 +562,88 @@ def out_for_cyto(SD,
     pd.concat([SD, formula, tcm, chem, protein]).to_csv(os.path.join(path, "Type.csv"), index=False)
 
 
-def vis(tcm, tcm_chem_links, chem, chem_protein_links, protein, path='result'):
-    """
-    使用pyecharts可视化分析结果
-    :param tcm: pd.DataFrame类型，中药信息
-    :param tcm_chem_links: pd.DataFrame类型，中药-化合物（中药成分）连接信息
-    :param chem: pd.DataFrame类型，化合物（中药成分）信息
-    :param chem_protein_links: pd.DataFrame类型，化合物（中药成分）-蛋白质（靶点）连接信息
-    :param protein: pd.DataFrame类型，蛋白质（靶点）连接信息
-    :param path: 字符串类型，存放结果的目录
-    """
-    # 若无path目录，先创建该目录
+
+def vis(SD_df, SD_formula_links_df, formula_df, formula_tcm_links_df, tcm_df, tcm_chem_df, chem_df, chem_pro_df, pro_df, path):
+
     if not os.path.exists(path):
         os.mkdir(path)
 
-    tcm, tcm_chem_links, chem, chem_protein_links, protein = \
-        re_name(tcm, tcm_chem_links, chem, chem_protein_links, protein)
+    SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, protein = \
+        re_name(SD_df, SD_formula_links_df, formula_df, formula_tcm_links_df, tcm_df, tcm_chem_df, chem_df, chem_pro_df, pro_df)
 
+    plot_circle(SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, protein, path)
+    plot_node_category_pie(SD, formula, tcm, chem, protein, path)
+
+
+def plot_circle(SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, protein, path):
     nodes = []
-    edges = []
+    links = []
 
     categories = [
-        {"name": "中药", "color": "#61a0a8"},
-        {"name": "化学成分", "color": "#f47920"},
-        {"name": "靶点", "color": "#ca8622"},
+        {"name": "中药", "color": "#61a0a8"},  # 浅蓝色
+        {"name": "成分", "color": "#f47920"},  # 橙色
+        {"name": "靶点", "color": "#ca8622"},  # 土黄色
+        {"name": "辩证", "color": "#d48265"},  # 红棕色
+        {"name": "方剂", "color": "#749f83"},  # 橄榄绿
     ]
 
-    for index, row in tcm_chem_links.iloc[0:].iterrows():
-        chinese_medicine = row[0]
-        chemical_component = row[1]
-        nodes.append({'name': chinese_medicine, "symbolSize": 20, 'category': 0, "color": "#1FA9E9"})
-        nodes.append({'name': chemical_component, "symbolSize": 20, 'category': 1, "color": "#FFFF00"})
-        edges.append({'source': chinese_medicine, 'target': chemical_component})
+    # 筛选每个类别的前50个节点（如果存在）
+    def get_top_nodes(df, column='Key', top_n=50):
+        """返回前 top_n 个节点（按出现频率或自定义规则）"""
+        return df[column].value_counts().head(top_n).index.tolist()
 
-    for index, row in chem_protein_links.iloc[0:].iterrows():
-        chemical_component = row[0]
-        target = row[1]
-        nodes.append({'name': chemical_component, "symbolSize": 20, 'category': 1, "color": "#FFFF00"})
-        nodes.append({'name': target, "symbolSize": 20, 'category': 2, "color": "#000000"})
-        edges.append({'source': chemical_component, 'target': target})
+    top_sd = get_top_nodes(SD)
+    top_formula = get_top_nodes(formula)
+    top_tcm = get_top_nodes(tcm)
+    top_chem = get_top_nodes(chem)
+    top_protein = get_top_nodes(protein)
 
-    unique_list = list(set(tuple(item.items()) for item in nodes))
-    nodes = [dict(item) for item in unique_list]
+    # 保存所有筛选后的节点名称（用于后续边的过滤）
+    selected_nodes = set(top_sd + top_formula + top_tcm + top_chem + top_protein)
 
-    unique_list = list(set(tuple(item.items()) for item in nodes))
-    nodes = [dict(item) for item in unique_list]
+    def add_nodes(node_list, id_list, category, symbol_size=20):
+        """只添加在筛选列表中的节点"""
+        for node_id in id_list:
+            if node_id in selected_nodes:  # 确保节点在筛选范围内
+                nodes.append({
+                    'name': str(node_id),
+                    'symbol_size': symbol_size,
+                    'category': category,
+                    'itemStyle': {'color': categories[category]['color']}
+                })
+
+    def add_links(link_df, source_col=0, target_col=1):
+        """只添加两端节点都在筛选列表中的边"""
+        for _, row in link_df.iterrows():
+            source = str(row.iloc[source_col])
+            target = str(row.iloc[target_col])
+            if source in selected_nodes and target in selected_nodes:
+                links.append({
+                    'source': source,
+                    'target': target,
+                    'lineStyle': {'opacity': 0.5, 'width': 0.3}
+                })
+
+    # 添加节点（只保留前50个）
+    add_nodes(nodes, SD['Key'].tolist(), category=3, symbol_size=15)      # 辩证
+    add_nodes(nodes, formula['Key'].tolist(), category=4, symbol_size=20) # 方剂
+    add_nodes(nodes, tcm['Key'].tolist(), category=0, symbol_size=25)     # 中药
+    add_nodes(nodes, chem['Key'].tolist(), category=1, symbol_size=15)    # 化学成分
+    add_nodes(nodes, protein['Key'].tolist(), category=2, symbol_size=10) # 靶点
+
+    # 添加边（自动过滤无效连接）
+    add_links(formula_tcm_links)
+    add_links(SD_formula_links)
+    add_links(tcm_chem_links)
+    add_links(chem_protein_links)
+
+    nodes = list({node['name']: node for node in nodes}.values())
 
     Graph(init_opts=opts.InitOpts(width="2400px", height="1200px")) \
         .add(
         '',
         nodes=nodes,
-        links=edges,
+        links=links,
         categories=categories,
         repulsion=8000,
         layout="circular",
@@ -623,86 +655,76 @@ def vis(tcm, tcm_chem_links, chem, chem_protein_links, protein, path='result'):
         title_opts=opts.TitleOpts(title=''),
         legend_opts=opts.LegendOpts(orient="vertical", pos_left="2%", pos_top="20%")
     ) \
-        .render(path=os.path.join(path, "Graph.html"))
+        .render(path=os.path.join(path, "Circle.html"))
 
 
-def tcm_vis(formula_df, formula_tcm_links_df, formula_SD_links_df, path):
-    nodes = []
-    links = []
+def plot_node_category_pie(SD, formula, tcm, chem, pro, path):
+    """
+    绘制节点类别的交互式饼图（修正配色版）
+    :param SD: 辩证数据集
+    :param formula: 方剂数据集
+    :param tcm: 中药数据集
+    :param chem: 化学成分数据集
+    :param pro: 靶点数据集
+    :param path: 输出目录
+    """
+    if not os.path.exists(path):
+        os.makedirs(path, exist_ok=True)
 
-    # 添加复方节点
-    for index, row in formula_df.iterrows():
-        formula_id = row['DNFID']
-        nodes.append({'name': str(formula_id), 'symbol_size': 40, 'category': 0})
+    # 1. 计算各类节点总数
+    category_counts = {
+        "辩证": len(SD['Key'].unique()),
+        "方剂": len(formula['Key'].unique()),
+        "中药": len(tcm['Key'].unique()),
+        "成分": len(chem['Key'].unique()),
+        "靶点": len(pro['Key'].unique())
+    }
 
-    # 添加中药节点
-    for tcm_id in formula_tcm_links_df['DNHID'].tolist():
-        nodes.append({'name': str(tcm_id), 'symbol_size': 20, 'category': 1})
+    labels = ["中药", "成分", "靶点", "辩证", "方剂"]  # 固定顺序
+    values = [category_counts[name] for name in labels]  # 按固定顺序取值
 
-    # 添加SD节点
-    for sd_id in formula_SD_links_df['DNSID'].tolist():
-        nodes.append({'name': str(sd_id), 'symbol_size': 40, 'category': 2})
+    color_series = [
+        "#61a0a8",
+        "#3498db",
+        "#ca8622",
+        "#d48265",
+        "#749f83"
+    ]
 
-    # 添加复方-中药边
-    for index, row in formula_tcm_links_df.iloc[0:].iterrows():
-        formula = row.iloc[0]
-        tcm = row.iloc[1]
-        links.append({'source': str(formula), 'target': str(tcm)})
-
-    for index, row in formula_SD_links_df.iloc[0:].iterrows():
-        SD = row.iloc[0]
-        formula = row.iloc[1]
-        links.append({'source': str(formula), 'target': str(SD)})
-
-    # 去重节点
-    unique_list = list(set(tuple(item.items()) for item in nodes))
-    nodes = [dict(item) for item in unique_list]
-
-    # 创建图表
-    graph_network = (
-        Graph(init_opts=opts.InitOpts(width="2400px", height="1200px"))  # 使用百分比设置宽高
+    pie = (
+        Pie(init_opts=opts.InitOpts(width="1000px", height="600px", theme="light"))
         .add(
-            series_name="",
-            nodes=nodes,
-            links=links,
-            categories=[
-                {"name": "复方"},  # 对应category 0
-                {"name": "中药"},  # 对应category 1
-                {"name": "辩证"}  # 对应category 2
-            ],
-            repulsion=8000,  # 节点之间的斥力
-            layout="force",  # 使用力导向布局
-            linestyle_opts=opts.LineStyleOpts(),  # 边的样式
-            label_opts=opts.LabelOpts(is_show=True, position="inside"),  # 节点标签
+            series_name="节点类别分布",
+            data_pair=list(zip(labels, values)),
+            radius=["40%", "75%"],  # 调整半径增强可读性
+            center=["50%", "50%"],
+            label_opts=opts.LabelOpts(
+                formatter="{b}: {c} ({d}%)",
+                font_size=12,
+                color="#333"
+            ),
+            color=color_series
         )
         .set_global_opts(
-            title_opts=opts.TitleOpts(title="网络图示例"),  # 图表标题
-            tooltip_opts=opts.TooltipOpts(trigger="item", formatter="{b}")  # 鼠标悬停提示
+            title_opts=opts.TitleOpts(
+                title="网络节点类别分布",
+                subtitle=f"总节点数: {sum(values)}",
+                pos_left="center",
+                title_textstyle_opts=opts.TextStyleOpts(font_size=16)
+            ),
+            legend_opts=opts.LegendOpts(
+                orient="vertical",
+                pos_right="3%",
+                pos_top="15%",
+                item_width=12,
+                item_height=12,
+                textstyle_opts=opts.TextStyleOpts(font_size=12)
+            ),
+            tooltip_opts=opts.TooltipOpts(
+                trigger="item",
+                formatter="{a} <br/>{b}: {c} ({d}%)"
+            )
         )
     )
 
-    graph_circle = (
-        Graph(init_opts=opts.InitOpts(width="2400px", height="1200px"))  # 使用百分比设置宽高
-        .add(
-            series_name="",
-            nodes=nodes,
-            links=links,
-            repulsion=8000,
-            layout="circular",
-            is_rotate_label=True,
-            linestyle_opts=opts.LineStyleOpts(color="source", curve=0.3),
-            label_opts=opts.LabelOpts(position="right"),
-            categories=[
-                {"name": "复方"},  # 对应category 0
-                {"name": "中药"},  # 对应category 1
-                {"name": "辩证"}  # 对应category 2
-            ],
-        )
-        .set_global_opts(
-            title_opts=opts.TitleOpts(title="网络图示例"),  # 图表标题
-            tooltip_opts=opts.TooltipOpts(trigger="item", formatter="{b}")  # 鼠标悬停提示
-        )
-    )
-
-    graph_network.render(f"{path}/graph_network.html")
-    graph_circle.render(f"{path}/graph_circle.html")
+    pie.render(os.path.join(path, "Pie.html"))
