@@ -370,10 +370,6 @@ def research_status_test(protein_list_path):
     output.get_sunburst_tree_bar('PPI_Target', p_fda_no_review, p_ct_no_review, p_fa, disease_name,
                                  reported_number, Symbol_To_Target_wm, es)
 
-    print('The program is finished!')
-    print('-------------------------------------------------------------------')
-    input('Please enter any key to exit')
-
 
 def get_user_input():
     """交互式获取用户输入，返回需要更新的配置字段"""

@@ -73,7 +73,7 @@ analysis.from_SD(
 storing the IDs of the syndrome differentiations to be analyzed, such as ['DNS001'], Specific ID numbers and SD information can be found in the[SD Syndrome Differentiation Dataset].(/DualNet-TCM/Data/SD.xlsx)
 
 `from_SD`Optional parameters：
-- `score`: int type，in the [Chemical_Protein_Links Dataset](/DualNet-TCM/Data/Chemical_Protein_Links.xlsx), 
+- `score`: int type，in the [Chemical_Protein_Links Dataset](/TCM-VOTER/Data/Chemical_Protein_Links.xlsx), 
 only records with a combined_score greater than or equal to scorewill be filtered out, default is 990；
 - `out_graph`: boolean type, whether to output an ECharts-based interactive network visualization graph in HTML format, default is `False`；
 - `out_for_cytoscape`: boolean type, whether to output files for Cytoscape visualization, default is `False`；
@@ -102,11 +102,11 @@ analysis.from_TCM_or_Formula(
 )
 ```
 
-`from_TCM_or_Formula` requires a mandatory parameter tcm_or_formula: any combinable data type that can use in to determine if an element is in it, storing the IDs of the TCM or formulas to be analyzed, such as ['DNH0367', 'DNH1695']. Specific ID numbers and TCM/formula information can be found in the [Formula Dataset](/DualNet-TCM/Data/Formula.xlsx)
- and [TCM Dataset](/DualNet-TCM/Data/TCM.xlsx)
+`from_TCM_or_Formula` requires a mandatory parameter tcm_or_formula: any combinable data type that can use in to determine if an element is in it, storing the IDs of the TCM or formulas to be analyzed, such as ['DNH0367', 'DNH1695']. Specific ID numbers and TCM/formula information can be found in the [Formula Dataset](/TCM-VOTER/Data/Formula.xlsx)
+ and [TCM Dataset](/TCM-VOTER/Data/TCM.xlsx)
 
 `from_TCM_or_Formula`Optional parameters：
-- `score`: int type, in the [Chemical_Protein_Links Dataset](/DualNet-TCM/Data/Chemical_Protein_Links.xlsx)
+- `score`: int type, in the [Chemical_Protein_Links Dataset](/TCM-VOTER/Data/Chemical_Protein_Links.xlsx)
 , only records with a combined_score greater than or equal to scorewill be filtered out, default is ；
 - `out_graph`: boolean type, whether to output an ECharts-based interactive network visualization graph in HTML format, default is `False`；
 - `out_for_cytoscape`: boolean type, whether to output files for Cytoscape visualization, default is `False`；
@@ -138,10 +138,10 @@ analysis.from_Protein(
 )
 ```
 
-`from_Protein` requires a mandatory parameter protein： any combinable data type that can use in to determine if an element is in it, storing the IDs of the TCM or formulas to be analyzed, such as ['ENSP00000381588', 'ENSP00000252519']. Specific ID numbers and target information can be found in the [Target Dataset](/DualNet-TCM/Data/Protein.xlsx)
+`from_Protein` requires a mandatory parameter protein： any combinable data type that can use in to determine if an element is in it, storing the IDs of the TCM or formulas to be analyzed, such as ['ENSP00000381588', 'ENSP00000252519']. Specific ID numbers and target information can be found in the [Target Dataset](/TCM-VOTER/Data/Protein.xlsx)
 
 `from_Protein` Optional parameters:
-- `score`: int type, in the [Chemical_Protein_Links Dataset](/DualNet-TCM/Data/Chemical_Protein_Links.xlsx), 
+- `score`: int type, in the [Chemical_Protein_Links Dataset](/TCM-VOTER/Data/Chemical_Protein_Links.xlsx), 
 only records with a combined_score greater than or equal to scorewill be filtered out, default is `0`；
 - `random_state`: int type, specifies the random seed used by the optimization model, default is `None`, meaning no random seed is specified;
 - `num`: int type, specifies the number of solution sets to be generated during optimization, default is `1000`；

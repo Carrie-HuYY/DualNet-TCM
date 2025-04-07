@@ -1,11 +1,13 @@
-# TCM-IPD (中药整合药理学数据库)
+# TCM-VOTER (中药网络药理学数据库)
 
-***TCM-IPD*** (Traditional Chinese Medicine - Integrated Pharmacology Database): 一个基于整合药理学的中药网药靶点分析与毒性筛查自动化平台。
+***TCM-VOTER*** (Traditional Chinese Medicine - Visualization - Omics and Text driven Target Enrichment and Research): 
+一个聚焦于网络结构，基于组学与文本挖掘的靶标富集与药理学研究工具
 
-从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"的双向网络，同时开发多种分析功能的整合药理学数据库。
+从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"网络，同时开发多种分析功能的网络药理学数据库。
 - 1.基于文本挖掘对候选蛋白或基因进行筛选和分类，缩小实验验证范围。 
 - 2.纳入中药毒理学的安全性评估筛选算法，辅助构建中药毒理学网络。
 - 3.基于大量病历数据的中医辩证预测，中医角度辅助老药新用和靶点寻找。
+- 4.开发组方优化算法/成分评价算法/可视化方案
 
 - [1. 简介](#简介)
 
@@ -33,7 +35,7 @@
 
 ## 安装
 
-可以使用pip安装TCM-IPD
+可以使用pip安装
 
 ```cmd
 pip install TCM-IPD
@@ -70,10 +72,10 @@ analysis.from_SD(
 ```
 
 `from_SD`需要一个必需形参`SD_ID`：任何可以使用in判断一个元素是否在辩证数据集中的组合数据类型，
-存储拟分析的辩证的ID， 如['DNS001'],具体ID编号及SD信息可见于[SD辩证数据集](/DualNet-TCM/Data/SD.xlsx)
+存储拟分析的辩证的ID， 如['DNS001'],具体ID编号及SD信息可见于[SD辩证数据集](/TCM-VOTER/Data/SD.xlsx)
 
 `from_SD`的可选形参有：
-- `score`: int类型，[Chemical_Protein_Links数据集](/DualNet-TCM/Data/Chemical_Protein_Links.xlsx)
+- `score`: int类型，[Chemical_Protein_Links数据集](/TCM-VOTER/Data/Chemical_Protein_Links.xlsx)
 中仅combined_score大于等于score的记录会被筛选出，默认为990；
 - `out_graph`: boolean类型，是否输出基于ECharts的html格式的网络可视化图，默认为`False`；
 - `out_for_cytoscape`: boolean类型，是否输出用于Cytoscape绘图的文件，默认为`False`；
@@ -105,11 +107,11 @@ analysis.from_TCM_or_Formula(
 ```
 
 `from_TCM_or_Formula`需要一个必需形参tcm_or_formula：任何可以使用in判断一个元素是否在其中的组合数据类型，
-存储拟分析的中药或复方的ID， 如['DNH0367', 'DNH1695']，具体ID编号及中药/方剂信息可见于[方剂数据集](/DualNet-TCM/Data/Formula.xlsx)
-和[中药数据集](/DualNet-TCM/Data/TCM.xlsx)
+存储拟分析的中药或复方的ID， 如['DNH0367', 'DNH1695']，具体ID编号及中药/方剂信息可见于[方剂数据集](/TCM-VOTER/Data/Formula.xlsx)
+和[中药数据集](/TCM-VOTER/Data/TCM.xlsx)
 
 `from_TCM_or_Formula`的可选形参有：
-- `score`: int类型，[Chemical_Protein_Links数据集](/DualNet-TCM/Data/Chemical_Protein_Links.xlsx)
+- `score`: int类型，[Chemical_Protein_Links数据集](/TCM-VOTER/Data/Chemical_Protein_Links.xlsx)
 中仅combined_score大于等于score的记录会被筛选出，默认为990；
 - `out_graph`: boolean类型，是否输出基于ECharts的html格式的网络可视化图，默认为`False`；
 - `out_for_cytoscape`: boolean类型，是否输出用于Cytoscape绘图的文件，默认为`False`；
@@ -145,10 +147,10 @@ analysis.from_Protein(
 ```
 
 `from_Protein`需要一个必需形参protein：任何可以使用in判断一个元素是否在其中的组合数据类型，
-存储拟分析的中药或复方的ID， 如['ENSP00000381588', 'ENSP00000252519']，具体ID编号及靶点信息可见于[靶点数据集](/DualNet-TCM/Data/Protein.xlsx)
+存储拟分析的中药或复方的ID， 如['ENSP00000381588', 'ENSP00000252519']，具体ID编号及靶点信息可见于[靶点数据集](/TCM-VOTER/Data/Protein.xlsx)
 
 `from_Protein`的可选形参有：
-- `score`: int类型，[Chemical_Protein_Links数据集](/DualNet-TCM/Data/Chemical_Protein_Links.xlsx)
+- `score`: int类型，[Chemical_Protein_Links数据集](/TCM-VOTER/Data/Chemical_Protein_Links.xlsx)
 中仅combined_score大于等于score的记录会被筛选出，默认为`0`；
 - `random_state`: int类型，指定优化模型使用的随机数种子，默认为`None`，即不指定随机数种子；
 - `num`: int类型，指定优化时需生成的解的组数，默认为`1000`；
