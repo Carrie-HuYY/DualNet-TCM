@@ -35,10 +35,10 @@
 
 ## 安装
 
-可以使用pip安装
+可以使用pip安装TCM-VOTER
 
 ```cmd
-pip install TCM-IPD
+pip install TCM-VOTER
 ```
 
 requirement包括(Python版本需要≥3.9，其余没有强制要求)
