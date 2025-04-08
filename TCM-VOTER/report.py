@@ -1,132 +1,191 @@
 import pandas as pd
-import re
+from datetime import datetime
 
 
-def parse_toxicity_data(toxic_effect):
-    """解析毒性数据字符串，返回结构化字典"""
-    toxicity_data = {
-        'human': [],
-        'rat': [],
-        'mice': [],
-        'rabbit': []
-    }
+def read_toxicity_data():
+    """
+    从Excel读取毒性数据
 
-    species_entries = re.split(r';\s*(?=[A-Za-z]+:)', toxic_effect)
+    参数:
 
-    for entry in species_entries:
-        if not entry:
-            continue
+    返回:
+        四个DataFrame: (targets_df, chem_df, formula_df, herb_df)
+    """
 
-        match = re.match(r'([A-Za-z]+):\s*(.+)', entry)
-        if not match:
-            continue
+    try:
+        # 读取各表格数据
+        targets_df = pd.read_excel("Data/Toxicity/靶点.xlsx")
+        chem_df = pd.read_excel("Data/Toxicity/成分.xlsx")
+        formula_df = pd.read_excel("Data/Toxicity/方剂.xlsx")
+        herb_df = pd.read_excel("Data/Toxicity/中药.xlsx")
 
-        species = match.group(1).lower()
-        effects = match.group(2)
+        print("数据读取成功！")
+        return targets_df, chem_df, formula_df, herb_df
 
-        effect_list = re.split(r'\|\|', effects)
-
-        for effect in effect_list:
-            effect_match = re.match(r'([^\[]+)(\[.+\])', effect.strip())
-            if effect_match:
-                effect_type = effect_match.group(1).strip()
-                refs = effect_match.group(2)
-                ref_count = len(re.findall(r'\[\d+-\d+\]', refs))
-
-                toxicity_data[species].append({
-                    'type': effect_type,
-                    'references': refs,
-                    'count': ref_count
-                })
-
-    return toxicity_data
+    except Exception as e:
+        print(f"读取数据时出错: {str(e)}")
+        return None, None, None, None
 
 
-def generate_toxicity_report(component_name, toxic_effect):
-    """生成单个成分的毒性报告"""
-    toxicity_data = parse_toxicity_data(toxic_effect)
+def generate_toxicity_report(toxic_formula, toxic_herb, toxic_chemical, toxic_protein,
+                             output_file="results/toxicity_report.txt"):
+    """
+    生成毒性报告
 
-    report_lines = [
-        f"成分安全评估报告：{component_name}",
-        "=" * 50
-    ]
+    参数:
+        toxic_targets_df: 有毒靶点DataFrame
+        toxic_chem_df: 有毒成分DataFrame
+        toxic_formula_df: 有毒方剂DataFrame
+        toxic_herb_df: 有毒中药DataFrame
+        output_file: 输出报告文件名
 
-    species_order = ['human', 'rat', 'mice', 'rabbit']
+    返回:
+        生成文本报告文件
+    """
+    # 获取当前日期
+    current_date = datetime.now().strftime("%Y-%m-%d")
 
-    for species in species_order:
-        if not toxicity_data[species]:
-            continue
+    # 初始化报告内容
+    report_content = f"中药毒性分析报告\n生成日期: {current_date}\n\n"
+    report_content += "=" * 50 + "\n"
 
-        species_names = {
-            'human': '人类',
-            'rat': '大鼠',
-            'mice': '小鼠',
-            'rabbit': '兔'
-        }
-
-        report_lines.append(f"\n▶ {species_names[species]}实验数据：")
-
-        sorted_effects = sorted(toxicity_data[species],
-                                key=lambda x: x['count'],
-                                reverse=True)
-
-        for effect in sorted_effects:
-            type_translation = {
-                'Cardiotoxicity': '心脏毒性',
-                'Hepatotoxicity': '肝毒性',
-                'Nephrotoxicity': '肾毒性',
-                'Neurotoxicity': '神经毒性',
-                'Reproductive Toxicity': '生殖毒性',
-                'Developmental Toxicity': '发育毒性',
-                'Genotoxicity': '遗传毒性',
-                'Respiratory Toxicity': '呼吸系统毒性',
-                'Digestive System Toxicity': '消化系统毒性',
-                'Other Side-effects': '其他毒副作用'
-            }
-
-            chinese_type = type_translation.get(effect['type'], effect['type'])
-            report_lines.append(
-                f"• 观察到{chinese_type}（文献支持：{effect['references']}，共{effect['count']}篇相关研究）")
-
-    report_lines.append("\n⚠ 风险提示：")
-
-    if toxicity_data['human']:
-        human_effects = [e['type'] for e in toxicity_data['human']]
-        if 'Cardiotoxicity' in human_effects:
-            report_lines.append("- 该成分对人类显示心脏毒性，临床使用需特别谨慎！")
-        if 'Hepatotoxicity' in human_effects:
-            report_lines.append("- 存在明确的肝毒性风险，长期使用需监测肝功能指标")
+    # 1. 有毒方剂汇总
+    report_content += "1. 有毒方剂汇总:\n"
+    if not toxic_formula.empty:
+        for _, row in toxic_formula.iterrows():
+            report_content += f"- 方剂名称: {row['formula_name']} ({row['formula_name_pinyin']})\n"
+            report_content += f"  剂型: {row['dosage_form']}\n"
+            report_content += f"  毒性效应: {row['toxicity_effect']}\n"
+            report_content += f"  英文毒性效应: {row['toxicity_effect_en']}\n\n"
     else:
-        report_lines.append("- 缺乏人类直接毒性数据，建议参考动物实验数据评估风险")
+        report_content += "未发现有毒方剂记录\n\n"
 
-    if toxicity_data['rat'] or toxicity_data['mice']:
-        report_lines.append("- 动物实验显示多系统毒性，建议进行更全面的安全性评估")
+    # 2. 有毒中药汇总
+    report_content += "2. 有毒中药汇总:\n"
+    if not toxic_herb.empty:
+        for _, row in toxic_herb.iterrows():
+            report_content += f"- 中药名称: {row['herb_name']} ({row['herb_name_pinyin']})\n"
+            report_content += f"  拉丁名: {row['herb_name_latin']}\n"
+            report_content += f"  毒性程度: {row['toxicity_degree']} ({row['toxicity_degree_en']})\n"
+            report_content += f"  功效: {row['action']} ({row['action_en']})\n"
+            report_content += f"  毒性效应: {row['toxic_effect']}\n"
+            report_content += f"  英文毒性效应: {row['toxic_effect_en']}\n\n"
+    else:
+        report_content += "未发现有毒中药记录\n\n"
 
-    return "\n".join(report_lines)
+    # 3. 有毒成分汇总
+    report_content += "3. 有毒成分汇总:\n"
+    if not toxic_chemical.empty:
+        for _, row in toxic_chemical.iterrows():
+            report_content += f"- 成分名称: {row['component_name']} ({row['component_name_en']})\n"
+            report_content += f"  分类: {row['ingredient_classification']} ({row['ingredient_classification_en']})\n"
+            report_content += f"  分子量: {row['molecular_weight']}\n"
+            report_content += f"  分子式: {row['molecular_formula']}\n"
+            report_content += f"  CAS号: {row['CAS']}\n\n"
+    else:
+        report_content += "未发现有毒成分记录\n\n"
+
+    # 4. 有毒靶点汇总
+    report_content += "4. 有毒靶点汇总:\n"
+    if not toxic_protein.empty:
+        for _, row in toxic_protein.iterrows():
+            report_content += f"- 基因符号: {row['gene_symbol']}\n"
+            report_content += f"  基因全名: {row['gene_full_name']}\n"
+            report_content += f"  Uniprot ID: {row['UniprotID']}\n"
+            report_content += f"  毒性类型: {row['TCMSTD_Target']} ({row['TCMSTD_Target_cn']})\n\n"
+    else:
+        report_content += "未发现有毒靶点记录\n\n"
+
+    # 5. 毒性类型统计
+    report_content += "5. 毒性类型统计:\n"
+
+    # 从方剂中提取毒性类型
+    formula_toxicity = []
+    if not toxic_formula.empty:
+        for effect in toxic_formula['toxicity_effect']:
+            parts = effect.split("||")
+            for part in parts:
+                if ":" in part:
+                    tox_type = part.split(":")[1].strip()
+                    formula_toxicity.append(tox_type.split("[")[0].strip())
+
+    # 从中药中提取毒性类型
+    herb_toxicity = []
+    if not toxic_herb.empty:
+        for effect in toxic_herb['toxic_effect']:
+            parts = effect.split("||")
+            for part in parts:
+                if ":" in part:
+                    tox_type = part.split(":")[1].strip()
+                    herb_toxicity.append(tox_type.split("[")[0].strip())
+
+    # 从靶点中提取毒性类型
+    target_toxicity = []
+    if not toxic_protein.empty:
+        target_toxicity = toxic_protein['TCMSTD_Target_cn'].tolist()
+
+    # 合并所有毒性类型
+    all_toxicity = formula_toxicity + herb_toxicity + target_toxicity
+
+    # 统计毒性类型
+    if all_toxicity:
+        toxicity_counts = pd.Series(all_toxicity).value_counts()
+        for tox_type, count in toxicity_counts.items():
+            report_content += f"- {tox_type}: {count}次提及\n"
+    else:
+        report_content += "未发现毒性类型记录\n"
+
+    # 写入报告文件
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(report_content)
+
+    print(f"毒性报告已生成: {output_file}")
 
 
-def generate_all_reports(df, output_file=None):
-    """为整个数据框生成报告"""
-    full_report = []
+def filter_toxic_data(targets_df, chem_df, formula_df, herb_df):
+    """
+    筛选有毒数据
 
-    for _, row in df.iterrows():
-        if pd.notna(row['toxic_effect']):
-            report = generate_toxicity_report(
-                row['component_name'],
-                row['toxic_effect']
-            )
-            full_report.append(report)
-            full_report.append("\n" + "=" * 80 + "\n")
+    参数:
+        targets_df: 靶点DataFrame
+        chem_df: 成分DataFrame
+        formula_df: 方剂DataFrame
+        herb_df: 中药DataFrame
 
-    full_report_text = "\n".join(full_report)
+    返回:
+        四个DataFrame: (toxic_targets, toxic_chem, toxic_formula, toxic_herb)
+    """
+    targets_toxicity, chem_toxicity, formula_toxicity, herb_toxicity = read_toxicity_data()
 
-    if output_file:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(full_report_text)
+    toxic_formula_mask = formula_toxicity['formula_name'].isin(formula_df['name'])
+    toxic_formula_df = formula_toxicity[toxic_formula_mask]
 
-    return full_report_text
+    toxic_herb_mask = herb_toxicity['herb_name'].isin(herb_df['cn_name'])
+    toxic_herb_df = herb_toxicity[toxic_herb_mask]
+
+    toxic_protein_mask = targets_toxicity['gene_symbol'].isin(targets_df['gene_name'])
+    toxic_protein_df = targets_toxicity[toxic_protein_mask]
+
+    toxic_chemical_mask = chem_toxicity['component_name'].isin(chem_df['Name'])
+    toxic_chemical_df = chem_toxicity[toxic_chemical_mask]
+
+    return toxic_formula_df, toxic_herb_df, toxic_chemical_df, toxic_protein_df
 
 
-if __name__ == '__main__':
-    df = pd.read_excel('Data/Toxicity/中药.xlsx')  # 加载数据
-    report = generate_all_reports(df, 'toxicity_report.txt')
+# 示例使用
+if __name__ == "__main__":
+    import main
+
+    SD_df, SD_Formula_Links_df, formula_df, formula_tcm_links_df, tcm_df, tcm_chem_links_df, chem_df, chem_protein_links_df, protein_df = (
+        main.from_tcm_or_formula(['DNH0158'], research_status_test=False, safety_research=True))
+
+    protein_df = pd.DataFrame(protein_df['gene_name'])
+    chem_df = pd.DataFrame(chem_df['Name'])
+    formula_df = pd.DataFrame(formula_df['name'])
+    tcm_df = pd.DataFrame(tcm_df['cn_name'])
+
+    toxic_formula, toxic_herb, toxic_chemical, toxic_protein = filter_toxic_data(
+        protein_df, chem_df, formula_df, tcm_df
+    )
+
+    generate_toxicity_report(toxic_formula, toxic_herb, toxic_chemical, toxic_protein)

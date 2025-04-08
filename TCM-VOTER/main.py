@@ -1,7 +1,9 @@
 import analysis, report, output, get, compute
 import os
-from tqdm import tqdm
+import time
+from datetime import datetime
 import pandas as pd
+import logging
 
 
 def from_tcm_or_formula(tcm_or_formula_id,
@@ -10,39 +12,47 @@ def from_tcm_or_formula(tcm_or_formula_id,
                         out_for_excel=True,
                         out_for_cytoscape=True,
                         research_status_test=True,
-                        safety_research=False,
+                        safety_research=True,
                         out_graph=True,
                         re=True,
                         path='results'):
     """
-        进行经典的正向网络药理学分析
+    Perform classical forward network pharmacology analysis
 
-        Args:
-            tcm_or_formula_id: 任何可以使用in判断一个元素是否在其中的组合数据类型，拟分析的中药或复方的ID。
-            proteins_id: None 或任何可以使用in判断一个元素是否在其中的组合数据类型，存储拟分析蛋白（靶点）在STITCH中的Ensembl_ID。
-                        默认为None
-            score (int): HerbiV_chemical_protein_links数据集中仅combined_score大于等于score的记录会被筛选出，默认为990。
-            out_for_cytoscape (bool): 是否输出用于Cytoscape绘图的文件，默认为True。
-            out_graph (bool): 是否输出基于ECharts的html格式的网络可视化图，默认为True。
-            re (bool): 是否返回原始分析结果（中药、化合物（中药成分）、蛋白（靶点）及其连接信息）。
-            path (str): 存放结果的目录。
+    Args:
+        tcm_or_formula_id: Any iterable that supports 'in' operation, containing TCM or formula IDs to analyze.
+        proteins_id: None or any iterable that supports 'in' operation, containing Ensembl_IDs of proteins to analyze.
+                    Default is None.
+        score (int): Only records with combined_score >= score in HerbiV_chemical_protein_links will be selected.
+                    Default is 990.
+        out_for_cytoscape (bool): Whether to output files for Cytoscape visualization. Default is True.
+        out_graph (bool): Whether to output ECharts-based HTML network visualization. Default is True.
+        re (bool): Whether to return raw analysis results (TCM, compounds, proteins and their connections).
+        path (str): Directory to store results.
+        research_status_test:
+        out_for_excel:
 
-
-        Returns:
-            formula: 复方信息（仅在输入的tcm_or_formula为HVPID时返回）。
-            formula_tcm_links: 复方-中药连接信息（仅在输入的tcm_or_formula为HVPID时返回）。
-            tcm: 中药信息。
-            tcm_chem_links: 中药-化合物（中药成分）连接信息。
-            chem: 化合物（中药成分）信息。
-            chem_protein_links: 化合物（中药成分）-蛋白（靶点）连接信息。
-            proteins: 蛋白（靶点）信息。
-            :param research_status_test: 
-            :param out_for_excel: 
+    Returns:
+        formula: Formula information (only returned when input is HVPID).
+        formula_tcm_links: Formula-TCM connection info (only returned when input is HVPID).
+        tcm: TCM information.
+        tcm_chem_links: TCM-compound connections.
+        chem: Compound information.
+        chem_protein_links: Compound-protein connections.
+        proteins: Protein information.
     """
 
 
-    if tcm_or_formula_id[0][2] == 'F':  # 判断输入是否为复方的
-        formula = get.get_formula('DNFID', tcm_or_formula_id)  # 获取该复方的信息
+    # Configure logging
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    logger = logging.getLogger(__name__)
+
+    logger.info("Starting network pharmacology analysis")
+
+    # Step 1: Get formula/TCM information
+    logger.info("Fetching formula/TCM information")
+    if tcm_or_formula_id[0][2] == 'F':  # Check if input is formula
+        formula = get.get_formula('DNFID', tcm_or_formula_id)
         formula_tcm_links = get.get_formula_tcm_links('DNFID', formula['DNFID'])
         tcm = get.get_tcm('DNHID', formula_tcm_links['DNHID'])
         sd_formula_links = get.get_SD_Formula_links('DNFID', formula['DNFID'])
@@ -54,15 +64,25 @@ def from_tcm_or_formula(tcm_or_formula_id,
         sd_formula_links = get.get_SD_Formula_links('DNFID', formula['DNFID'])
         sd = get.get_SD('DNSID', sd_formula_links['DNSID'])
 
+    # Step 2: Get chemical information
+    logger.info("Fetching TCM-chemical links")
     tcm_chem_links = get.get_tcm_chem_links('DNHID', tcm['DNHID'])
+    logger.info("Fetching chemical information")
     chem = get.get_chemicals('DNCID', tcm_chem_links['DNCID'])
+
+    # Step 3: Get protein information
+    logger.info(f"Fetching chem-protein links with score >= {score}")
     chem_protein_links = get.get_chem_protein_links('DNCID', chem['DNCID'], score)
 
     if proteins_id is None:
+        logger.info("Fetching protein information")
         proteins = get.get_proteins('Ensembl_ID', chem_protein_links['Ensembl_ID'])
     else:
+        logger.info("Fetching specified protein information")
         proteins = get.get_proteins('Ensembl_ID', proteins_id)
 
+    # Convert to DataFrames
+    logger.info("Converting results to DataFrames")
     SD_df = pd.DataFrame(sd)
     SD_Formula_Links_df = pd.DataFrame(sd_formula_links)
     formula_df = pd.DataFrame(formula)
@@ -73,15 +93,21 @@ def from_tcm_or_formula(tcm_or_formula_id,
     chem_protein_links_df = pd.DataFrame(chem_protein_links)
     protein_df = pd.DataFrame(proteins)
 
+    # Output visualization
     if out_graph:
+        logger.info("Generating visualization")
         output.vis(SD_df, SD_Formula_Links_df, formula_df, formula_tcm_links_df,
                    tcm_df, tcm_chem_links_df, chem_df, chem_protein_links_df, protein_df, path)
 
+    # Output for Cytoscape
     if out_for_cytoscape:
+        logger.info("Generating Cytoscape output")
         output.out_for_cyto(SD_df, SD_Formula_Links_df, formula_df, formula_tcm_links_df,
-                           tcm_df, tcm_chem_links_df, chem_df, chem_protein_links_df, protein_df, path)
+                            tcm_df, tcm_chem_links_df, chem_df, chem_protein_links_df, protein_df, path)
 
+    # Output to Excel
     if out_for_excel:
+        logger.info("Writing results to Excel")
         with pd.ExcelWriter(f"{path}/results.xlsx") as writer:
             SD_df.to_excel(writer, sheet_name="辩证信息", index=False)
             SD_Formula_Links_df.to_excel(writer, sheet_name="辩证-复方信息", index=False)
@@ -93,8 +119,9 @@ def from_tcm_or_formula(tcm_or_formula_id,
             chem_protein_links_df.to_excel(writer, sheet_name="化合物-靶点连接", index=False)
             protein_df.to_excel(writer, sheet_name="靶点信息", index=False)
 
-
+    # Research status test
     if research_status_test:
+        logger.info("Performing research status test")
         analysis.update_config()
 
         protein_research_test = protein_df['gene_name']
@@ -110,19 +137,28 @@ def from_tcm_or_formula(tcm_or_formula_id,
 
         analysis.research_status_test(f"Protein_List.xlsx")
 
+    # Safety research (placeholder)
     if safety_research:
-        return 0
+        logger.info("Performing safety research test")
 
+        protein_df = pd.DataFrame(protein_df['gene_name'])
+        chem_df = pd.DataFrame(chem_df['Name'])
+        formula_df = pd.DataFrame(formula_df['name'])
+        tcm_df = pd.DataFrame(tcm_df['cn_name'])
+
+        toxic_formula, toxic_herb, toxic_chemical, toxic_protein = report.filter_toxic_data(
+            protein_df, chem_df, formula_df, tcm_df
+        )
+
+        report.generate_toxicity_report(toxic_formula, toxic_herb, toxic_chemical, toxic_protein)
+
+    logger.info("Analysis completed")
 
     if re:
-        return (SD_df, SD_Formula_Links_df, formula_df, formula_tcm_links_df,
-                tcm_df, tcm_chem_links_df, chem_df, chem_protein_links_df, protein_df)
+        return SD_df, SD_Formula_Links_df, formula_df, formula_tcm_links_df, tcm_df, tcm_chem_links_df, chem_df, chem_protein_links_df, protein_df
     else:
         return 0
 
-
-import time
-from datetime import datetime
 
 def from_proteins(proteins,
                   score=990,
@@ -130,7 +166,7 @@ def from_proteins(proteins,
                   out_for_cytoscape=True,
                   out_for_excel=True,
                   research_status_test=True,
-                  safety_research=False,
+                  safety_research=True,
                   random_state=None,
                   num=1000,
                   tcm_component=False,
@@ -243,7 +279,17 @@ def from_proteins(proteins,
 
     if safety_research:
         log_step("Safety research (placeholder)")
-        return 0
+
+        protein_df = pd.DataFrame(protein_df['gene_name'])
+        chem_df = pd.DataFrame(chem_df['Name'])
+        formula_df = pd.DataFrame(formula_df['name'])
+        tcm_df = pd.DataFrame(tcm_df['cn_name'])
+
+        toxic_formula, toxic_herb, toxic_chemical, toxic_protein = report.filter_toxic_data(
+            protein_df, chem_df, formula_df, tcm_df
+        )
+
+        report.generate_toxicity_report(toxic_formula, toxic_herb, toxic_chemical, toxic_protein)
 
     log_step("Completed")
     if re:
@@ -258,7 +304,7 @@ def from_SD(SD_ID,
             out_for_cytoscape=True,
             out_for_excel=True,
             research_status_test=True,
-            safety_research=False,
+            safety_research=True,
             re=True,
             path='results/'
             ):
@@ -359,8 +405,17 @@ def from_SD(SD_ID,
 
     if safety_research:
         log_step("Running safety research")
-        # 这里添加安全性研究的代码
-        return 0
+
+        protein_df = pd.DataFrame(protein_df['gene_name'])
+        chem_df = pd.DataFrame(chem_df['Name'])
+        formula_df = pd.DataFrame(formula_df['name'])
+        tcm_df = pd.DataFrame(tcm_df['cn_name'])
+
+        toxic_formula, toxic_herb, toxic_chemical, toxic_protein = report.filter_toxic_data(
+            protein_df, chem_df, formula_df, tcm_df
+        )
+
+        report.generate_toxicity_report(toxic_formula, toxic_herb, toxic_chemical, toxic_protein)
 
     log_step("Completed all operations")
     if re:
@@ -370,5 +425,6 @@ def from_SD(SD_ID,
         return 0
 
 if __name__ == '__main__':
-    from_SD(['DNS0001'])
-    from_proteins(['ENSP00000000233'], score=660, out_for_cytoscape=False, out_graph=False,tcm_component=False, formula_component=False)
+    from_tcm_or_formula(['DNH0158'])
+    #from_SD(['DNS0001'])
+    #from_proteins(['ENSP00000000233'], score=660, out_for_cytoscape=False, out_graph=False,tcm_component=False, formula_component=False)

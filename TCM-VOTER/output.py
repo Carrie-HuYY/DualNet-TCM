@@ -5,7 +5,6 @@ import textwrap
 import pandas as pd
 from pyecharts import options as opts
 from pyecharts.charts import Sunburst ,Tree ,Bar ,Page, Graph, Pie
-from elasticsearch import Elasticsearch
 
 
 def all_targets_tree(fda_unre, fda_re, clinical_unre, clinical_re, dir_name):
