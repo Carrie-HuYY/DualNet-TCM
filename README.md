@@ -57,8 +57,9 @@ numpy~=1.21.6
 从中医辩证开始，构建中药整合药理学
 
 ```python
-from TCM-IPD import analysis
-analysis.from_SD(
+from TCM-VOTER import main
+
+main.from_SD(
   SD_ID, 
   score=990, 
   out_graph=False, 
@@ -92,8 +93,9 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 从中药或者方剂开始，构建中药整合药理学网络
 
 ```python
-from TCM-IPD import analysis
-analysis.from_TCM_or_Formula(
+from TCM-VOTER import main
+
+main.from_TCM_or_Formula(
   tcm_or_formula, 
   score=990, 
   out_graph=False, 
@@ -128,8 +130,8 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 从靶点开始，构建中药整合药理学
 
 ```python
-from TCM-IPD import analysis
-analysis.from_Protein(
+from TCM-VOTER import main
+main.from_Protein(
   protein,
   score=0,
   random_state=None,
@@ -169,11 +171,11 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 
 ## 结果展示
 
-### out_graph
+### 可视化绘图(out_graph)
 
 `out_graph`提供了两种可交互的可视化方案，[范例1](/README_pictures/out_graph_0.png)和[范例2](/README_pictures/out_graph_1.png)
 
-### out_for_cytoscape
+### 输出可用于Cytoscape作图的文件(out_for_cytoscape)
 
 `out_for_cytoscape`给出了可以直接用于cytoscape绘图的两个文件，`type.csv`和`network.csv`，其中格式分别如下：
 
@@ -192,11 +194,17 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 | testosterone | SHBG                |
 | testosterone | IGFBP3              |
 
-### out_for_excel
+### 输出excel(out_for_excel)
 
-### research_status_test
+输出一个名为`results.xlsx`的文件，按照不同的文件名分为函数得到的数据，
 
-### safety_research
+### 研究价值评估(research_status_test)
+
+研究价值评定，根据所得靶点筛选
+
+### 安全性评估(safety_research)
+
+
 
 ## Star History
 

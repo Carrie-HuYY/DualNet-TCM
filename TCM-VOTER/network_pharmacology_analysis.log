@@ -1,0 +1,988 @@
+2025-04-10 14:50:49,676 - INFO - Starting network pharmacology analysis...
+2025-04-10 14:50:49,676 - INFO - Fetching chemical data...
+2025-04-10 14:50:50,780 - INFO - Fetching protein links data...
+2025-04-10 14:51:03,740 - INFO - Fetching protein data...
+2025-04-10 14:51:05,166 - INFO - Fetching TCM-chemical links...
+2025-04-10 14:51:06,466 - INFO - Fetching TCM data...
+2025-04-10 14:51:06,927 - INFO - Fetching formula-TCM links...
+2025-04-10 14:51:24,082 - INFO - Fetching formula data...
+2025-04-10 14:51:27,516 - INFO - Fetching SD-formula links...
+2025-04-10 14:51:27,570 - INFO - Fetching SD data...
+2025-04-10 14:51:27,625 - INFO - Converting data to DataFrames...
+2025-04-10 14:51:27,625 - INFO - Generating network visualizations...
+2025-04-10 14:51:27,672 - INFO - Preparing files for Cytoscape...
+2025-04-10 14:51:27,703 - INFO - Writing results to Excel file...
+2025-04-10 14:51:27,741 - INFO - Performing research status test...
+2025-04-10 14:51:35,711 - INFO - Performing safety research analysis...
+2025-04-10 14:51:36,303 - INFO - Analysis completed successfully in 46.63 seconds
+2025-04-10 14:53:44,869 - INFO - Starting network pharmacology analysis...
+2025-04-10 14:53:44,870 - INFO - Fetching chemical data...
+2025-04-10 14:53:44,870 - ERROR - Error occurred during analysis: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "D:\github_planting\TCM-VOTER\TCM-VOTER\main.py", line 52, in from_chemical
+    chem = get.get_chemicals('DNCID', chemical_id['DNCID'])
+TypeError: list indices must be integers or slices, not str
+2025-04-10 14:55:34,186 - INFO - Starting network pharmacology analysis...
+2025-04-10 14:55:34,186 - INFO - Fetching chemical data...
+2025-04-10 14:55:35,191 - INFO - Fetching protein links data...
+2025-04-10 14:55:35,191 - ERROR - Error occurred during analysis: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "D:\github_planting\TCM-VOTER\TCM-VOTER\main.py", line 55, in from_chemical
+    chem_protein_links = get.get_chem_protein_links('DNCID', chemical_id['DNCID'], score=score)
+TypeError: list indices must be integers or slices, not str
+2025-04-10 14:55:51,553 - INFO - Starting network pharmacology analysis...
+2025-04-10 14:55:51,553 - INFO - Fetching chemical data...
+2025-04-10 14:55:52,562 - INFO - Fetching protein links data...
+2025-04-10 14:56:06,814 - INFO - Fetching protein data...
+2025-04-10 14:56:09,195 - INFO - Fetching TCM-chemical links...
+2025-04-10 14:56:11,517 - INFO - Fetching TCM data...
+2025-04-10 14:56:12,316 - INFO - Fetching formula-TCM links...
+2025-04-10 14:56:40,081 - INFO - Fetching formula data...
+2025-04-10 14:56:45,124 - INFO - Fetching SD-formula links...
+2025-04-10 14:56:45,201 - INFO - Fetching SD data...
+2025-04-10 14:56:45,295 - INFO - Converting data to DataFrames...
+2025-04-10 14:56:45,296 - INFO - Generating network visualizations...
+2025-04-10 14:56:45,754 - INFO - Preparing files for Cytoscape...
+2025-04-10 14:56:46,148 - INFO - Writing results to Excel file...
+2025-04-10 14:56:46,265 - INFO - Performing research status test...
+2025-04-10 14:57:31,708 - INFO - Performing safety research analysis...
+2025-04-10 14:57:32,306 - INFO - Analysis completed successfully in 100.75 seconds
+2025-04-10 14:58:10,996 - INFO - Starting network pharmacology analysis...
+2025-04-10 14:58:10,996 - INFO - Fetching chemical data...
+2025-04-10 14:58:12,098 - INFO - Fetching protein links data...
+2025-04-10 15:10:41,784 - INFO - Starting network pharmacology analysis
+2025-04-10 15:10:41,784 - INFO - Fetching formula/TCM information
+2025-04-10 15:11:01,495 - INFO - Fetching TCM-chemical links
+2025-04-10 15:11:02,798 - INFO - Fetching chemical information
+2025-04-10 15:11:03,403 - INFO - Fetching chem-protein links with score >= 990
+2025-04-10 15:11:16,325 - INFO - Fetching protein information
+2025-04-10 15:11:17,781 - INFO - Converting results to DataFrames
+2025-04-10 15:11:17,781 - INFO - Generating visualization
+2025-04-10 15:11:21,760 - INFO - Generating Cytoscape output
+2025-04-10 15:11:25,420 - INFO - Writing results to Excel
+2025-04-10 15:11:25,916 - INFO - Performing research status test
+2025-04-10 15:11:34,337 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:N/A duration:4.097s]
+2025-04-10 15:11:34,337 - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 1 times in a row, putting on 1 second timeout
+2025-04-10 15:11:34,337 - WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001B6B1CDF550>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x000001B6B1CDF550>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+2025-04-10 15:11:38,436 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:N/A duration:4.084s]
+2025-04-10 15:11:38,436 - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 2 times in a row, putting on 2 second timeout
+2025-04-10 15:11:38,436 - WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001B6B1CDF820>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x000001B6B1CDF820>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+2025-04-10 15:11:38,437 - INFO - Resurrected node <Urllib3HttpNode(http://localhost:9200)> (force=False)
+2025-04-10 15:11:42,547 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:N/A duration:4.110s]
+2025-04-10 15:11:42,547 - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 3 times in a row, putting on 4 second timeout
+2025-04-10 15:11:42,547 - WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001B6B1CDFE80>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x000001B6B1CDFE80>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+2025-04-10 15:11:42,548 - INFO - Resurrected node <Urllib3HttpNode(http://localhost:9200)> (force=False)
+2025-04-10 15:11:46,618 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:N/A duration:4.069s]
+2025-04-10 15:11:46,618 - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 4 times in a row, putting on 8 second timeout
+2025-04-10 19:34:24,416 - INFO - Starting network pharmacology analysis...
+2025-04-10 19:34:24,416 - INFO - Fetching chemical data...
+2025-04-10 19:34:25,080 - INFO - Fetching protein links data...
+2025-04-10 19:34:40,472 - INFO - Fetching protein data...
+2025-04-10 19:34:43,073 - INFO - Fetching TCM-chemical links...
+2025-04-10 19:34:45,415 - INFO - Fetching TCM data...
+2025-04-10 19:34:46,240 - INFO - Fetching formula-TCM links...
+2025-04-10 19:35:13,999 - INFO - Fetching formula data...
+2025-04-10 19:35:18,986 - INFO - Fetching SD-formula links...
+2025-04-10 19:35:19,156 - INFO - Fetching SD data...
+2025-04-10 19:35:19,266 - INFO - Converting data to DataFrames...
+2025-04-10 19:35:19,266 - INFO - Generating network visualizations...
+2025-04-10 19:35:25,560 - INFO - Preparing files for Cytoscape...
+2025-04-10 19:35:31,701 - INFO - Writing results to Excel file...
+2025-04-10 19:35:32,509 - INFO - Performing safety research analysis...
+2025-04-10 19:35:33,592 - INFO - Analysis completed successfully in 69.18 seconds
+2025-04-10 19:49:30,364 - INFO - Starting network pharmacology analysis...
+2025-04-10 19:49:30,365 - INFO - Fetching chemical data...
+2025-04-10 19:49:30,984 - INFO - Fetching protein links data...
+2025-04-10 19:49:43,818 - INFO - Fetching protein data...
+2025-04-10 19:49:45,311 - INFO - Fetching TCM-chemical links...
+2025-04-10 19:49:46,636 - INFO - Fetching TCM data...
+2025-04-10 19:49:47,110 - INFO - Fetching formula-TCM links...
+2025-04-10 19:50:03,832 - INFO - Fetching formula data...
+2025-04-10 19:50:06,871 - INFO - Fetching SD-formula links...
+2025-04-10 19:50:06,963 - INFO - Fetching SD data...
+2025-04-10 19:50:07,020 - INFO - Converting data to DataFrames...
+2025-04-10 19:50:07,020 - INFO - Generating network visualizations...
+2025-04-10 19:50:10,816 - INFO - Preparing files for Cytoscape...
+2025-04-10 19:50:14,804 - INFO - Writing results to Excel file...
+2025-04-10 19:50:15,294 - INFO - Performing research status test...
+2025-04-10 19:50:16,371 - INFO - Performing safety research analysis...
+2025-04-10 19:50:17,078 - INFO - Analysis completed successfully in 46.71 seconds
+2025-04-10 19:53:05,570 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:N/A duration:4.118s]
+2025-04-10 19:53:05,570 - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 1 times in a row, putting on 1 second timeout
+2025-04-10 19:53:05,570 - WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000023FA2A2CB20>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000023FA2A2CB20>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+2025-04-10 19:53:09,649 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:N/A duration:4.069s]
+2025-04-10 19:53:09,649 - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 2 times in a row, putting on 2 second timeout
+2025-04-10 19:53:09,649 - WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000023FA2A2CBB0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000023FA2A2CBB0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+2025-04-10 19:53:09,650 - INFO - Resurrected node <Urllib3HttpNode(http://localhost:9200)> (force=False)
+2025-04-10 19:53:13,726 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:N/A duration:4.075s]
+2025-04-10 19:53:13,726 - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 3 times in a row, putting on 4 second timeout
+2025-04-10 19:53:13,726 - WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\retry.py", line 449, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 441, in request
+    self.endheaders()
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\29908\.conda\envs\DualNet-TCM\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 279, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 214, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000023FA2A2CD60>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+  File "C:\Users\29908\AppData\Roaming\Python\Python39\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000023FA2A2CD60>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+2025-04-10 19:53:13,727 - INFO - Resurrected node <Urllib3HttpNode(http://localhost:9200)> (force=False)
+2025-04-10 19:53:17,795 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:N/A duration:4.068s]
+2025-04-10 19:53:17,796 - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 4 times in a row, putting on 8 second timeout
+2025-04-10 20:08:50,484 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.696s]
+2025-04-10 20:08:50,489 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.004s]
+2025-04-10 20:08:50,626 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.137s]
+2025-04-10 20:08:50,628 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:50,728 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.100s]
+2025-04-10 20:08:50,731 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:50,831 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.099s]
+2025-04-10 20:08:50,833 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:50,855 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.022s]
+2025-04-10 20:08:50,857 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:50,929 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.070s]
+2025-04-10 20:08:50,932 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:50,984 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.051s]
+2025-04-10 20:08:50,986 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,063 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.077s]
+2025-04-10 20:08:51,065 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,095 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.030s]
+2025-04-10 20:08:51,099 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,141 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.042s]
+2025-04-10 20:08:51,144 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,172 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.028s]
+2025-04-10 20:08:51,174 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,256 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.082s]
+2025-04-10 20:08:51,257 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:51,271 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.013s]
+2025-04-10 20:08:51,273 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,287 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.013s]
+2025-04-10 20:08:51,289 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,337 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.048s]
+2025-04-10 20:08:51,339 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,384 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.045s]
+2025-04-10 20:08:51,387 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,397 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:51,398 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:51,423 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.023s]
+2025-04-10 20:08:51,424 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:51,438 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.012s]
+2025-04-10 20:08:51,440 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,461 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.020s]
+2025-04-10 20:08:51,462 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,644 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.181s]
+2025-04-10 20:08:51,646 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:51,718 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.072s]
+2025-04-10 20:08:51,721 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,771 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.050s]
+2025-04-10 20:08:51,772 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,791 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.019s]
+2025-04-10 20:08:51,793 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,807 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.014s]
+2025-04-10 20:08:51,808 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:51,859 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.050s]
+2025-04-10 20:08:51,861 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,881 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.020s]
+2025-04-10 20:08:51,882 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:51,917 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.035s]
+2025-04-10 20:08:51,920 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:52,049 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.128s]
+2025-04-10 20:08:52,051 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:52,149 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.098s]
+2025-04-10 20:08:52,152 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:52,246 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.093s]
+2025-04-10 20:08:52,247 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:52,299 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.051s]
+2025-04-10 20:08:52,301 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:52,344 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.044s]
+2025-04-10 20:08:52,347 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:52,369 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.021s]
+2025-04-10 20:08:52,371 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:52,392 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.020s]
+2025-04-10 20:08:52,394 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:52,441 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.047s]
+2025-04-10 20:08:52,443 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:52,633 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.189s]
+2025-04-10 20:08:52,635 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,002 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.366s]
+2025-04-10 20:08:53,004 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,044 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.041s]
+2025-04-10 20:08:53,046 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,108 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.061s]
+2025-04-10 20:08:53,110 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,165 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.056s]
+2025-04-10 20:08:53,167 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,273 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.106s]
+2025-04-10 20:08:53,276 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,290 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.013s]
+2025-04-10 20:08:53,292 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,324 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.031s]
+2025-04-10 20:08:53,324 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,363 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.037s]
+2025-04-10 20:08:53,365 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,378 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.012s]
+2025-04-10 20:08:53,380 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,392 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.011s]
+2025-04-10 20:08:53,393 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,408 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.015s]
+2025-04-10 20:08:53,411 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,443 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.032s]
+2025-04-10 20:08:53,445 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,460 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.015s]
+2025-04-10 20:08:53,462 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,538 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.076s]
+2025-04-10 20:08:53,539 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,574 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.035s]
+2025-04-10 20:08:53,576 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,626 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.049s]
+2025-04-10 20:08:53,628 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,664 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.035s]
+2025-04-10 20:08:53,665 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,683 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.016s]
+2025-04-10 20:08:53,685 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,754 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.069s]
+2025-04-10 20:08:53,755 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,816 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.060s]
+2025-04-10 20:08:53,818 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,831 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.012s]
+2025-04-10 20:08:53,833 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:53,862 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.029s]
+2025-04-10 20:08:53,865 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:53,895 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.031s]
+2025-04-10 20:08:53,897 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:54,030 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.131s]
+2025-04-10 20:08:54,032 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,081 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.048s]
+2025-04-10 20:08:54,082 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,104 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.022s]
+2025-04-10 20:08:54,105 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,123 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.018s]
+2025-04-10 20:08:54,125 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:54,150 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.024s]
+2025-04-10 20:08:54,152 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:54,199 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.048s]
+2025-04-10 20:08:54,202 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:54,222 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.020s]
+2025-04-10 20:08:54,223 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,264 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.041s]
+2025-04-10 20:08:54,266 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,298 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.030s]
+2025-04-10 20:08:54,300 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:54,397 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.096s]
+2025-04-10 20:08:54,399 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:54,409 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.011s]
+2025-04-10 20:08:54,412 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,419 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:54,422 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:54,433 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.011s]
+2025-04-10 20:08:54,434 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,771 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.335s]
+2025-04-10 20:08:54,773 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,792 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.018s]
+2025-04-10 20:08:54,794 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:54,815 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.021s]
+2025-04-10 20:08:54,817 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,827 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:54,830 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,897 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.067s]
+2025-04-10 20:08:54,899 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,916 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.017s]
+2025-04-10 20:08:54,919 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:54,949 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.030s]
+2025-04-10 20:08:54,950 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:54,975 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.023s]
+2025-04-10 20:08:54,977 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,017 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.040s]
+2025-04-10 20:08:55,019 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,033 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.013s]
+2025-04-10 20:08:55,034 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,099 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.064s]
+2025-04-10 20:08:55,101 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,266 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.128s]
+2025-04-10 20:08:55,267 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,279 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.011s]
+2025-04-10 20:08:55,282 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:55,307 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.025s]
+2025-04-10 20:08:55,308 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,319 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,321 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,331 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:55,333 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,345 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.012s]
+2025-04-10 20:08:55,347 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,358 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,359 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,369 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,371 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,382 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,383 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,393 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,395 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,405 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,407 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,419 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.013s]
+2025-04-10 20:08:55,421 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,459 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.038s]
+2025-04-10 20:08:55,461 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,472 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,474 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,482 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:55,485 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,495 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,497 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,507 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,510 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,519 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:55,521 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,551 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.030s]
+2025-04-10 20:08:55,553 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,562 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,564 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,572 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:55,575 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,583 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:55,585 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,591 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:55,592 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,602 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:55,603 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,611 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:55,613 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,622 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:55,623 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,631 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:55,633 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,643 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:55,645 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,649 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,651 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,655 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,656 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,662 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:55,662 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,668 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,669 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,673 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:55,675 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,679 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,682 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:55,687 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:55,689 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,695 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:55,697 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,703 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:55,705 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,711 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:55,713 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,717 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,719 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,724 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:55,726 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,732 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:55,734 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,739 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,741 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:55,745 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.003s]
+2025-04-10 20:08:55,747 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,753 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,754 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,760 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:55,761 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,766 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,767 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,773 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:55,775 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,779 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,782 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:55,785 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,787 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,792 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:55,793 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,797 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.003s]
+2025-04-10 20:08:55,799 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,803 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,804 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,808 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,810 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,814 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:55,815 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,819 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.003s]
+2025-04-10 20:08:55,821 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,825 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:55,826 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:55,891 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.025s]
+2025-04-10 20:08:55,893 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:55,957 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.064s]
+2025-04-10 20:08:55,960 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:56,009 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.014s]
+2025-04-10 20:08:56,014 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.004s]
+2025-04-10 20:08:56,029 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.015s]
+2025-04-10 20:08:56,031 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,037 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:56,039 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,060 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.021s]
+2025-04-10 20:08:56,061 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,068 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:56,069 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,107 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:56,110 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,116 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:56,117 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,126 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:56,127 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,136 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,138 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,142 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:56,144 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,149 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:56,152 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:56,157 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:56,159 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,163 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:56,166 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,184 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.018s]
+2025-04-10 20:08:56,185 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,194 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,195 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,201 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:56,203 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,208 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:56,210 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,219 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,220 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,225 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:56,226 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,232 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:56,233 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,242 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,243 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,256 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.013s]
+2025-04-10 20:08:56,257 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,275 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.018s]
+2025-04-10 20:08:56,276 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,283 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:56,284 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,290 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:56,292 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,299 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:56,301 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,311 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:56,312 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,321 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,323 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,353 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.030s]
+2025-04-10 20:08:56,354 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,361 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:56,363 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,376 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.013s]
+2025-04-10 20:08:56,379 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,393 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.015s]
+2025-04-10 20:08:56,395 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,406 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:56,407 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,426 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.017s]
+2025-04-10 20:08:56,428 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,456 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.029s]
+2025-04-10 20:08:56,458 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,467 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,468 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,476 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,477 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,486 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,487 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,493 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:56,494 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,502 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,504 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,512 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:56,514 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,522 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,524 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,533 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,535 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,544 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,546 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,554 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,557 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,565 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,567 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,576 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,577 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,586 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,587 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,595 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,596 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,603 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:56,606 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,615 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,617 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,679 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.029s]
+2025-04-10 20:08:56,682 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,691 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,692 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,729 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.036s]
+2025-04-10 20:08:56,731 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,740 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,742 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,785 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,787 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,811 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.024s]
+2025-04-10 20:08:56,812 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,852 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:56,853 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,861 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:56,862 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,868 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:56,869 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,878 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:56,879 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,914 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:56,915 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:56,920 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:56,921 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:56,961 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.002s]
+2025-04-10 20:08:56,962 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,095 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.133s]
+2025-04-10 20:08:57,096 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,107 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.011s]
+2025-04-10 20:08:57,109 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,135 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.026s]
+2025-04-10 20:08:57,136 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,144 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,145 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,150 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.003s]
+2025-04-10 20:08:57,151 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,158 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,159 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,199 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,201 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,208 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,209 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.000s]
+2025-04-10 20:08:57,219 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,220 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,229 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,230 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,238 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,240 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,248 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,250 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,293 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:57,294 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,303 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,305 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,350 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.014s]
+2025-04-10 20:08:57,352 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,363 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:57,365 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,408 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:57,409 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,417 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,418 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,429 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.011s]
+2025-04-10 20:08:57,431 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,439 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,441 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,449 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,450 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,457 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,458 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,465 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:57,467 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,478 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.011s]
+2025-04-10 20:08:57,480 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,487 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,489 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,505 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.015s]
+2025-04-10 20:08:57,506 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,511 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:57,513 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,527 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.014s]
+2025-04-10 20:08:57,529 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,536 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,537 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,546 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,547 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,555 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:57,558 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,565 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,567 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,575 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,576 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,579 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.003s]
+2025-04-10 20:08:57,581 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,589 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,590 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,593 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.002s]
+2025-04-10 20:08:57,595 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,601 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:57,602 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,607 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:57,608 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,650 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:57,651 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,657 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:57,660 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,704 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:57,706 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,730 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.023s]
+2025-04-10 20:08:57,731 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,744 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.013s]
+2025-04-10 20:08:57,745 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,766 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.020s]
+2025-04-10 20:08:57,768 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,774 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:57,776 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,816 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:57,818 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:57,823 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:57,825 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,878 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.017s]
+2025-04-10 20:08:57,880 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:57,938 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.058s]
+2025-04-10 20:08:57,942 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:57,957 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.015s]
+2025-04-10 20:08:57,959 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:58,005 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.045s]
+2025-04-10 20:08:58,006 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,022 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.015s]
+2025-04-10 20:08:58,024 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,057 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.033s]
+2025-04-10 20:08:58,058 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,068 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.010s]
+2025-04-10 20:08:58,069 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,148 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.077s]
+2025-04-10 20:08:58,150 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,222 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.073s]
+2025-04-10 20:08:58,223 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,323 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.098s]
+2025-04-10 20:08:58,325 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,423 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.097s]
+2025-04-10 20:08:58,424 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,528 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.105s]
+2025-04-10 20:08:58,531 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,568 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:58,569 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,589 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.020s]
+2025-04-10 20:08:58,590 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,596 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:58,598 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,641 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:58,642 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:58,650 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:58,651 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,689 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.004s]
+2025-04-10 20:08:58,692 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.003s]
+2025-04-10 20:08:58,698 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:58,701 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,744 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.011s]
+2025-04-10 20:08:58,745 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,753 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:58,755 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,816 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.030s]
+2025-04-10 20:08:58,817 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,838 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.020s]
+2025-04-10 20:08:58,840 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:58,957 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.083s]
+2025-04-10 20:08:58,958 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.000s]
+2025-04-10 20:08:58,964 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:58,965 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:58,972 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.006s]
+2025-04-10 20:08:58,974 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,076 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.017s]
+2025-04-10 20:08:59,078 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,219 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.142s]
+2025-04-10 20:08:59,221 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:59,258 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:59,260 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,267 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:59,269 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,277 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:59,278 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,285 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:59,287 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:59,326 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:59,328 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:59,335 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:59,337 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:59,381 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.012s]
+2025-04-10 20:08:59,383 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.002s]
+2025-04-10 20:08:59,391 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.009s]
+2025-04-10 20:08:59,393 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,438 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.014s]
+2025-04-10 20:08:59,439 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,445 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.005s]
+2025-04-10 20:08:59,448 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.000s]
+2025-04-10 20:08:59,473 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.025s]
+2025-04-10 20:08:59,476 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,484 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.008s]
+2025-04-10 20:08:59,486 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,527 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.007s]
+2025-04-10 20:08:59,528 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]
+2025-04-10 20:08:59,531 - INFO - POST http://localhost:9200/abstract22/_search?scroll=5m [status:200 duration:0.003s]
+2025-04-10 20:08:59,531 - INFO - DELETE http://localhost:9200/_search/scroll [status:200 duration:0.001s]

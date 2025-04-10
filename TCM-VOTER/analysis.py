@@ -371,33 +371,17 @@ def research_status_test(protein_list_path):
                                  reported_number, Symbol_To_Target_wm, es)
 
 
-def get_user_input():
-    """交互式获取用户输入，返回需要更新的配置字段"""
-    print("请输入以下配置（留空则保持原值）：")
-    disease_name = input(f"疾病名称 [当前值: Hepatocellular carcinoma]: ") or None
-    reported_number = input(f"研究数量 [当前值: 0]: ") or None
-    target_max_number = input(f"最大靶点数 [当前值: 70]: ") or None
-    interaction_num = input(f"交互研究值 [当前值: 0]: ") or None
-
-    # 构造更新字典（过滤空输入）
-    updates = {}
-    if disease_name:
-        updates["disease_name"] = disease_name
-    if target_max_number:
-        updates["target_max_number"] = int(target_max_number)
-    if interaction_num:
-        updates["interaction_num"] = int(interaction_num)
-    if reported_number:
-        updates["reported_number"] = int(reported_number)
-
-    return updates
-
-
-def update_config(config_path="config.json"):
+def update_config(disease_name, target_max_number, reported_number, interaction_num, config_path="config.json"):
     """读取用户输入并更新配置文件"""
+
+    updates = {}
+    updates["disease_name"] = disease_name
+    updates["target_max_number"] = int(target_max_number)
+    updates["interaction_num"] = int(interaction_num)
+    updates["reported_number"] = int(reported_number)
+
     with open(config_path, "r+", encoding="utf-8") as f:
         config = json.load(f)
-        updates = get_user_input()  # 获取用户输入
         config.update(updates)  # 合并更新
 
         # 写回文件
