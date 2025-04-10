@@ -623,7 +623,7 @@ def from_SD(SD_ID,
         return 0
 
 
-def TCM_VOTER(SerchType,
+def TCM_VOTER(SearchType,
               SearchName,
               DiseaseName="cough",
               target_max_number=70,
@@ -639,15 +639,15 @@ def TCM_VOTER(SerchType,
               path='results/'
               ):
 
-    if SerchType == 0:
+    if SearchType == 0:
         SearchID = get.get_SD('证候', SearchName)['DNSID']
 
         from_SD(SearchID,
                 score=score,
-                DiseaseName="cough",
-                target_max_number=70,
-                report_number=0,
-                interaction_number=0,
+                DiseaseName=DiseaseName,
+                target_max_number=target_max_number,
+                report_number=report_number,
+                interaction_number=interaction_number,
                 out_graph=out_graph,
                 out_for_cytoscape=out_for_cytoscape,
                 out_for_excel=out_for_excel,
@@ -657,15 +657,15 @@ def TCM_VOTER(SerchType,
                 path=path
                 )
 
-    if SerchType == 1:
+    if SearchType == 1:
 
         SearchID = get.get_formula('name', SearchName)['DNFID']
 
         from_tcm_or_formula(SearchID, score=score,
-                            DiseaseName="cough",
-                            target_max_number=70,
-                            report_number=0,
-                            interaction_number=0,
+                            DiseaseName=DiseaseName,
+                            target_max_number=target_max_number,
+                            report_number=report_number,
+                            interaction_number=interaction_number,
                             out_graph=out_graph,
                             out_for_cytoscape=out_for_cytoscape,
                             out_for_excel=out_for_excel,
@@ -675,15 +675,15 @@ def TCM_VOTER(SerchType,
                             path=path
                             )
 
-    if SerchType == 2:
+    if SearchType == 2:
 
         SearchID = get.get_tcm('cn_name', SearchName)['DNHID']
 
         from_tcm_or_formula(SearchID, score=score,
-                            DiseaseName="cough",
-                            target_max_number=70,
-                            report_number=0,
-                            interaction_number=0,
+                            DiseaseName=DiseaseName,
+                            target_max_number=target_max_number,
+                            report_number=report_number,
+                            interaction_number=interaction_number,
                 out_graph=out_graph,
                 out_for_cytoscape=out_for_cytoscape,
                 out_for_excel=out_for_excel,
@@ -693,15 +693,15 @@ def TCM_VOTER(SerchType,
                 path=path
                 )
 
-    if SerchType == 3:
+    if SearchType == 3:
 
         SearchID = get.get_chemicals('Name', SearchName)['DNCID']
 
         from_chemical(SearchID, score=score,
-                      DiseaseName="cough",
-                      target_max_number=70,
-                      report_number=0,
-                      interaction_number=0,
+                      DiseaseName=DiseaseName,
+                      target_max_number=target_max_number,
+                      report_number=report_number,
+                      interaction_number=interaction_number,
                 out_graph=out_graph,
                 out_for_cytoscape=out_for_cytoscape,
                 out_for_excel=out_for_excel,
@@ -711,23 +711,23 @@ def TCM_VOTER(SerchType,
                 path=path
                 )
 
-    if SerchType == 4:
+    if SearchType == 4:
 
         SearchID = get.get_proteins('gene_name', SearchName)['Ensembl_ID']
 
         from_proteins(SearchID, score=score,
-                      DiseaseName="cough",
-                      target_max_number=70,
-                      report_number=0,
-                      interaction_number=0,
-                out_graph=out_graph,
-                out_for_cytoscape=out_for_cytoscape,
-                out_for_excel=out_for_excel,
-                research_status_test=research_status_test,
-                safety_research=safety_research,
-                re=re,
-                path=path
-                )
+                      DiseaseName=DiseaseName,
+                      target_max_number=target_max_number,
+                      report_number=report_number,
+                      interaction_number=interaction_number,
+                        out_graph=out_graph,
+                        out_for_cytoscape=out_for_cytoscape,
+                        out_for_excel=out_for_excel,
+                        research_status_test=research_status_test,
+                        safety_research=safety_research,
+                        re=re,
+                        path=path
+                        )
 
 
     return 0
@@ -735,8 +735,21 @@ def TCM_VOTER(SerchType,
 
 
 if __name__ == '__main__':
-    TCM_VOTER(SerchType=0,
-              SearchName=['肺胃风寒证'])
+    TCM_VOTER(SearchType=2,
+              SearchName=['人参'],
+              score=990,
+              DiseaseName="cough",
+              target_max_number=70,
+              report_number=0,
+              interaction_number=0,
+              out_graph=True,
+              out_for_cytoscape=True,
+              out_for_excel=True,
+              research_status_test=True,
+              safety_research=True,
+              re=True,
+              path='results/'
+                  )
 
     #from_tcm_or_formula(['DNH0158'])
     #from_chemical(['DNC0007'], score=0)
