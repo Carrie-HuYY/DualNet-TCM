@@ -30,35 +30,47 @@ def from_chemical(chemical_id,
                   re=True,
                   path='results'):
     """
-    Perform classical forward network pharmacology analysis with logging
+    执行基于化学物的正向网络药理学分析
 
-    Args:
-        chemical_id: Chemical ID to analyze
-        score (int): Combined score threshold. Default is 990.
-        out_for_excel (bool): Output Excel files. Default is True.
-        out_for_cytoscape (bool): Output for Cytoscape. Default is True.
-        research_status_test (bool): Perform research status test. Default is True.
-        safety_research (bool): Perform safety research. Default is True.
-        out_graph (bool): Output visualization. Default is True.
-        re (bool): Return raw results. Default is True.
-        path (str): Output directory. Default is 'results'.
+    该函数实现完整的网络药理学分析流程，包括：
+    1. 化学物、蛋白质、中药成分的数据获取
+    2. 网络构建与可视化
+    3. 靶点蛋白研究状态分析
+    4. 成分安全性评估
+    5. 多种格式结果输出(Excel、Cytoscape、可视化图形)
 
-    Returns:
-        Various DataFrames containing analysis results or 0 if re=False
-        :param path:
-        :param re:
-        :param out_graph:
-        :param safety_research:
-        :param research_status_test:
-        :param out_for_cytoscape:
-        :param out_for_excel:
-        :param interaction_number:
-        :param report_number:
-        :param chemical_id:
-        :param score:
-        :param target_max_number:
-        :param DiseaseName:
+    参数:
+        chemical_id (str): 待分析化学物的ID(DNCID格式)
+        score (int, 可选): 蛋白质相互作用的综合分数阈值，默认为990
+        DiseaseName (str, 可选): 用于研究状态分析的疾病名称，默认为"cough"(咳嗽)
+        target_max_number (int, 可选): 最大靶点数量，默认为70
+        report_number (int, 可选): 生成报告数量，默认为0
+        interaction_number (int, 可选): 考虑的相互作用数量，默认为0
+        out_for_excel (bool, 可选): 是否输出Excel文件，默认为True
+        out_for_cytoscape (bool, 可选): 是否准备Cytoscape文件，默认为True
+        research_status_test (bool, 可选): 是否执行研究状态测试，默认为True
+        safety_research (bool, 可选): 是否进行安全性研究，默认为True
+        out_graph (bool, 可选): 是否生成可视化图形，默认为True
+        re (bool, 可选): 是否返回原始结果，默认为True
+        path (str, 可选): 输出目录路径，默认为'results'
+
+    返回:
+        tuple 或 int: 如果re=True返回包含分析结果的多个DataFrame(按顺序):
+            - SD_df: 辨证信息数据
+            - SD_Formula_Links_df: 辨证-复方关联数据
+            - formula_df: 复方信息数据
+            - formula_tcm_links_df: 复方-中药关联数据
+            - tcm_df: 中药信息数据
+            - tcm_chem_links_df: 中药-化学物关联数据
+            - chem_df: 化学物信息数据
+            - chem_protein_links_df: 化学物-靶点关联数据
+            - protein_df: 靶点信息数据
+        如果re=False则返回0
+
+    异常:
+        Exception: 执行过程中发生错误时会记录日志并重新抛出异常
     """
+
     # 记录开始时间
     start_time = time.time()
     logger.info("Starting network pharmacology analysis...")
@@ -176,6 +188,8 @@ def from_chemical(chemical_id,
         logger.error(f"Error occurred during analysis: {str(e)}", exc_info=True)
         raise
 
+
+
 def from_tcm_or_formula(tcm_or_formula_id,
                         proteins_id=None,
                         score=990,
@@ -190,46 +204,6 @@ def from_tcm_or_formula(tcm_or_formula_id,
                         out_graph=True,
                         re=True,
                         path='results'):
-    """
-    Perform classical forward network pharmacology analysis
-
-    Args:
-        tcm_or_formula_id: Any iterable that supports 'in' operation, containing TCM or formula IDs to analyze.
-        proteins_id: None or any iterable that supports 'in' operation, containing Ensembl_IDs of proteins to analyze.
-                    Default is None.
-        score (int): Only records with combined_score >= score in HerbiV_chemical_protein_links will be selected.
-                    Default is 990.
-        out_for_cytoscape (bool): Whether to output files for Cytoscape visualization. Default is True.
-        out_graph (bool): Whether to output ECharts-based HTML network visualization. Default is True.
-        re (bool): Whether to return raw analysis results (TCM, compounds, proteins and their connections).
-        path (str): Directory to store results.
-        research_status_test:
-        out_for_excel:
-
-    Returns:
-        formula: Formula information (only returned when input is HVPID).
-        formula_tcm_links: Formula-TCM connection info (only returned when input is HVPID).
-        tcm: TCM information.
-        tcm_chem_links: TCM-compound connections.
-        chem: Compound information.
-        chem_protein_links: Compound-protein connections.
-        proteins: Protein information.
-        :param path:
-        :param re:
-        :param out_graph:
-        :param safety_research:
-        :param research_status_test:
-        :param out_for_excel:
-        :param out_for_cytoscape:
-        :param interaction_number:
-        :param report_number:
-        :param target_max_number:
-        :param score:
-        :param proteins_id:
-        :param tcm_or_formula_id:
-        :param DiseaseName:
-    """
-
 
     # Configure logging
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -638,6 +612,72 @@ def TCM_VOTER(SearchType,
               re=True,
               path='results/'
               ):
+    """
+    中药网络药理学分析入口函数（TCM_VOTER）
+
+    该函数是网络药理学分析的统一入口，根据不同的搜索类型调用相应的分析函数
+
+    参数:
+        SearchType (int): 搜索类型，可选值:
+            0 - 辨证(证候)
+            1 - 方剂
+            2 - 中药
+            3 - 化学成分
+            4 - 靶点蛋白
+        SearchName (str): 搜索名称，根据SearchType不同而不同:
+            证候名/方剂名/中药名/成分名/基因名
+        DiseaseName (str, 可选): 目标疾病名称，用于研究状态分析，默认为"cough"
+        target_max_number (int, 可选): 最大靶点数量限制，默认为70
+        report_number (int, 可选): 报告生成数量，默认为0
+        interaction_number (int, 可选): 相互作用数量限制，默认为0
+        score (int, 可选): 蛋白质相互作用分数阈值，默认为990
+        out_graph (bool, 可选): 是否输出可视化图形，默认为True
+        out_for_cytoscape (bool, 可选): 是否生成Cytoscape格式文件，默认为True
+        out_for_excel (bool, 可选): 是否输出Excel结果文件，默认为True
+        research_status_test (bool, 可选): 是否执行研究状态测试，默认为True
+        safety_research (bool, 可选): 是否进行安全性研究，默认为True
+        re (bool, 可选): 是否返回结果数据，默认为True
+        path (str, 可选): 结果输出路径，默认为'results/'
+
+    返回:
+        int: 固定返回0
+
+    示例:
+        >>> # 辨证分析
+        >>> TCM_VOTER(SearchType=0, SearchName="气虚证")
+        >>>
+        >>> # 方剂分析
+        >>> TCM_VOTER(SearchType=1, SearchName="四物汤")
+        >>>
+        >>> # 中药分析
+        >>> TCM_VOTER(
+        ...     SearchType=2,
+        ...     SearchName="当归",
+        ...     DiseaseName="anemia",
+        ...     out_graph=False
+        ... )
+        >>>
+        >>> # 化学成分分析
+        >>> TCM_VOTER(SearchType=3, SearchName="槲皮素")
+        >>>
+        >>> # 靶点蛋白分析
+        >>> TCM_VOTER(
+        ...     SearchType=4,
+        ...     SearchName="TNF",
+        ...     path="custom_results/"
+        ... )
+
+    工作流程:
+        1. 根据SearchType确定搜索类型
+        2. 调用get模块获取对应的ID
+        3. 根据类型调用相应的分析函数:
+            - 辨证: from_SD()
+            - 方剂/中药: from_tcm_or_formula()
+            - 化学成分: from_chemical()
+            - 靶点蛋白: from_proteins()
+        4. 所有分析函数共享相同的参数配置
+        5. 返回固定值0
+    """
 
     if SearchType == 0:
         SearchID = get.get_SD('证候', SearchName)['DNSID']
@@ -735,9 +775,9 @@ def TCM_VOTER(SearchType,
 
 
 if __name__ == '__main__':
-    TCM_VOTER(SearchType=2,
-              SearchName=['人参'],
-              score=990,
+    TCM_VOTER(SearchType=1,
+              SearchName=['六味地黄丸'],
+              score=900,
               DiseaseName="cough",
               target_max_number=70,
               report_number=0,

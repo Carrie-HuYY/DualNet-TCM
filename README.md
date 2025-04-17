@@ -13,10 +13,7 @@
 
 - [2. 安装](#安装)
 
-- [3. 使用](#使用)
-  - [3.1 from_SD：从辩证出发](#from_sd)
-  - [3.2 from_TCM_or_Formula：从中药/方剂出发](#from_tcm_or_formula)
-  - [3.3 from_proteins：从靶点出发](#from_protein)
+- [3. 使用](#TCM-VOTER函数)
 
 - [4. 结果展示](#结果展示)
   - [4.1 基于pyecharts的可交互图](#out_graph)
@@ -35,11 +32,7 @@
 
 ## 安装
 
-可以使用pip安装TCM-VOTER
-
-```cmd
-pip install TCM-VOTER
-```
+### requirements
 
 requirement包括(Python版本需要≥3.9，其余没有强制要求)
 
@@ -51,10 +44,23 @@ pyecharts~=2.0.7
 numpy~=1.21.6
 ```
 
+### pip安装
+可以使用pip安装TCM-VOTER
+
+```cmd
+pip install TCM-VOTER
+```
+
 ## 使用
 
 ### `TCM-VOTER函数`
 
+`from_SD`需要两个个必需形参`SearchType`：可以用来判断检索的类型（详见下表）；`SearchName`：可以用于检索的内容，如果是`0`那就输入某种方剂名，
+具体数据可见[数据集](/TCM-VOTER/Data/)
+
+| SearchType | 0 | 1 | 2 | 3 | 4 |
+|------------|---|---|---|---|---|
+| Source     | 辩证 | 方剂 | 中药 | 成分 | 靶点 |
 
 ```python
 from TCM-VOTER import main
@@ -75,18 +81,6 @@ main.TCM_VOTER(SearchType,
                path='results/'
                     )
 ```
-
-`from_SD`需要两个个必需形参`SearchType`：可以用来判断检索的类型（详见下表）；`SearchName`：可以用于检索的内容，如果是`0`那就输入某种方剂名，
-具体数据可见[数据集](/TCM-VOTER/Data/)
-
-| SearchType | Source |
-|------------|--------|
-| 0          | 辩证     |
-| 1          | 方剂     |
-| 2          | 中药     |
-| 3          | 成分     |
-| 4          | 靶点     |
-
 
 
 `from_SD`的可选形参有：
@@ -109,11 +103,11 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 
 ## 结果展示
 
-### 可视化绘图(out_graph)
+### out_graph
 
 `out_graph`提供了两种可交互的可视化方案，[范例1](/README_pictures/out_graph_0.png)和[范例2](/README_pictures/out_graph_1.png)
 
-### 输出可用于Cytoscape作图的文件(out_for_cytoscape)
+### out_for_cytoscape
 
 `out_for_cytoscape`给出了可以直接用于cytoscape绘图的两个文件，`type.csv`和`network.csv`，其中格式分别如下：
 
@@ -132,17 +126,17 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 | testosterone | SHBG                |
 | testosterone | IGFBP3              |
 
-### 输出excel(out_for_excel)
+### out_for_excel
 
 输出一个名为`results.xlsx`的文件，按照不同的文件名分为函数得到的数据，
 
-### 研究价值评估(research_status_test)
+### research_status_test
 
-根据中药网络药理学筛选得到的差异表达蛋白（DEPs）或基因（DEGs），进而从
-中筛选出已有FDA批准或临床试验药物的靶点，排除无对应药物的候选蛋白，最后给出药物推荐表格，
+从差异表达蛋白(DEPs)中筛选出已有FDA批准或临床试验药物的靶点，
+排除无对应药物的候选蛋白，最后给出药物推荐表格，
 以及两种可视化方案：[图1](README_pictures/Reasearch_0.png)，[图2](README_pictures/Reasearch_1.png)
 
-### 安全性评估(safety_research)
+### safety_research
 
 
 
