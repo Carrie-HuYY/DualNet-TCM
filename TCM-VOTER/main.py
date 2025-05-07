@@ -692,7 +692,7 @@ if __name__ == '__main__':
               out_graph=True,
               out_for_cytoscape=True,
               out_for_excel=True,
-              research_status_test=False,
+              research_status_test=True,
               safety_research=True,
               re=True,
               path='results/'

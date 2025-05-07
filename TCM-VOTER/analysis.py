@@ -1,4 +1,5 @@
-import output, get
+import output
+import get
 import json
 from bs4 import BeautifulSoup
 import os
@@ -134,7 +135,7 @@ def classify_targets_wm(Symbol_To_Target, Symbol_list):
 
 
 def classify_targets_html(target_have_drug, target_no_drug, target_FDA_approved,
-                          target_clinical_trial, target_others, dir_name):
+                          target_clinical_trial, target_others):
     """
     将html中的数据进行更改后输出
     :param target_have_drug:
@@ -142,7 +143,6 @@ def classify_targets_html(target_have_drug, target_no_drug, target_FDA_approved,
     :param target_FDA_approved:
     :param target_clinical_trial:
     :param target_others:
-    :param dir_name:
     :return:
     """
     with open('config.json', 'r') as f:
@@ -161,14 +161,13 @@ def classify_targets_html(target_have_drug, target_no_drug, target_FDA_approved,
         'Clinical data', str(len(target_clinical_trial)))
 
     soup = BeautifulSoup(text_html, 'html.parser')
-    with open('results/' + disease_name + ' reported_number_' + str(
-            reported_number) + '/' + dir_name + '/Targets_pie_chart.html', 'w', encoding='utf-8') as fp:
+    with open('results/' + disease_name + '/Targets_pie_chart.html', 'w', encoding='utf-8') as fp:
         fp.write(str(soup))
 
 
 def query_target(symbol, Symbol_To_PubMedID, Symbol_To_UniprotID, Symbol_To_Fullname, es, keywords):
     pubMedId = Symbol_To_PubMedID[symbol]
-    # final_list = []
+
     sql1 = {
         'query': {
             'bool': {
@@ -275,26 +274,54 @@ def set_config_auto():
     interaction_num = config['interaction_num']
     target_max_number = config['target_max_number']  # 靶标推荐最大值,根据文献数量进行排序
 
-    os.makedirs('results/' + disease_name + ' reported_number_' + str(reported_number), exist_ok=True)
-    os.makedirs('results/' + disease_name + ' reported_number_' + str(reported_number) + '/Target', exist_ok=True)
-    os.makedirs('results/' + disease_name + ' reported_number_' + str(reported_number) + '/PPI_Target', exist_ok=True)
+    os.makedirs('results/' + disease_name, exist_ok=True)
 
     return disease_name, reported_number, interaction_num, target_max_number
 
 
-def research_status_test(protein_list_path):
+def research_status_test(protein_list_path: str) -> None:
+    """分析蛋白质靶标研究状态并生成可视化报告。
+
+    该函数执行完整的靶标分析流程，包括：
+    1. 从输入文件加载蛋白质列表
+    2. 通过PPI网络扩展靶标集合
+    3. 对靶标进行分类和研究状态验证
+    4. 生成交互式可视化报告
+
+    Args:
+        protein_list_path (str): 蛋白质列表文件路径，文件应为每行一个基因符号的文本文件
+
+    Returns:
+        None: 无直接返回值，但会生成以下输出文件：
+            - HTML报告: Target_classification.html, PPI_Target_classification.html
+            - JSON可视化数据: Target_tree.json, PPI_Target_sunburst.json 等
+            - 控制台输出统计信息
+
+    Raises:
+        FileNotFoundError: 如果输入的蛋白质列表文件不存在
+        ConnectionError: 如果无法连接本地Elasticsearch服务
+
+    Notes:
+        1. 需要预先配置本地Elasticsearch服务(默认端口9200)
+        2. 依赖以下辅助模块:
+           - get: 数据获取模块
+           - output: 结果输出模块
+        3. 分类标准:
+           - h_dr: 已报道的疾病相关靶标
+           - fa: FDA批准药物靶标
+           - ct: 临床试验阶段靶标
+           - ot: 其他靶标
+    """
     disease_name, reported_number, interaction_num, target_max_number = set_config_auto()
 
-    #print(disease_name, reported_number, interaction_num, target_max_number)
-
-    Symbol_PPI_list, Symbol_To_Target_wm, Symbol_To_Fullname, Symbol_list = get.get_data(protein_list_path,
-                                                                                         interaction_num)
+    Symbol_PPI_list, Symbol_To_Target_wm, Symbol_To_Fullname, Symbol_list = (
+        get.get_data(protein_list_path, interaction_num))
 
     p_h_dr, p_no_dr, p_fa, p_ct, p_ot = classify_targets_wm(Symbol_To_Target_wm, Symbol_PPI_list)
     h_dr, no_dr, fa, ct, ot = classify_targets_wm(Symbol_To_Target_wm, Symbol_list)
 
-    classify_targets_html(h_dr, no_dr, fa, ct, ot, 'Target')
-    classify_targets_html(p_h_dr, p_no_dr, p_fa, p_ct, p_ot, 'PPI_Target')
+    classify_targets_html(h_dr, no_dr, fa, ct, ot)
+    classify_targets_html(p_h_dr, p_no_dr, p_fa, p_ct, p_ot)
 
     es = Elasticsearch(
         ['http://localhost:9200/']
@@ -309,8 +336,8 @@ def research_status_test(protein_list_path):
                                                                              reported_number)
 
     # 生成靶标信息的Tree图
-    output.all_targets_tree(fda_no_review, fda_review, ct_no_review, ct_review, 'Target')
-    output.all_targets_tree(p_fda_no_review, p_fda_review, p_ct_no_review, p_ct_review, 'PPI_Target')
+    output.all_targets_tree(fda_no_review, fda_review, ct_no_review, ct_review)
+    output.all_targets_tree(p_fda_no_review, p_fda_review, p_ct_no_review, p_ct_review)
 
     t1 = time.time()
     print('Program end time:', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
@@ -329,9 +356,9 @@ def research_status_test(protein_list_path):
     p_ct_no_review = output.new_targets_list(p_ct_no_review, output.sort_targets(p_no_review, target_max_number, es))
 
     # 获得全部靶标药物推荐的旭日图，以及每个靶标对应的药物信息和药物热度
-    output.get_sunburst_tree_bar('Target', fda_no_review, ct_no_review, fa, disease_name, reported_number,
+    output.get_sunburst_tree_bar(fda_no_review, ct_no_review, fa, disease_name, reported_number,
                                  Symbol_To_Target_wm, es)
-    output.get_sunburst_tree_bar('PPI_Target', p_fda_no_review, p_ct_no_review, p_fa, disease_name,
+    output.get_sunburst_tree_bar(p_fda_no_review, p_ct_no_review, p_fa, disease_name,
                                  reported_number, Symbol_To_Target_wm, es)
 
 

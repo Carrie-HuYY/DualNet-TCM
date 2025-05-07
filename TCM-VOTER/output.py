@@ -7,7 +7,7 @@ from pyecharts import options as opts
 from pyecharts.charts import Sunburst, Tree, Bar, Page, Graph, Pie
 
 
-def all_targets_tree(fda_unre, fda_re, clinical_unre, clinical_re, dir_name):
+def all_targets_tree(fda_unre, fda_re, clinical_unre, clinical_re):
     with open('config.json', 'r') as f:
         config = json.load(f)
 
@@ -77,8 +77,7 @@ def all_targets_tree(fda_unre, fda_re, clinical_unre, clinical_re, dir_name):
         ),
         )
 
-        .render('results/' + disease_name + ' reported_number_' + str(
-            reported_number) + '/' + dir_name + "/Targets_tree.html")
+        .render('results/' + disease_name + '/' + "/Targets_tree.html")
     )
 
 
@@ -128,7 +127,7 @@ def drug_treetype_data(drugs):
 
 
 # 生成每个靶标对应药物的树状图以及柱状图
-def target_tree_bar(dir_name, symbol, drug_frequency,
+def target_tree_bar(symbol, drug_frequency,
                     drug_ap_not_report, drug_ap_report,
                     drug_cl_not_report, drug_cl_report,
                     disease_name, reported_number):
@@ -237,13 +236,12 @@ def target_tree_bar(dir_name, symbol, drug_frequency,
         Page()
         .add(tree, bar)
     ).render(
-        'results/' + disease_name + ' reported_number_' + str(
-            reported_number) + '/' + dir_name + '/' + symbol + '/' + symbol + '.html'
+        'results/' + disease_name + '/' + symbol + '/' + symbol + '.html'
     )
 
 
 # 制作sunburst图
-def get_sunburst(un_relevant_targets_recommend_drug, fa, dir_name):
+def get_sunburst(un_relevant_targets_recommend_drug, fa):
     with open('config.json', 'r') as f:
         config = json.load(f)
 
@@ -332,21 +330,19 @@ def get_sunburst(un_relevant_targets_recommend_drug, fa, dir_name):
                                                    font_family='Microsoft YaHei',
                                                    ))
 
-        .render('results/' + disease_name + ' reported_number_' + str(
-            reported_number) + '/' + dir_name + "/drug_suggestion.html")
+        .render('results/' + disease_name + "/drug_suggestion.html")
     )
 
 
 # 生成excel表格
-def get_excel(un_relevant_targets_recommend_drug, dir_name, disease_name, reported_number):
+def get_excel(un_relevant_targets_recommend_drug, disease_name, reported_number):
     # 生成excel表格
     df = pd.DataFrame(un_relevant_targets_recommend_drug.items(), columns=['Target', 'Drug'])
-    df.to_excel('results/' + disease_name + ' reported_number_' + str(
-        reported_number) + '/' + dir_name + "/drug_suggestion.html", index=False)
+    df.to_excel('results/' + disease_name + "/drug_suggestion.html", index=False)
 
 
 # 生成靶标对应药物的sunburst图和每个靶标对应的药物信息
-def get_sunburst_tree_bar(dir_name, fda_no_review, ct_no_review, fa, disease, input, Symbol_To_Target, es):
+def get_sunburst_tree_bar(fda_no_review, ct_no_review, fa, disease, input, Symbol_To_Target, es):
     with open('config.json', 'r') as f:
         config = json.load(f)
 
@@ -355,6 +351,7 @@ def get_sunburst_tree_bar(dir_name, fda_no_review, ct_no_review, fa, disease, in
 
     target_not_report = fda_no_review + ct_no_review
     un_relevant_targets_recommend_drug = {}
+
     for symbol in target_not_report:
         target = [*Symbol_To_Target[symbol].keys()][0]
         # print(symbol)
@@ -372,15 +369,16 @@ def get_sunburst_tree_bar(dir_name, fda_no_review, ct_no_review, fa, disease, in
         drug_frequency = get.get_drug_frequency(drug_not_report, drug_report, es)
         if drug_frequency:
             os.makedirs(
-                'results/' + disease_name + ' reported_number_' + str(reported_number) + '/' + dir_name + '/' + symbol,
+                'results/' + disease_name + '/' + symbol,
                 exist_ok=True)
-            target_tree_bar(dir_name, symbol, drug_frequency,
+            target_tree_bar(symbol, drug_frequency,
                             drug_ap_not_report, drug_ap_report,
                             drug_cl_not_report, drug_cl_report,
                             disease_name, reported_number)
 
             number_index = drug_frequency.index(max(drug_frequency))
-            if drug_not_report == []:
+
+            if not drug_not_report:
                 suggest_drug = drug_report[number_index]
             else:
                 suggest_drug = drug_not_report[number_index]
@@ -388,9 +386,8 @@ def get_sunburst_tree_bar(dir_name, fda_no_review, ct_no_review, fa, disease, in
 
     # 输出为excel文件
     df = pd.DataFrame(un_relevant_targets_recommend_drug.items(), columns=['Target', 'Recommend Drug'])
-    df.to_excel('results/' + disease_name + ' reported_number_' + str(
-        reported_number) + '/' + dir_name + "/drug_suggestion.xlsx", index=False)
-    get_sunburst(un_relevant_targets_recommend_drug, fa, dir_name)
+    df.to_excel('results/' + disease_name + "/drug_suggestion.xlsx", index=False)
+    get_sunburst(un_relevant_targets_recommend_drug, fa)
 
 
 # 对推荐靶标数量进行控制

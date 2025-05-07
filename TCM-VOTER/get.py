@@ -2,10 +2,7 @@ from collections import Counter
 import pandas as pd
 import os
 import json
-from elasticsearch import Elasticsearch
 
-# TODO: 为各函数增加抛出异常功能，若无法查询到相关信息，则抛出异常。
-# TODO: 修改函数解释以及其中的变量名，使之与函数作用统一
 
 def get_formula(by, items) -> pd.DataFrame:
     """
@@ -44,7 +41,7 @@ def get_formula_tcm_links(by, items) -> pd.DataFrame:
 
     # 读取HerbiV_formula_tcm_links数据集
     formula_tcm_links_all = pd.read_excel(os.path.dirname(os.path.abspath(__file__)) +
-                                        r'/Data/Formula_TCM_Links.xlsx')
+                                          r'/Data/Formula_TCM_Links.xlsx')
 
     # 在数据集中获取items中复方/中药的复方-中药连接信息
     formula_tcm_links = formula_tcm_links_all.loc[formula_tcm_links_all[by].isin(items)].copy()
@@ -145,7 +142,6 @@ def get_chem_protein_links(by, items, score=900) -> pd.DataFrame:
             by (str): 数据集中与items相匹配的列的列名。Column name of the column in the dataset that matches items.
             items (collections.abc.Iterable): 要查询的化合物/蛋白。Chemical(s)/protein(s) to be queried.
             score (int): 仅combined_score大于等于score的记录会被筛选出，默认为900，最大为1000，最小为0。
-            Record(s) with combined_score no less than score will be filtered out, 900 by default.
 
         Returns:
             pandas.DataFrame: items中化合物/蛋白的化合物-靶点（蛋白）连接的combined_score大于等于score的连接信息。
@@ -197,7 +193,6 @@ def get_proteins(by, items) -> pd.DataFrame:
     proteins.index = range(proteins.shape[0])
 
     return proteins
-
 
 
 def get_SD(by, items) -> pd.DataFrame:
@@ -254,9 +249,7 @@ def get_targetNum_dict(symbol_list, interaction_num, PPI_DICT):
     return {k: v for k, v in PPI_NUMBER.items() if v >= interaction_num}
 
 
-
 def get_data(protein_list_path, interaction_num):
-
     file_name = protein_list_path
     Symbol_list = get_Symbol(file_name)
 
@@ -270,23 +263,24 @@ def get_data(protein_list_path, interaction_num):
     print('The number of PPI proteins list is: ', len(Symbol_PPI_list))
     print('Please wait for a while, the program is running...')
 
-    with open ('Data/Drug/Symbol_To_Target.json', 'r') as f:
+    with open('Data/Drug/Symbol_To_Target.json', 'r') as f:
         Symbol_To_Target_wm = json.load(f)
 
-    with open ('Data/ID_Transformed/Symbol_To_Fullname.json', 'r') as f:
+    with open('Data/ID_Transformed/Symbol_To_Fullname.json', 'r') as f:
         Symbol_To_Fullname = json.load(f)
 
     return Symbol_PPI_list, Symbol_To_Target_wm, Symbol_To_Fullname, Symbol_list
 
 
 def get_txt():
-    '''
+    """
     获取当前地址文件夹中所有txt的文件名
     :return: 返回文件名
-    '''
+    """
     for file_name in os.listdir():
         if file_name.endswith('.txt'):
             return file_name
+
 
 #
 def get_Symbol(file_name):
@@ -298,6 +292,7 @@ def get_Symbol(file_name):
     Symbol = pd.read_excel(file_name)
 
     return Symbol
+
 
 # 'hepatocellular carcinoma'
 # 查询药物关于疾病的报道信息
@@ -375,7 +370,7 @@ def get_drug_report_info(drug_ap, drug_cl, disease, input_num, es):
 # 从药物列表获取药物的频率
 def get_drug_frequency(drug_not_report, drug_report, es):
     drug_frequency = []
-    if drug_not_report != []:
+    if drug_not_report:
         for drug in drug_not_report:
             # 这个名字需要进行处理
             # 会出现特殊字符无法处理的情况[Avastin+/-Tarceva]
@@ -422,7 +417,7 @@ def get_PPI_Symbol_List(symbol_list, interaction_num):
     """
     获取PPI列表
     """
-    with open ('Data/PPI/PPI.json', 'r') as f:
+    with open('Data/PPI/PPI.json', 'r') as f:
         PPI_DICT = json.load(f)
 
     symbol_list = symbol_list['gene_name'].tolist()
@@ -434,7 +429,7 @@ def get_PPI_Symbol_List(symbol_list, interaction_num):
 
 
 if __name__ == '__main__':
-    with open ('Data/PPI/PPI.json', 'r') as f:
+    with open('Data/PPI/PPI.json', 'r') as f:
         PPI_DICT = json.load(f)
 
     symbol_list = ["ARF5"]

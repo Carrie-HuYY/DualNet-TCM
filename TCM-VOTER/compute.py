@@ -24,6 +24,7 @@ def calculate_herbiv_score(data: pd.DataFrame, id_col: str, link_data: pd.DataFr
     Returns:
         计算后的 HerbiV Score。
     """
+
     # 使用 groupby 和 apply 优化计算
     def _calculate_score(group):
         return 1 - (1 - group[score_col]).prod()
@@ -33,13 +34,13 @@ def calculate_herbiv_score(data: pd.DataFrame, id_col: str, link_data: pd.DataFr
 
 
 def score(
-    tcm: pd.DataFrame,
-    tcm_chem_links: pd.DataFrame,
-    chem: pd.DataFrame,
-    chem_protein_links: pd.DataFrame,
-    formula: Union[pd.DataFrame, None] = None,
-    formula_tcm_links: Union[pd.DataFrame, None] = None,
-    weights: Union[dict, None] = None
+        tcm: pd.DataFrame,
+        tcm_chem_links: pd.DataFrame,
+        chem: pd.DataFrame,
+        chem_protein_links: pd.DataFrame,
+        formula: Union[pd.DataFrame, None] = None,
+        formula_tcm_links: Union[pd.DataFrame, None] = None,
+        weights: Union[dict, None] = None
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """
     计算复方、中药和化合物的 HerbiV Score。
@@ -88,14 +89,16 @@ def score(
 
         # 计算各中药的 HerbiV Score
         tcm_scores = tcm['DNHID'].apply(
-            lambda x: 1 - (1 - chem_and_score.loc[chem_and_score['DNCID'].isin(tcm_chem_dict.get(x, [])), f'{protein} HerbiV Score']).prod()
+            lambda x: 1 - (1 - chem_and_score.loc[chem_and_score['DNCID'].
+                           isin(tcm_chem_dict.get(x, [])), f'{protein} HerbiV Score']).prod()
         )
         tcm_and_score[f'{protein} HerbiV Score'] = tcm_scores
 
         # 若传入了复方相关信息，则还需计算各复方的 HerbiV Score
         if formula is not None:
             formula_scores = formula['DNFID'].apply(
-                lambda x: 1 - (1 - tcm_and_score.loc[tcm_and_score['DNHID'].isin(formula_tcm_dict.get(x, [])), f'{protein} HerbiV Score']).prod()
+                lambda x: 1 - (1 - tcm_and_score.loc[tcm_and_score['DNHID'].
+                               isin(formula_tcm_dict.get(x, [])), f'{protein} HerbiV Score']).prod()
             )
             formula_and_score[f'{protein} HerbiV Score'] = formula_scores
 
@@ -119,6 +122,7 @@ def score(
     chem_and_score = chem_and_score.sort_values(by='Importance Score', ascending=False).reset_index(drop=True)
 
     return tcm_and_score, chem_and_score, formula_and_score
+
 
 def component(items_and_score: pd.DataFrame, random_state=None, num=1000, c=10) -> pd.DataFrame:
     """
@@ -203,7 +207,8 @@ def boost(row: pd.Series, items_and_score: pd.DataFrame, by: str) -> float:
     return (row['Importance Score'] - max_score) / max_score
 
 
-def knapsack(weights: np.ndarray, n: int, forbidden_combinations: List[List[str]], names: np.ndarray, values: np.ndarray, c: int = 10) -> Tuple[float, List[str]]:
+def knapsack(weights: np.ndarray, n: int, forbidden_combinations: List[List[str]],
+             names: np.ndarray, values: np.ndarray, c: int = 10) -> Tuple[float, List[str]]:
     """
     使用动态规划解决背包问题。
 
