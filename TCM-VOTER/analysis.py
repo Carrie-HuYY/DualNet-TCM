@@ -78,15 +78,15 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
         formula_tcm_links = formula_tcm_links.loc[
             formula_tcm_links['DNFID'].isin(formula_id) &
             formula_tcm_links['DNHID'].isin(tcm_id)
-        ]
+            ]
     tcm_chem_links = tcm_chem_links.loc[
         tcm_chem_links['DNHID'].isin(tcm_id) &
         tcm_chem_links['DNCID'].isin(chem_id)
-    ]
+        ]
     chem_protein_links = chem_protein_links.loc[
         chem_protein_links['DNCID'].isin(chem_id) &
         chem_protein_links['Ensembl_ID'].isin(proteins_id)
-    ]
+        ]
 
     # 重新索引
     tcm_chem_links.reset_index(drop=True, inplace=True)
@@ -99,43 +99,6 @@ def dfs_filter(formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_prote
 def classify_targets_wm(Symbol_To_Target, Symbol_list):
     """
     classify_targets: 根据给定的 Symbol_To_Target 字典和 Symbol_list 列表，对靶标（targets）进行西药分类。
-
-    :param Symbol_To_Target:
-    :param Symbol_list:
-    :return:
-        有药物的靶标（target_have_drug）：这些靶标在 Symbol_To_Target 字典中有对应的条目，即存在与之相关的药物信息。
-        无药物的靶标（target_no_drug）：这些靶标在 Symbol_To_Target 字典中没有对应的条目，即没有与之相关的药物信息。
-        FDA批准的靶标（target_FDA_approved）：这些靶标不仅有药物，而且这些药物已经成功通过FDA审批。
-        临床试验中的靶标（target_clinical_trial）：这些靶标有药物，且这些药物目前处于临床试验阶段。
-        其他靶标（target_others）：这些靶标有药物，但药物既不是FDA批准的，也不在临床试验中。
-    """
-    target_have_drug, target_no_drug = [], []
-    target_FDA_approved, target_clinical_trial, target_others = [], [], []
-
-    for symbol in Symbol_list:
-        if symbol in Symbol_To_Target.keys():
-            target_have_drug.append(symbol)
-        else:
-            target_no_drug.append(symbol)
-
-    for symbol in target_have_drug:
-        target_phage = [*Symbol_To_Target[symbol].values()][0]
-        target_name = [*Symbol_To_Target[symbol].keys()][0]
-        drug_phase, drug_ap_cl, drug_ap, drug_cl = output.drug_classify(target_name)
-        # 增加一个判断，如果symbol所在阶段确实存在对应的药物，则将其加入到对应的列表中
-        if target_phage == 'Successful target' and drug_ap != []:
-            target_FDA_approved.append(symbol)
-        elif target_phage == 'Clinical Trial target' and drug_cl != []:
-            target_clinical_trial.append(symbol)
-        else:
-            target_others.append(symbol)
-
-    return target_have_drug, target_no_drug, target_FDA_approved, target_clinical_trial, target_others
-
-
-def classify_targets_tcm(Symbol_To_Target, Symbol_list):
-    """
-    classify_targets: 根据给定的 Symbol_To_Target 字典和 Symbol_list 列表，对靶标（targets）进行中药角度分类。
 
     :param Symbol_To_Target:
     :param Symbol_list:
@@ -203,8 +166,7 @@ def classify_targets_html(target_have_drug, target_no_drug, target_FDA_approved,
         fp.write(str(soup))
 
 
-def query_target(symbol,Symbol_To_PubMedID,Symbol_To_UniprotID,Symbol_To_Fullname,es,keywords):
-    uniprotID = Symbol_To_UniprotID[symbol]
+def query_target(symbol, Symbol_To_PubMedID, Symbol_To_UniprotID, Symbol_To_Fullname, es, keywords):
     pubMedId = Symbol_To_PubMedID[symbol]
     # final_list = []
     sql1 = {
@@ -219,12 +181,12 @@ def query_target(symbol,Symbol_To_PubMedID,Symbol_To_UniprotID,Symbol_To_Fullnam
                     {
                         "match_phrase": {
                             "abstract": keywords
-                            }
+                        }
                     },
                     {
                         "match_phrase": {  # abstract中还要存在另一个关键词
                             "abstract": symbol
-                            }
+                        }
                     },
                 ]
             }
@@ -239,32 +201,32 @@ def query_target(symbol,Symbol_To_PubMedID,Symbol_To_UniprotID,Symbol_To_Fullnam
             fullName = Symbol_To_Fullname[symbol]
             sql2 = {
                 "query": {
-                        "bool": {
-                            'must': [
-                                {
-                                    "match_phrase": {
-                                        "abstract": keywords
-                                        }
-                                },
-                                {
-                                    "bool": {
-                                        "should": [
-                                            {
-                                                "match_phrase": {
-                                                    "abstract": fullName
-                                                }
-                                            },
-                                            {
-                                                "match_phrase": {
-                                                    "abstract": symbol
-                                                }
-                                            }
-                                        ]
-                                    }
+                    "bool": {
+                        'must': [
+                            {
+                                "match_phrase": {
+                                    "abstract": keywords
                                 }
-                            ]
-                        }
+                            },
+                            {
+                                "bool": {
+                                    "should": [
+                                        {
+                                            "match_phrase": {
+                                                "abstract": fullName
+                                            }
+                                        },
+                                        {
+                                            "match_phrase": {
+                                                "abstract": symbol
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
                     }
+                }
             }
             res = es.search(index='abstract22', body=sql2, scroll='5m')
             reported_number_2 = res['hits']['total']['value']
@@ -279,29 +241,29 @@ def query_target(symbol,Symbol_To_PubMedID,Symbol_To_UniprotID,Symbol_To_Fullnam
 
 # 通过摘要中的关键词进行查询，将靶标分为对于该疾病报道过的靶标和没有报道过的靶标
 def report_info(fa, ct, es, keywords, input_num):
-    with open ('Data\ID_Transformed\Symbol_To_PubMedID.json', 'r') as f:
+    with open('Data/ID_Transformed/Symbol_To_PubMedID.json', 'r') as f:
         Symbol_To_PubMedID = json.load(f)
-    with open ('Data\ID_Transformed\Symbol_To_UniprotID.json', 'r') as f:
+    with open('Data/ID_Transformed/Symbol_To_UniprotID.json', 'r') as f:
         Symbol_To_UniprotID = json.load(f)
-    with open ('Data\ID_Transformed\Symbol_To_Fullname.json', 'r') as f:
+    with open('Data/ID_Transformed/Symbol_To_Fullname.json', 'r') as f:
         Symbol_To_Fullname = json.load(f)
-    fda_no_review, fda_review ,ct_no_review, ct_review= [],[],[],[]
+    fda_no_review, fda_review, ct_no_review, ct_review = [], [], [], []
     for symbol in fa:
         # 存在有的symbol没有对应的uniprotID或者pubMedID 对于这样的symbol进行剔除
         if symbol in Symbol_To_PubMedID.keys() and symbol in Symbol_To_UniprotID.keys():
-            query_num = query_target(symbol,Symbol_To_PubMedID,Symbol_To_UniprotID,Symbol_To_Fullname,es,keywords)
+            query_num = query_target(symbol, Symbol_To_PubMedID, Symbol_To_UniprotID, Symbol_To_Fullname, es, keywords)
             if query_num > input_num:
                 fda_review.append(symbol)
             else:
                 fda_no_review.append(symbol)
     for symbol in ct:
-        if symbol  in Symbol_To_PubMedID.keys() and symbol  in Symbol_To_UniprotID.keys():
-            query_num = query_target(symbol,Symbol_To_PubMedID,Symbol_To_UniprotID,Symbol_To_Fullname,es,keywords)
+        if symbol in Symbol_To_PubMedID.keys() and symbol in Symbol_To_UniprotID.keys():
+            query_num = query_target(symbol, Symbol_To_PubMedID, Symbol_To_UniprotID, Symbol_To_Fullname, es, keywords)
             if query_num > input_num:
                 ct_review.append(symbol)
             else:
                 ct_no_review.append(symbol)
-    return fda_no_review, fda_review ,ct_no_review, ct_review
+    return fda_no_review, fda_review, ct_no_review, ct_review
 
 
 def set_config_auto():
@@ -325,7 +287,8 @@ def research_status_test(protein_list_path):
 
     #print(disease_name, reported_number, interaction_num, target_max_number)
 
-    Symbol_PPI_list, Symbol_To_Target_wm, Symbol_To_Fullname, Symbol_list = get.get_data(protein_list_path, interaction_num)
+    Symbol_PPI_list, Symbol_To_Target_wm, Symbol_To_Fullname, Symbol_list = get.get_data(protein_list_path,
+                                                                                         interaction_num)
 
     p_h_dr, p_no_dr, p_fa, p_ct, p_ot = classify_targets_wm(Symbol_To_Target_wm, Symbol_PPI_list)
     h_dr, no_dr, fa, ct, ot = classify_targets_wm(Symbol_To_Target_wm, Symbol_list)
@@ -342,7 +305,8 @@ def research_status_test(protein_list_path):
 
     # symbol对应的靶标
     fda_no_review, fda_review, ct_no_review, ct_review = report_info(fa, ct, es, disease_name, reported_number)
-    p_fda_no_review, p_fda_review, p_ct_no_review, p_ct_review = report_info(p_fa, p_ct, es, disease_name, reported_number)
+    p_fda_no_review, p_fda_review, p_ct_no_review, p_ct_review = report_info(p_fa, p_ct, es, disease_name,
+                                                                             reported_number)
 
     # 生成靶标信息的Tree图
     output.all_targets_tree(fda_no_review, fda_review, ct_no_review, ct_review, 'Target')
@@ -374,11 +338,8 @@ def research_status_test(protein_list_path):
 def update_config(disease_name, target_max_number, reported_number, interaction_num, config_path="config.json"):
     """读取用户输入并更新配置文件"""
 
-    updates = {}
-    updates["disease_name"] = disease_name
-    updates["target_max_number"] = int(target_max_number)
-    updates["interaction_num"] = int(interaction_num)
-    updates["reported_number"] = int(reported_number)
+    updates = {"disease_name": disease_name, "target_max_number": int(target_max_number),
+               "interaction_num": int(interaction_num), "reported_number": int(reported_number)}
 
     with open(config_path, "r+", encoding="utf-8") as f:
         config = json.load(f)

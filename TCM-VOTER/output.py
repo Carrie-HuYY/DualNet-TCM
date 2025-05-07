@@ -4,11 +4,10 @@ import get
 import textwrap
 import pandas as pd
 from pyecharts import options as opts
-from pyecharts.charts import Sunburst ,Tree ,Bar ,Page, Graph, Pie
+from pyecharts.charts import Sunburst, Tree, Bar, Page, Graph, Pie
 
 
 def all_targets_tree(fda_unre, fda_re, clinical_unre, clinical_re, dir_name):
-
     with open('config.json', 'r') as f:
         config = json.load(f)
 
@@ -83,7 +82,6 @@ def all_targets_tree(fda_unre, fda_re, clinical_unre, clinical_re, dir_name):
     )
 
 
-
 # 通过phase将药物进行分类
 def drug_classify(target_name):
     with open('data\Drug\Target_To_Drug.json', 'r') as f:
@@ -111,7 +109,6 @@ def drug_classify(target_name):
                 'name': key
             })
     return drug_phase, drug_ap_cl, drug_ap, drug_cl
-
 
 
 # 将字符串处理，过长的字符串换行
@@ -247,7 +244,6 @@ def target_tree_bar(dir_name, symbol, drug_frequency,
 
 # 制作sunburst图
 def get_sunburst(un_relevant_targets_recommend_drug, fa, dir_name):
-
     with open('config.json', 'r') as f:
         config = json.load(f)
 
@@ -351,7 +347,6 @@ def get_excel(un_relevant_targets_recommend_drug, dir_name, disease_name, report
 
 # 生成靶标对应药物的sunburst图和每个靶标对应的药物信息
 def get_sunburst_tree_bar(dir_name, fda_no_review, ct_no_review, fa, disease, input, Symbol_To_Target, es):
-
     with open('config.json', 'r') as f:
         config = json.load(f)
 
@@ -454,12 +449,14 @@ def re_name(SD, SD_Formula_Links, formula, formula_tcm_links, tcm, tcm_chem_link
     )
 
     out_sd_formula_links['SourceNode'] = out_sd_formula_links['SourceNode'].apply(
-        lambda x: sd_c.loc[sd_c['DNSID'] == x, '证候'].iloc[0] if not sd_c.loc[sd_c['DNSID'] == x, '证候'].empty else None
+        lambda x: sd_c.loc[sd_c['DNSID'] == x, '证候'].iloc[0] if not sd_c.loc[
+            sd_c['DNSID'] == x, '证候'].empty else None
     )
     out_sd_formula_links.dropna(subset=['SourceNode'], inplace=True)
 
     out_sd_formula_links['TargetNode'] = out_sd_formula_links['TargetNode'].apply(
-        lambda x:formula_C.loc[formula_C['DNFID'] == x, 'name'].iloc[0] if not formula_C.loc[formula_C['DNFID'] == x, 'name'].empty else None
+        lambda x: formula_C.loc[formula_C['DNFID'] == x, 'name'].iloc[0] if not formula_C.loc[
+            formula_C['DNFID'] == x, 'name'].empty else None
     )
 
     # 清洗方剂-中药连接信息
@@ -467,12 +464,14 @@ def re_name(SD, SD_Formula_Links, formula, formula_tcm_links, tcm, tcm_chem_link
         columns={formula_tcm_links.columns[0]: 'SourceNode', formula_tcm_links.columns[1]: 'TargetNode'}
     )
     out_formula_tcm_links['SourceNode'] = out_formula_tcm_links['SourceNode'].apply(
-        lambda x: formula_C.loc[formula_C['DNFID'] == x, 'name'].iloc[0] if not formula_C.loc[formula_C['DNFID'] == x, 'name'].empty else None
+        lambda x: formula_C.loc[formula_C['DNFID'] == x, 'name'].iloc[0] if not formula_C.loc[
+            formula_C['DNFID'] == x, 'name'].empty else None
     )
     out_formula_tcm_links.dropna(subset=['SourceNode'], inplace=True)
 
     out_formula_tcm_links['TargetNode'] = out_formula_tcm_links['TargetNode'].apply(
-        lambda x: tcm_c.loc[tcm_c['DNHID'] == x, 'cn_name'].iloc[0] if not tcm_c.loc[tcm_c['DNHID'] == x, 'cn_name'].empty else None
+        lambda x: tcm_c.loc[tcm_c['DNHID'] == x, 'cn_name'].iloc[0] if not tcm_c.loc[
+            tcm_c['DNHID'] == x, 'cn_name'].empty else None
     )
     out_formula_tcm_links.dropna(subset=['TargetNode'], inplace=True)
 
@@ -481,12 +480,14 @@ def re_name(SD, SD_Formula_Links, formula, formula_tcm_links, tcm, tcm_chem_link
         columns={tcm_chem_links_c.columns[0]: 'SourceNode', tcm_chem_links_c.columns[1]: 'TargetNode'}
     )
     out_tcm_chem['SourceNode'] = out_tcm_chem['SourceNode'].apply(
-        lambda x: tcm_c.loc[tcm_c['DNHID'] == x, 'cn_name'].iloc[0] if not tcm_c.loc[tcm_c['DNHID'] == x, 'cn_name'].empty else None
+        lambda x: tcm_c.loc[tcm_c['DNHID'] == x, 'cn_name'].iloc[0] if not tcm_c.loc[
+            tcm_c['DNHID'] == x, 'cn_name'].empty else None
     )
     out_tcm_chem.dropna(subset=['SourceNode'], inplace=True)
 
     out_tcm_chem['TargetNode'] = out_tcm_chem['TargetNode'].apply(
-        lambda x: chem_c.loc[chem_c['DNCID'] == x, 'Name'].iloc[0] if not chem_c.loc[chem_c['DNCID'] == x, 'Name'].empty else None
+        lambda x: chem_c.loc[chem_c['DNCID'] == x, 'Name'].iloc[0] if not chem_c.loc[
+            chem_c['DNCID'] == x, 'Name'].empty else None
     )
     out_tcm_chem.dropna(subset=['TargetNode'], inplace=True)
 
@@ -495,12 +496,14 @@ def re_name(SD, SD_Formula_Links, formula, formula_tcm_links, tcm, tcm_chem_link
         columns={chem_protein_links_c.columns[0]: 'SourceNode', chem_protein_links_c.columns[1]: 'TargetNode'}
     )
     out_chem_protein_links['SourceNode'] = out_chem_protein_links['SourceNode'].apply(
-        lambda x: chem_c.loc[chem_c['DNCID'] == x, 'Name'].iloc[0] if not chem_c.loc[chem_c['DNCID'] == x, 'Name'].empty else None
+        lambda x: chem_c.loc[chem_c['DNCID'] == x, 'Name'].iloc[0] if not chem_c.loc[
+            chem_c['DNCID'] == x, 'Name'].empty else None
     )
     out_chem_protein_links.dropna(subset=['SourceNode'], inplace=True)
 
     out_chem_protein_links['TargetNode'] = out_chem_protein_links['TargetNode'].apply(
-        lambda x: protein_c.loc[protein_c['Ensembl_ID'] == x, 'gene_name'].iloc[0] if not protein_c.loc[protein_c['Ensembl_ID'] == x, 'gene_name'].empty else None
+        lambda x: protein_c.loc[protein_c['Ensembl_ID'] == x, 'gene_name'].iloc[0] if not protein_c.loc[
+            protein_c['Ensembl_ID'] == x, 'gene_name'].empty else None
     )
     out_chem_protein_links.dropna(subset=['TargetNode'], inplace=True)
 
@@ -552,29 +555,33 @@ def out_for_cyto(SD,
         os.mkdir(path)
 
     SD, SD_Formula_Links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, protein = \
-        re_name(SD, SD_Formula_Links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, protein)
+        re_name(SD, SD_Formula_Links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links,
+                protein)
 
     # 输出Network文件
-    pd.concat([SD_Formula_Links, formula_tcm_links, tcm_chem_links, chem_protein_links, tcm_chem_links]).to_csv(os.path.join(path, 'Network.csv'), index=False)
+    pd.concat([SD_Formula_Links, formula_tcm_links, tcm_chem_links, chem_protein_links, tcm_chem_links]).to_csv(
+        os.path.join(path, 'Network.csv'), index=False)
 
     # 输出Type文件
     pd.concat([SD, formula, tcm, chem, protein]).to_csv(os.path.join(path, "Type.csv"), index=False)
 
 
-
-def vis(SD_df, SD_formula_links_df, formula_df, formula_tcm_links_df, tcm_df, tcm_chem_df, chem_df, chem_pro_df, pro_df, path):
-
+def vis(SD_df, SD_formula_links_df, formula_df, formula_tcm_links_df, tcm_df, tcm_chem_df, chem_df, chem_pro_df, pro_df,
+        path):
     if not os.path.exists(path):
         os.mkdir(path)
 
     SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, protein = \
-        re_name(SD_df, SD_formula_links_df, formula_df, formula_tcm_links_df, tcm_df, tcm_chem_df, chem_df, chem_pro_df, pro_df)
+        re_name(SD_df, SD_formula_links_df, formula_df, formula_tcm_links_df, tcm_df, tcm_chem_df, chem_df, chem_pro_df,
+                pro_df)
 
-    plot_circle(SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, protein, path)
+    plot_circle(SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links,
+                protein, path)
     plot_node_category_pie(SD, formula, tcm, chem, protein, path)
 
 
-def plot_circle(SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links, protein, path):
+def plot_circle(SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_links, chem, chem_protein_links,
+                protein, path):
     nodes = []
     links = []
 
@@ -624,11 +631,11 @@ def plot_circle(SD, SD_formula_links, formula, formula_tcm_links, tcm, tcm_chem_
                 })
 
     # 添加节点（只保留前50个）
-    add_nodes(nodes, SD['Key'].tolist(), category=3, symbol_size=15)      # 辩证
-    add_nodes(nodes, formula['Key'].tolist(), category=4, symbol_size=20) # 方剂
-    add_nodes(nodes, tcm['Key'].tolist(), category=0, symbol_size=25)     # 中药
-    add_nodes(nodes, chem['Key'].tolist(), category=1, symbol_size=15)    # 化学成分
-    add_nodes(nodes, protein['Key'].tolist(), category=2, symbol_size=10) # 靶点
+    add_nodes(nodes, SD['Key'].tolist(), category=3, symbol_size=15)  # 辩证
+    add_nodes(nodes, formula['Key'].tolist(), category=4, symbol_size=20)  # 方剂
+    add_nodes(nodes, tcm['Key'].tolist(), category=0, symbol_size=25)  # 中药
+    add_nodes(nodes, chem['Key'].tolist(), category=1, symbol_size=15)  # 化学成分
+    add_nodes(nodes, protein['Key'].tolist(), category=2, symbol_size=10)  # 靶点
 
     # 添加边（自动过滤无效连接）
     add_links(formula_tcm_links)
