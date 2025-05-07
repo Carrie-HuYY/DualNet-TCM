@@ -1,0 +1,8438 @@
+{
+    "OSTP":{
+        "T00032":"Research target"
+    },
+    "TGFA":{
+        "T00033":"Clinical Trial target"
+    },
+    "MRCKA":{
+        "T00075":"Research target"
+    },
+    "PIGU":{
+        "T00088":"Research target"
+    },
+    "LOX5":{
+        "T00140":"Successful target"
+    },
+    "TRPC5":{
+        "T00156":"Clinical Trial target"
+    },
+    "MDM2":{
+        "T00176":"Clinical Trial target"
+    },
+    "IL4":{
+        "T00239":"Clinical Trial target"
+    },
+    "NR1D1":{
+        "T00254":"Preclinical target"
+    },
+    "MOG":{
+        "T00295":"Research target"
+    },
+    "ACHA5":{
+        "T00299":"Research target"
+    },
+    "TM11D":{
+        "T00302":"Research target"
+    },
+    "ABL1":{
+        "T63505":"Successful target"
+    },
+    "TNNC2":{
+        "T00419":"Clinical Trial target"
+    },
+    "SRR":{
+        "T00477":"Research target"
+    },
+    "IL23R":{
+        "T00484":"Clinical Trial target"
+    },
+    "P2Y10":{
+        "T00488":"Research target"
+    },
+    "ABCA1":{
+        "T00494":"Successful target"
+    },
+    "PAWR":{
+        "T00496":"Clinical Trial target"
+    },
+    "GTR9":{
+        "T00523":"Discontinued target"
+    },
+    "SO1A2":{
+        "T00569":"Research target"
+    },
+    "MK10":{
+        "T00663":"Patented target"
+    },
+    "SOX2":{
+        "T00724":"Research target"
+    },
+    "M4K1":{
+        "T00749":"Clinical Trial target"
+    },
+    "FUT3":{
+        "T00750":"Clinical Trial target"
+    },
+    "KCJ11":{
+        "T00820":"Research target"
+    },
+    "M3K8":{
+        "T00852":"Research target"
+    },
+    "CXCR1":{
+        "T48195":"Research target"
+    },
+    "HCAR3":{
+        "T00890":"Clinical Trial target"
+    },
+    "KPCE":{
+        "T00895":"Successful target"
+    },
+    "NTF4":{
+        "T00902":"Research target"
+    },
+    "PHF8":{
+        "T00933":"Research target"
+    },
+    "TYRP1":{
+        "T00938":"Clinical Trial target"
+    },
+    "PB1":{
+        "T00973":"Research target"
+    },
+    "ERN1":{
+        "T17656":"Research target"
+    },
+    "WWP2":{
+        "T01054":"Research target"
+    },
+    "E9PEK4":{
+        "T01110":"Clinical Trial target"
+    },
+    "SPAG6":{
+        "T01151":"Research target"
+    },
+    "ST32B":{
+        "T01255":"Research target"
+    },
+    "BCR":{
+        "T38284":"Successful target"
+    },
+    "BACE2":{
+        "T47438":"Research target"
+    },
+    "TMPS2":{
+        "T01282":"Research target"
+    },
+    "TS101":{
+        "T01283":"Clinical Trial target"
+    },
+    "SYVN1":{
+        "T01441":"Research target"
+    },
+    "ULA1":{
+        "T01447":"Clinical Trial target"
+    },
+    "GSTO1":{
+        "T01521":"Preclinical target"
+    },
+    "CXA9":{
+        "T01529":"Research target"
+    },
+    "SGPL1":{
+        "T01575":"Clinical Trial target"
+    },
+    "CATA":{
+        "T01597":"Clinical Trial target"
+    },
+    "PML":{
+        "T01683":"Research target"
+    },
+    "HHAT":{
+        "T01725":"Research target"
+    },
+    "ADA2C":{
+        "T01777":"Successful target"
+    },
+    "ITB1":{
+        "T01851":"Clinical Trial target"
+    },
+    "KLK2":{
+        "T01908":"Clinical Trial target"
+    },
+    "RON":{
+        "T01973":"Clinical Trial target"
+    },
+    "PDE4D":{
+        "T02001":"Successful target"
+    },
+    "ARSB":{
+        "T02119":"Successful target"
+    },
+    "GSH0":{
+        "T02134":"Research target"
+    },
+    "IL27B":{
+        "T02231":"Research target"
+    },
+    "DPOLQ":{
+        "T02258":"Clinical Trial target"
+    },
+    "RUNX2":{
+        "T02259":"Research target"
+    },
+    "KCNT1":{
+        "T02262":"Clinical Trial target"
+    },
+    "TN13B":{
+        "T02318":"Successful target"
+    },
+    "TM219":{
+        "T02328":"Research target"
+    },
+    "GHR":{
+        "T02333":"Successful target"
+    },
+    "UTS2":{
+        "T02346":"Research target"
+    },
+    "E2AK1":{
+        "T81482":"Research target"
+    },
+    "EPHB1":{
+        "T02446":"Research target"
+    },
+    "FYV1":{
+        "T02469":"Clinical Trial target"
+    },
+    "NNTM":{
+        "T02484":"Research target"
+    },
+    "CD2":{
+        "T02532":"Clinical Trial target"
+    },
+    "SCN4A":{
+        "T02546":"Clinical Trial target"
+    },
+    "DRD3":{
+        "T02551":"Successful target"
+    },
+    "PTGES":{
+        "T02562":"Clinical Trial target"
+    },
+    "SO1B3":{
+        "T02565":"Research target"
+    },
+    "PLPP":{
+        "T02587":"Research target"
+    },
+    "TRFE":{
+        "T02617":"Clinical Trial target"
+    },
+    "BIRC5":{
+        "T02677":"Clinical Trial target"
+    },
+    "NOS2":{
+        "T02703":"Clinical Trial target"
+    },
+    "GRM3":{
+        "T02719":"Clinical Trial target"
+    },
+    "IRF1":{
+        "T02723":"Research target"
+    },
+    "NTR1":{
+        "T02728":"Clinical Trial target"
+    },
+    "CCR3":{
+        "T02752":"Discontinued target"
+    },
+    "ABCC9":{
+        "T02777":"Successful target"
+    },
+    "DMD":{
+        "T12909":"Clinical Trial target"
+    },
+    "IFNB":{
+        "T02808":"Successful target"
+    },
+    "HTR5B":{
+        "T02891":"Research target"
+    },
+    "IL1AP":{
+        "T02974":"Clinical Trial target"
+    },
+    "SRMS":{
+        "T03023":"Research target"
+    },
+    "RASK":{
+        "T59480":"Clinical Trial target"
+    },
+    "TLR1":{
+        "T42932":"Patented target"
+    },
+    "DGLA":{
+        "T03150":"Patented target"
+    },
+    "PRAME":{
+        "T03189":"Clinical Trial target"
+    },
+    "KS6A3":{
+        "T03279":"Patented target"
+    },
+    "IL2RA":{
+        "T03313":"Successful target"
+    },
+    "LY6D":{
+        "T03317":"Research target"
+    },
+    "IL4RA":{
+        "T03346":"Successful target"
+    },
+    "SRBP2":{
+        "T03385":"Research target"
+    },
+    "PGH1":{
+        "T60529":"Successful target"
+    },
+    "CHST5":{
+        "T03404":"Research target"
+    },
+    "COX17":{
+        "T03409":"Research target"
+    },
+    "KIME":{
+        "T03453":"Research target"
+    },
+    "MMP12":{
+        "T03500":"Clinical Trial target"
+    },
+    "RGS8":{
+        "T03529":"Patented target"
+    },
+    "HNF1A":{
+        "T03556":"Clinical Trial target"
+    },
+    "FCG2B":{
+        "T03573":"Clinical Trial target"
+    },
+    "STK38":{
+        "T03581":"Research target"
+    },
+    "SIA8D":{
+        "T03593":"Research target"
+    },
+    "CBP":{
+        "T03634":"Clinical Trial target"
+    },
+    "SYUA":{
+        "T03644":"Clinical Trial target"
+    },
+    "ADA":{
+        "T03661":"Successful target"
+    },
+    "ADAM9":{
+        "T03672":"Clinical Trial target"
+    },
+    "HDAC9":{
+        "T03687":"Patented target"
+    },
+    "LKHA4":{
+        "T03691":"Successful target"
+    },
+    "B2CL2":{
+        "T03755":"Clinical Trial target"
+    },
+    "TNR14":{
+        "T03772":"Research target"
+    },
+    "MK":{
+        "T03878":"Research target"
+    },
+    "AT1A1":{
+        "T40800":"Successful target"
+    },
+    "PPP5":{
+        "T04123":"Patented target"
+    },
+    "CLCKA":{
+        "T04149":"Research target"
+    },
+    "NMUR2":{
+        "T04210":"Research target"
+    },
+    "STK16":{
+        "T04303":"Research target"
+    },
+    "M3K7":{
+        "T04361":"Research target"
+    },
+    "CUL3":{
+        "T04364":"Research target"
+    },
+    "ANXA2":{
+        "T04386":"Research target"
+    },
+    "KCNN3":{
+        "T04388":"Clinical Trial target"
+    },
+    "CBLB":{
+        "T04393":"Research target"
+    },
+    "TSSK2":{
+        "T04413":"Research target"
+    },
+    "PKR2":{
+        "T04497":"Research target"
+    },
+    "KSR1":{
+        "T04499":"Research target"
+    },
+    "DLG4":{
+        "T90665":"Research target"
+    },
+    "EZH2":{
+        "T25265":"Successful target"
+    },
+    "IRF8":{
+        "T04599":"Research target"
+    },
+    "ADRO":{
+        "T04685":"Research target"
+    },
+    "ACHA":{
+        "T04689":"Successful target"
+    },
+    "TYDP2":{
+        "T04696":"Research target"
+    },
+    "PUR9":{
+        "T04741":"Research target"
+    },
+    "SDF1":{
+        "T04773":"Clinical Trial target"
+    },
+    "SUH":{
+        "T04827":"Research target"
+    },
+    "E2AK2":{
+        "T51102":"Research target"
+    },
+    "CCL20":{
+        "T04894":"Clinical Trial target"
+    },
+    "CAN2":{
+        "T04902":"Clinical Trial target"
+    },
+    "PK3CB":{
+        "T05031":"Clinical Trial target"
+    },
+    "ANO1":{
+        "T05089":"Successful target"
+    },
+    "HDAC3":{
+        "T05090":"Clinical Trial target"
+    },
+    "CMA1":{
+        "T05114":"Clinical Trial target"
+    },
+    "KMT5B":{
+        "T05164":"Preclinical target"
+    },
+    "ZA2G":{
+        "T05249":"Research target"
+    },
+    "XPO2":{
+        "T05324":"Research target"
+    },
+    "MARCS":{
+        "T05351":"Clinical Trial target"
+    },
+    "TGM2":{
+        "T05387":"Preclinical target"
+    },
+    "NEP":{
+        "T05409":"Clinical Trial target"
+    },
+    "LIGO1":{
+        "T05643":"Clinical Trial target"
+    },
+    "LCAT":{
+        "T05661":"Clinical Trial target"
+    },
+    "PLCA":{
+        "T05739":"Research target"
+    },
+    "BPHL":{
+        "T05806":"Research target"
+    },
+    "CXG1":{
+        "T05828":"Research target"
+    },
+    "GASR":{
+        "T05849":"Successful target"
+    },
+    "APH1A":{
+        "T99840":"Clinical Trial target"
+    },
+    "TNNT2":{
+        "T05887":"Research target"
+    },
+    "PDE8A":{
+        "T05904":"Patented target"
+    },
+    "MUC16":{
+        "T05938":"Clinical Trial target"
+    },
+    "FCGRN":{
+        "T06020":"Clinical Trial target"
+    },
+    "M3K1":{
+        "T06031":"Clinical Trial target"
+    },
+    "NOS3":{
+        "T06046":"Clinical Trial target"
+    },
+    "TXTP":{
+        "T06064":"Research target"
+    },
+    "ROCK2":{
+        "T06093":"Clinical Trial target"
+    },
+    "IRS2":{
+        "T06128":"Clinical Trial target"
+    },
+    "RGS12":{
+        "T06146":"Research target"
+    },
+    "VIPR2":{
+        "T06182":"Clinical Trial target"
+    },
+    "PARP1":{
+        "T06273":"Successful target"
+    },
+    "SPYA":{
+        "T06365":"Research target"
+    },
+    "INAR2":{
+        "T06421":"Successful target"
+    },
+    "CP2A6":{
+        "T06455":"Successful target"
+    },
+    "NUCL":{
+        "T06475":"Clinical Trial target"
+    },
+    "RAC3":{
+        "T06525":"Research target"
+    },
+    "IL17F":{
+        "T06542":"Clinical Trial target"
+    },
+    "CAH6":{
+        "T06569":"Successful target"
+    },
+    "CGB3":{
+        "T06575":"Clinical Trial target"
+    },
+    "IL18":{
+        "T06671":"Clinical Trial target"
+    },
+    "ITA1":{
+        "T74109":"Research target"
+    },
+    "PSB9":{
+        "T06792":"Patented target"
+    },
+    "SOCS1":{
+        "T06800":"Research target"
+    },
+    "S100G":{
+        "T06819":"Research target"
+    },
+    "IL23A":{
+        "T06841":"Successful target"
+    },
+    "GHRL":{
+        "T06850":"Clinical Trial target"
+    },
+    "PDGFA":{
+        "T06869":"Clinical Trial target"
+    },
+    "CCR4":{
+        "T06955":"Successful target"
+    },
+    "DPOLB":{
+        "T06958":"Clinical Trial target"
+    },
+    "PACA":{
+        "T07045":"Clinical Trial target"
+    },
+    "SC5A5":{
+        "T07063":"Clinical Trial target"
+    },
+    "FAK2":{
+        "T07087":"Research target"
+    },
+    "HPPD":{
+        "T07137":"Successful target"
+    },
+    "NTRK1":{
+        "T25419":"Clinical Trial target"
+    },
+    "M4K2":{
+        "T07191":"Patented target"
+    },
+    "FABP4":{
+        "T07217":"Patented target"
+    },
+    "S10AC":{
+        "T07247":"Clinical Trial target"
+    },
+    "PIM2":{
+        "T07279":"Clinical Trial target"
+    },
+    "ACKR1":{
+        "T07289":"Successful target"
+    },
+    "VGFR3":{
+        "T07303":"Successful target"
+    },
+    "MSMB":{
+        "T07374":"Clinical Trial target"
+    },
+    "NOTC1":{
+        "T07394":"Clinical Trial target"
+    },
+    "RAGE":{
+        "T07400":"Clinical Trial target"
+    },
+    "ITA4":{
+        "T99686":"Research target"
+    },
+    "MASP2":{
+        "T07448":"Clinical Trial target"
+    },
+    "MYH7":{
+        "T07507":"Clinical Trial target"
+    },
+    "APOB":{
+        "T07533":"Clinical Trial target"
+    },
+    "CY1":{
+        "T07569":"Successful target"
+    },
+    "UBP13":{
+        "T07584":"Preclinical target"
+    },
+    "K1C17":{
+        "T07591":"Research target"
+    },
+    "CAMLG":{
+        "T07601":"Clinical Trial target"
+    },
+    "RPB7":{
+        "T07607":"Research target"
+    },
+    "PDE5A":{
+        "T07663":"Successful target"
+    },
+    "KCNJ4":{
+        "T07740":"Research target"
+    },
+    "PAK2":{
+        "T07766":"Research target"
+    },
+    "NAC1":{
+        "T07775":"Research target"
+    },
+    "5HT1B":{
+        "T07806":"Successful target"
+    },
+    "HDAC5":{
+        "T07930":"Patented target"
+    },
+    "LIRB2":{
+        "T07931":"Clinical Trial target"
+    },
+    "CHSTF":{
+        "T07944":"Research target"
+    },
+    "EPO":{
+        "T07958":"Clinical Trial target"
+    },
+    "TADBP":{
+        "T08014":"Clinical Trial target"
+    },
+    "PROP":{
+        "T08029":"Clinical Trial target"
+    },
+    "LRRK2":{
+        "T09977":"Patented target"
+    },
+    "TRPV6":{
+        "T08133":"Clinical Trial target"
+    },
+    "FANCA":{
+        "T08139":"Clinical Trial target"
+    },
+    "IFNA5":{
+        "T08156":"Clinical Trial target"
+    },
+    "OXSR1":{
+        "T08198":"Research target"
+    },
+    "HG2A":{
+        "T08231":"Clinical Trial target"
+    },
+    "GRAB":{
+        "T08298":"Research target"
+    },
+    "CD79B":{
+        "T08306":"Successful target"
+    },
+    "CDK12":{
+        "T08326":"Clinical Trial target"
+    },
+    "RNH2A":{
+        "T08350":"Research target"
+    },
+    "S23A2":{
+        "T08378":"Successful target"
+    },
+    "HXA5":{
+        "T08379":"Research target"
+    },
+    "JAK2":{
+        "T08391":"Successful target"
+    },
+    "S6A12":{
+        "T08446":"Research target"
+    },
+    "NLRP3":{
+        "T08499":"Clinical Trial target"
+    },
+    "TRBM":{
+        "T08583":"Discontinued target"
+    },
+    "EPHA6":{
+        "T08647":"Research target"
+    },
+    "PRIO":{
+        "T08722":"Research target"
+    },
+    "CSK":{
+        "T08741":"Patented target"
+    },
+    "KAP0":{
+        "T08813":"Research target"
+    },
+    "MMP8":{
+        "T08856":"Clinical Trial target"
+    },
+    "ACTHR":{
+        "T08898":"Successful target"
+    },
+    "GBRG2":{
+        "T08910":"Successful target"
+    },
+    "CADH1":{
+        "T08919":"Research target"
+    },
+    "ACACB":{
+        "T08922":"Successful target"
+    },
+    "1A33":{
+        "T08985":"Research target"
+    },
+    "PSB10":{
+        "T09022":"Patented target"
+    },
+    "TPBG":{
+        "T09058":"Clinical Trial target"
+    },
+    "S15A4":{
+        "T09063":"Research target"
+    },
+    "CALCB":{
+        "T09067":"Research target"
+    },
+    "IL10":{
+        "T09092":"Clinical Trial target"
+    },
+    "CASP2":{
+        "T09128":"Patented target"
+    },
+    "TENS4":{
+        "T09132":"Research target"
+    },
+    "LIMK2":{
+        "T09133":"Research target"
+    },
+    "DDR1":{
+        "T09185":"Patented target"
+    },
+    "PAQR1":{
+        "T09266":"Research target"
+    },
+    "CHIT1":{
+        "T09395":"Research target"
+    },
+    "KCJ10":{
+        "T09423":"Successful target"
+    },
+    "SPRC":{
+        "T09439":"Research target"
+    },
+    "CD5R1":{
+        "T09513":"Research target"
+    },
+    "CXCR5":{
+        "T09528":"Clinical Trial target"
+    },
+    "PPBT":{
+        "T09538":"Successful target"
+    },
+    "LEG1":{
+        "T09544":"Patented target"
+    },
+    "MCHR1":{
+        "T09572":"Clinical Trial target"
+    },
+    "GLUC":{
+        "T44919":"Clinical Trial target"
+    },
+    "GGT1":{
+        "T09742":"Research target"
+    },
+    "ADH7":{
+        "T09770":"Research target"
+    },
+    "TOP1":{
+        "T09826":"Successful target"
+    },
+    "AGTR2":{
+        "T09909":"Successful target"
+    },
+    "CCR5":{
+        "T09960":"Successful target"
+    },
+    "CCNE1":{
+        "T10052":"Research target"
+    },
+    "OPSD":{
+        "T10091":"Research target"
+    },
+    "FSHB":{
+        "T10092":"Clinical Trial target"
+    },
+    "CTRC":{
+        "T10118":"Patented target"
+    },
+    "DKK2":{
+        "T10125":"Research target"
+    },
+    "PTPRS":{
+        "T10147":"Successful target"
+    },
+    "CD4":{
+        "T10191":"Successful target"
+    },
+    "PDE4B":{
+        "T10265":"Clinical Trial target"
+    },
+    "CXD3":{
+        "T10336":"Research target"
+    },
+    "BRSK2":{
+        "T10375":"Research target"
+    },
+    "PLD2":{
+        "T10383":"Clinical Trial target"
+    },
+    "ACKR3":{
+        "T10491":"Preclinical target"
+    },
+    "ITB2":{
+        "T10513":"Clinical Trial target"
+    },
+    "LYSC":{
+        "T10586":"Research target"
+    },
+    "NPY2R":{
+        "T10670":"Clinical Trial target"
+    },
+    "DCHS":{
+        "T10735":"Clinical Trial target"
+    },
+    "FACE2":{
+        "T10756":"Research target"
+    },
+    "BMP6":{
+        "T10762":"Clinical Trial target"
+    },
+    "CDK8":{
+        "T10822":"Clinical Trial target"
+    },
+    "FETA":{
+        "T10828":"Clinical Trial target"
+    },
+    "FCGR1":{
+        "T10844":"Research target"
+    },
+    "GPR85":{
+        "T10864":"Research target"
+    },
+    "CD38":{
+        "T10877":"Successful target"
+    },
+    "ACOD":{
+        "T10897":"Successful target"
+    },
+    "UBP37":{
+        "T10899":"Research target"
+    },
+    "TRPC7":{
+        "T10918":"Research target"
+    },
+    "LYAM3":{
+        "T10965":"Successful target"
+    },
+    "ILRL2":{
+        "T10988":"Clinical Trial target"
+    },
+    "IFNW1":{
+        "T11005":"Clinical Trial target"
+    },
+    "CRFR2":{
+        "T11011":"Clinical Trial target"
+    },
+    "5HT1D":{
+        "T11072":"Successful target"
+    },
+    "ADA33":{
+        "T11192":"Patented target"
+    },
+    "FBX11":{
+        "T11203":"Research target"
+    },
+    "ANDR":{
+        "T11211":"Successful target"
+    },
+    "S1PR3":{
+        "T11241":"Patented target"
+    },
+    "CH60":{
+        "T11283":"Clinical Trial target"
+    },
+    "MRP1":{
+        "T11288":"Successful target"
+    },
+    "CCL2":{
+        "T11309":"Clinical Trial target"
+    },
+    "SIK1":{
+        "T11317":"Research target"
+    },
+    "CATK":{
+        "T11388":"Clinical Trial target"
+    },
+    "ADA2A":{
+        "T11448":"Successful target"
+    },
+    "TLR9":{
+        "T11451":"Clinical Trial target"
+    },
+    "GIP":{
+        "T11453":"Research target"
+    },
+    "THIL":{
+        "T11487":"Clinical Trial target"
+    },
+    "ERF":{
+        "T11561":"Research target"
+    },
+    "SRS12":{
+        "T11578":"Research target"
+    },
+    "XCT":{
+        "T11615":"Clinical Trial target"
+    },
+    "IL31":{
+        "T11701":"Clinical Trial target"
+    },
+    "DDR2":{
+        "T11764":"Patented target"
+    },
+    "ACATN":{
+        "T11791":"Patented target"
+    },
+    "CP2B6":{
+        "T11793":"Research target"
+    },
+    "KLK5":{
+        "T11808":"Patented target"
+    },
+    "TAU":{
+        "T45593":"Clinical Trial target"
+    },
+    "VKOR1":{
+        "T11843":"Successful target"
+    },
+    "GBRR3":{
+        "T11858":"Research target"
+    },
+    "TRPM7":{
+        "T11906":"Research target"
+    },
+    "KCNN1":{
+        "T11911":"Clinical Trial target"
+    },
+    "F13B":{
+        "T11947":"Clinical Trial target"
+    },
+    "ATF3":{
+        "T11966":"Research target"
+    },
+    "MA2B1":{
+        "T12059":"Clinical Trial target"
+    },
+    "SHH":{
+        "T12075":"Research target"
+    },
+    "PDE4C":{
+        "T12081":"Patented target"
+    },
+    "RBBP9":{
+        "T12084":"Research target"
+    },
+    "ACVR1":{
+        "T12091":"Clinical Trial target"
+    },
+    "MAGA4":{
+        "T12097":"Clinical Trial target"
+    },
+    "CRY1":{
+        "T12108":"Preclinical target"
+    },
+    "SCN9A":{
+        "T12119":"Clinical Trial target"
+    },
+    "M3K11":{
+        "T12126":"Research target"
+    },
+    "CGL":{
+        "T12241":"Patented target"
+    },
+    "GNAQ":{
+        "T12290":"Research target"
+    },
+    "CCND1":{
+        "T12355":"Clinical Trial target"
+    },
+    "GNRHR":{
+        "T12475":"Successful target"
+    },
+    "LCK":{
+        "T12499":"Successful target"
+    },
+    "PI4KB":{
+        "T12541":"Research target"
+    },
+    "ITPR3":{
+        "T12581":"Research target"
+    },
+    "DYNAP":{
+        "T12623":"Research target"
+    },
+    "ACON":{
+        "T12627":"Research target"
+    },
+    "TERA":{
+        "T12646":"Clinical Trial target"
+    },
+    "ZNT8":{
+        "T12714":"Research target"
+    },
+    "B2LA1":{
+        "T12797":"Patented target"
+    },
+    "KPCA":{
+        "T12808":"Successful target"
+    },
+    "HSP7C":{
+        "T12817":"Research target"
+    },
+    "COP1":{
+        "T12819":"Successful target"
+    },
+    "CARM1":{
+        "T12837":"Research target"
+    },
+    "LALBA":{
+        "T12938":"Research target"
+    },
+    "UBP33":{
+        "T12952":"Patented target"
+    },
+    "TNNC1":{
+        "T12966":"Successful target"
+    },
+    "HMGB2":{
+        "T12974":"Research target"
+    },
+    "SDC1":{
+        "T13017":"Clinical Trial target"
+    },
+    "IF5A2":{
+        "T13039":"Research target"
+    },
+    "PTN11":{
+        "T13057":"Clinical Trial target"
+    },
+    "KC1A":{
+        "T72915":"Preclinical target"
+    },
+    "NET1":{
+        "T13086":"Research target"
+    },
+    "FNTA":{
+        "T13127":"Successful target"
+    },
+    "WNT5A":{
+        "T13175":"Research target"
+    },
+    "E2AK3":{
+        "T75015":"Research target"
+    },
+    "CAH1":{
+        "T13201":"Successful target"
+    },
+    "AVR2A":{
+        "T47366":"Clinical Trial target"
+    },
+    "IL12A":{
+        "T31072":"Clinical Trial target"
+    },
+    "S38A4":{
+        "T13252":"Research target"
+    },
+    "SSDH":{
+        "T13259":"Successful target"
+    },
+    "CP19A":{
+        "T13260":"Successful target"
+    },
+    "PNKP":{
+        "T13319":"Research target"
+    },
+    "APEX1":{
+        "T13348":"Clinical Trial target"
+    },
+    "KCNC2":{
+        "T13394":"Research target"
+    },
+    "GALR2":{
+        "T13453":"Research target"
+    },
+    "LPAR6":{
+        "T13484":"Research target"
+    },
+    "S29A1":{
+        "T13491":"Successful target"
+    },
+    "LRP1":{
+        "T91130":"Research target"
+    },
+    "ILK":{
+        "T13616":"Patented target"
+    },
+    "PDCD1":{
+        "T59631":"Successful target"
+    },
+    "SSR3":{
+        "T13644":"Successful target"
+    },
+    "NR1H2":{
+        "T13714":"Clinical Trial target"
+    },
+    "RXRA":{
+        "T13726":"Successful target"
+    },
+    "OGFR":{
+        "T13741":"Clinical Trial target"
+    },
+    "ACHA9":{
+        "T13795":"Research target"
+    },
+    "S1PR1":{
+        "T13852":"Successful target"
+    },
+    "TMPS6":{
+        "T13863":"Research target"
+    },
+    "NR5A2":{
+        "T75136":"Research target"
+    },
+    "SENP8":{
+        "T13928":"Research target"
+    },
+    "CDN1B":{
+        "T14006":"Research target"
+    },
+    "RAB7A":{
+        "T14030":"Research target"
+    },
+    "AKT1":{
+        "T67619":"Clinical Trial target"
+    },
+    "ITB7":{
+        "T14065":"Successful target"
+    },
+    "HS12B":{
+        "T14071":"Research target"
+    },
+    "KLOTB":{
+        "T14110":"Clinical Trial target"
+    },
+    "TGFB2":{
+        "T14143":"Clinical Trial target"
+    },
+    "OPHN1":{
+        "T14144":"Research target"
+    },
+    "TERF2":{
+        "T14181":"Research target"
+    },
+    "RIC8A":{
+        "T14196":"Research target"
+    },
+    "ABCG5":{
+        "T14200":"Research target"
+    },
+    "LGR5":{
+        "T14231":"Clinical Trial target"
+    },
+    "MCLN3":{
+        "T14241":"Research target"
+    },
+    "S6A11":{
+        "T38200":"Clinical Trial target"
+    },
+    "CFLAR":{
+        "T14306":"Research target"
+    },
+    "SOAT1":{
+        "T14463":"Clinical Trial target"
+    },
+    "I10R2":{
+        "T14557":"Research target"
+    },
+    "TRYB1":{
+        "T14558":"Successful target"
+    },
+    "TNR6":{
+        "T14592":"Clinical Trial target"
+    },
+    "ERBB2":{
+        "T14597":"Successful target"
+    },
+    "FA8":{
+        "T14602":"Successful target"
+    },
+    "PI51A":{
+        "T14630":"Research target"
+    },
+    "TNF13":{
+        "T14676":"Clinical Trial target"
+    },
+    "SIR1":{
+        "T14731":"Clinical Trial target"
+    },
+    "CD40L":{
+        "T14755":"Clinical Trial target"
+    },
+    "PA24A":{
+        "T14834":"Clinical Trial target"
+    },
+    "FGF23":{
+        "T14853":"Successful target"
+    },
+    "UBP14":{
+        "T14875":"Preclinical target"
+    },
+    "CASPA":{
+        "T14894":"Patented target"
+    },
+    "CEGT":{
+        "T14908":"Successful target"
+    },
+    "MCL1":{
+        "T14912":"Clinical Trial target"
+    },
+    "FA83B":{
+        "T14928":"Research target"
+    },
+    "CENPE":{
+        "T14945":"Research target"
+    },
+    "CTLA4":{
+        "T15000":"Successful target"
+    },
+    "NRP1":{
+        "T15023":"Successful target"
+    },
+    "CX3C1":{
+        "T15033":"Research target"
+    },
+    "IBP1":{
+        "T80701":"Discontinued target"
+    },
+    "TRAF6":{
+        "T15051":"Research target"
+    },
+    "LDHA":{
+        "T88057":"Research target"
+    },
+    "FAK1":{
+        "T15068":"Clinical Trial target"
+    },
+    "NUF2":{
+        "T15126":"Research target"
+    },
+    "SERA":{
+        "T15139":"Research target"
+    },
+    "GBRT":{
+        "T15161":"Research target"
+    },
+    "CO1A2":{
+        "T15167":"Clinical Trial target"
+    },
+    "CETP":{
+        "T15334":"Clinical Trial target"
+    },
+    "TNR18":{
+        "T15344":"Clinical Trial target"
+    },
+    "AT2A2":{
+        "T15377":"Clinical Trial target"
+    },
+    "JAM1":{
+        "T15438":"Research target"
+    },
+    "C5AR1":{
+        "T15439":"Clinical Trial target"
+    },
+    "UCHL5":{
+        "T15441":"Patented target"
+    },
+    "PE2R1":{
+        "T15497":"Clinical Trial target"
+    },
+    "DGLB":{
+        "T15509":"Research target"
+    },
+    "IRS1":{
+        "T15510":"Clinical Trial target"
+    },
+    "HNF4A":{
+        "T15514":"Research target"
+    },
+    "SO2A1":{
+        "T15518":"Patented target"
+    },
+    "CTSR3":{
+        "T15552":"Research target"
+    },
+    "PAI1":{
+        "T45151":"Clinical Trial target"
+    },
+    "MUTA":{
+        "T15569":"Successful target"
+    },
+    "5HT5A":{
+        "T15571":"Successful target"
+    },
+    "ADIPO":{
+        "T15572":"Research target"
+    },
+    "PSA":{
+        "T15610":"Clinical Trial target"
+    },
+    "TTBK1":{
+        "T15636":"Research target"
+    },
+    "KCNA4":{
+        "T15665":"Research target"
+    },
+    "CASP8":{
+        "T15700":"Patented target"
+    },
+    "CD11B":{
+        "T15722":"Research target"
+    },
+    "P53":{
+        "T69823":"Clinical Trial target"
+    },
+    "BAZ2B":{
+        "T15745":"Research target"
+    },
+    "PDK1":{
+        "T15776":"Clinical Trial target"
+    },
+    "NKG2A":{
+        "T15783":"Clinical Trial target"
+    },
+    "KCNK3":{
+        "T15795":"Clinical Trial target"
+    },
+    "SMYD2":{
+        "T15797":"Preclinical target"
+    },
+    "SRCH":{
+        "T15811":"Research target"
+    },
+    "S6A17":{
+        "T15822":"Research target"
+    },
+    "BRCA2":{
+        "T15823":"Research target"
+    },
+    "TEC":{
+        "T15848":"Patented target"
+    },
+    "UMPS":{
+        "T15851":"Research target"
+    },
+    "DPP8":{
+        "T15855":"Clinical Trial target"
+    },
+    "PRTN3":{
+        "T15882":"Clinical Trial target"
+    },
+    "CML1":{
+        "T15888":"Research target"
+    },
+    "CUL4A":{
+        "T15894":"Clinical Trial target"
+    },
+    "ZN202":{
+        "T15914":"Research target"
+    },
+    "CCR1":{
+        "T16016":"Clinical Trial target"
+    },
+    "LOX15":{
+        "T16042":"Patented target"
+    },
+    "NOS1":{
+        "T16117":"Clinical Trial target"
+    },
+    "GAST":{
+        "T16128":"Clinical Trial target"
+    },
+    "ICOSL":{
+        "T16144":"Clinical Trial target"
+    },
+    "TPOR":{
+        "T16156":"Successful target"
+    },
+    "E2F2":{
+        "T16180":"Research target"
+    },
+    "ULK3":{
+        "T16188":"Research target"
+    },
+    "SMO":{
+        "T66505":"Successful target"
+    },
+    "Q3C1U7":{
+        "T16240":"Research target"
+    },
+    "ARRB2":{
+        "T16243":"Research target"
+    },
+    "CCL5":{
+        "T16263":"Clinical Trial target"
+    },
+    "MUC5A":{
+        "T16285":"Research target"
+    },
+    "PIN1":{
+        "T16308":"Clinical Trial target"
+    },
+    "CXB3":{
+        "T16326":"Research target"
+    },
+    "GPR32":{
+        "T16336":"Research target"
+    },
+    "IL1A":{
+        "T16340":"Clinical Trial target"
+    },
+    "PTN1":{
+        "T16347":"Clinical Trial target"
+    },
+    "CXA8":{
+        "T16353":"Research target"
+    },
+    "SGCG":{
+        "T16401":"Research target"
+    },
+    "CDN2A":{
+        "T16452":"Research target"
+    },
+    "CDN1C":{
+        "T16459":"Research target"
+    },
+    "FAS":{
+        "T16514":"Successful target"
+    },
+    "EGFR":{
+        "T64969":"Clinical Trial target"
+    },
+    "P2Y14":{
+        "T16555":"Research target"
+    },
+    "ANXA8":{
+        "T16578":"Research target"
+    },
+    "PIM3":{
+        "T16596":"Patented target"
+    },
+    "CEAM5":{
+        "T16601":"Clinical Trial target"
+    },
+    "TRPM1":{
+        "T16614":"Research target"
+    },
+    "SSR1":{
+        "T16633":"Successful target"
+    },
+    "GLHA":{
+        "T16650":"Research target"
+    },
+    "RET":{
+        "T60631":"Successful target"
+    },
+    "DGAT1":{
+        "T16688":"Successful target"
+    },
+    "5HT6R":{
+        "T16691":"Clinical Trial target"
+    },
+    "VATA":{
+        "T16731":"Research target"
+    },
+    "DLK1":{
+        "T16738":"Clinical Trial target"
+    },
+    "KDM1A":{
+        "T16739":"Clinical Trial target"
+    },
+    "XIAP":{
+        "T61683":"Clinical Trial target"
+    },
+    "IOD1":{
+        "T16792":"Successful target"
+    },
+    "ECE2":{
+        "T16799":"Research target"
+    },
+    "ANM1":{
+        "T16808":"Clinical Trial target"
+    },
+    "CADH2":{
+        "T16868":"Clinical Trial target"
+    },
+    "G3BP1":{
+        "T16886":"Research target"
+    },
+    "CCL11":{
+        "T16888":"Clinical Trial target"
+    },
+    "CATE":{
+        "T16891":"Research target"
+    },
+    "KAT2B":{
+        "T16902":"Research target"
+    },
+    "CNTLN":{
+        "T16923":"Research target"
+    },
+    "CAH12":{
+        "T16987":"Successful target"
+    },
+    "FER":{
+        "T16993":"Research target"
+    },
+    "KDM4E":{
+        "T17036":"Patented target"
+    },
+    "TOP2A":{
+        "T96144":"Successful target"
+    },
+    "UBP5":{
+        "T17067":"Preclinical target"
+    },
+    "ITAE":{
+        "T17122":"Research target"
+    },
+    "P2RX3":{
+        "T17140":"Clinical Trial target"
+    },
+    "MP2K5":{
+        "T17143":"Research target"
+    },
+    "LEPR":{
+        "T17163":"Successful target"
+    },
+    "GSTA1":{
+        "T17221":"Research target"
+    },
+    "PARP3":{
+        "T17228":"Patented target"
+    },
+    "RHCG":{
+        "T17291":"Research target"
+    },
+    "DUS10":{
+        "T17339":"Research target"
+    },
+    "DYR":{
+        "T17345":"Successful target"
+    },
+    "SQSTM":{
+        "T17367":"Research target"
+    },
+    "GP1BA":{
+        "T17427":"Clinical Trial target"
+    },
+    "HNMT":{
+        "T17448":"Successful target"
+    },
+    "MEN1":{
+        "T17485":"Clinical Trial target"
+    },
+    "RPE65":{
+        "T17502":"Clinical Trial target"
+    },
+    "INHBA":{
+        "T17514":"Clinical Trial target"
+    },
+    "S1PR4":{
+        "T17523":"Research target"
+    },
+    "STK33":{
+        "T17552":"Research target"
+    },
+    "ENK5":{
+        "T17555":"Research target"
+    },
+    "KCNA5":{
+        "T17569":"Successful target"
+    },
+    "TACD2":{
+        "T17629":"Clinical Trial target"
+    },
+    "HTRA1":{
+        "T17642":"Research target"
+    },
+    "HPT":{
+        "T17710":"Clinical Trial target"
+    },
+    "KCNJ6":{
+        "T17721":"Research target"
+    },
+    "UROK":{
+        "T17758":"Successful target"
+    },
+    "PGRC1":{
+        "T17814":"Research target"
+    },
+    "PDE9A":{
+        "T17852":"Clinical Trial target"
+    },
+    "PEPA5":{
+        "T17863":"Research target"
+    },
+    "PDK2":{
+        "T17967":"Research target"
+    },
+    "FYN":{
+        "T17980":"Successful target"
+    },
+    "EZH1":{
+        "T17986":"Clinical Trial target"
+    },
+    "CR2":{
+        "T18059":"Clinical Trial target"
+    },
+    "KCC2A":{
+        "T18299":"Clinical Trial target"
+    },
+    "LATS2":{
+        "T18390":"Research target"
+    },
+    "EPHA5":{
+        "T18474":"Research target"
+    },
+    "HS90A":{
+        "T18477":"Successful target"
+    },
+    "CD80":{
+        "T58238":"Successful target"
+    },
+    "BAGE1":{
+        "T18571":"Research target"
+    },
+    "LPAR5":{
+        "T18616":"Research target"
+    },
+    "FGF1":{
+        "T18639":"Clinical Trial target"
+    },
+    "MGLL":{
+        "T18664":"Clinical Trial target"
+    },
+    "MUC1":{
+        "T18779":"Clinical Trial target"
+    },
+    "KDM7A":{
+        "T18784":"Research target"
+    },
+    "CXA4":{
+        "T18796":"Research target"
+    },
+    "KISS1":{
+        "T18872":"Clinical Trial target"
+    },
+    "PE2R4":{
+        "T18876":"Clinical Trial target"
+    },
+    "KDM4A":{
+        "T18904":"Patented target"
+    },
+    "GON1":{
+        "T18950":"Successful target"
+    },
+    "CD3G":{
+        "T18972":"Clinical Trial target"
+    },
+    "PK2L1":{
+        "T18978":"Research target"
+    },
+    "MPIP3":{
+        "T19011":"Research target"
+    },
+    "CCNE2":{
+        "T19027":"Research target"
+    },
+    "BMP10":{
+        "T19110":"Research target"
+    },
+    "PA2GA":{
+        "T19160":"Clinical Trial target"
+    },
+    "PYGL":{
+        "T19184":"Patented target"
+    },
+    "PCFT":{
+        "T19229":"Successful target"
+    },
+    "CP2C9":{
+        "T19244":"Successful target"
+    },
+    "IL21R":{
+        "T19334":"Clinical Trial target"
+    },
+    "LIPE":{
+        "T19368":"Clinical Trial target"
+    },
+    "FIBA":{
+        "T19414":"Successful target"
+    },
+    "HPGDS":{
+        "T19433":"Successful target"
+    },
+    "KCNA2":{
+        "T19492":"Research target"
+    },
+    "ADCY5":{
+        "T19531":"Research target"
+    },
+    "ONCM":{
+        "T19556":"Clinical Trial target"
+    },
+    "OGA":{
+        "T19567":"Clinical Trial target"
+    },
+    "IL2RB":{
+        "T19579":"Clinical Trial target"
+    },
+    "CSF3":{
+        "T19615":"Successful target"
+    },
+    "GUC2D":{
+        "T19693":"Successful target"
+    },
+    "M3K9":{
+        "T19760":"Clinical Trial target"
+    },
+    "SOMA":{
+        "T19784":"Clinical Trial target"
+    },
+    "FGF7":{
+        "T19852":"Clinical Trial target"
+    },
+    "CRTC1":{
+        "T20017":"Clinical Trial target"
+    },
+    "STA5A":{
+        "T20027":"Patented target"
+    },
+    "BRSK1":{
+        "T20053":"Research target"
+    },
+    "TNFA":{
+        "T20178":"Successful target"
+    },
+    "TNNI3":{
+        "T20186":"Research target"
+    },
+    "TNFC":{
+        "T20221":"Research target"
+    },
+    "KCNH2":{
+        "T20251":"Successful target"
+    },
+    "HAX1":{
+        "T20256":"Research target"
+    },
+    "EMAL4":{
+        "T20296":"Research target"
+    },
+    "ATG7":{
+        "T20302":"Research target"
+    },
+    "NPY5R":{
+        "T20331":"Discontinued target"
+    },
+    "CSF1R":{
+        "T20333":"Successful target"
+    },
+    "PCP":{
+        "T20371":"Patented target"
+    },
+    "CAH2":{
+        "T20401":"Successful target"
+    },
+    "CLCN6":{
+        "T20455":"Research target"
+    },
+    "RBP1":{
+        "T20498":"Research target"
+    },
+    "HEM2":{
+        "T20514":"Successful target"
+    },
+    "DYRK4":{
+        "T20542":"Research target"
+    },
+    "CCR8":{
+        "T20575":"Discontinued target"
+    },
+    "PDE7B":{
+        "T20578":"Discontinued target"
+    },
+    "STAT6":{
+        "T20585":"Research target"
+    },
+    "CASP6":{
+        "T20600":"Patented target"
+    },
+    "ADML":{
+        "T20629":"Research target"
+    },
+    "ACM4":{
+        "T20709":"Successful target"
+    },
+    "SC6A8":{
+        "T20741":"Clinical Trial target"
+    },
+    "VEGFA":{
+        "T96721":"Successful target"
+    },
+    "F262":{
+        "T20776":"Research target"
+    },
+    "IDHC":{
+        "T88569":"Clinical Trial target"
+    },
+    "PDPK1":{
+        "T20891":"Clinical Trial target"
+    },
+    "BUB1":{
+        "T20953":"Patented target"
+    },
+    "NPSR1":{
+        "T20958":"Patented target"
+    },
+    "CDK5":{
+        "T20973":"Patented target"
+    },
+    "NEU2":{
+        "T20975":"Research target"
+    },
+    "CD8A":{
+        "T20978":"Clinical Trial target"
+    },
+    "NOD1":{
+        "T21038":"Research target"
+    },
+    "EPAS1":{
+        "T21123":"Clinical Trial target"
+    },
+    "MAPK2":{
+        "T21307":"Clinical Trial target"
+    },
+    "TNF11":{
+        "T21334":"Successful target"
+    },
+    "PDE3B":{
+        "T21357":"Patented target"
+    },
+    "MCP":{
+        "T21395":"Clinical Trial target"
+    },
+    "ACH10":{
+        "T21434":"Clinical Trial target"
+    },
+    "BBC3":{
+        "T21460":"Research target"
+    },
+    "FABP5":{
+        "T21507":"Patented target"
+    },
+    "RASA1":{
+        "T21580":"Research target"
+    },
+    "CLK3":{
+        "T21585":"Research target"
+    },
+    "NUAK1":{
+        "T21653":"Research target"
+    },
+    "METH":{
+        "T21661":"Research target"
+    },
+    "GSTP1":{
+        "T21669":"Clinical Trial target"
+    },
+    "AGAL":{
+        "T21678":"Successful target"
+    },
+    "APOE":{
+        "T21689":"Clinical Trial target"
+    },
+    "FBXW7":{
+        "T21705":"Research target"
+    },
+    "MSI1H":{
+        "T21715":"Research target"
+    },
+    "PCNA":{
+        "T21782":"Clinical Trial target"
+    },
+    "SELPL":{
+        "T21865":"Clinical Trial target"
+    },
+    "CEAM3":{
+        "T21890":"Successful target"
+    },
+    "SC6A2":{
+        "T21945":"Successful target"
+    },
+    "ANGP2":{
+        "T21960":"Clinical Trial target"
+    },
+    "PTH2R":{
+        "T22032":"Clinical Trial target"
+    },
+    "IL17":{
+        "T22095":"Successful target"
+    },
+    "GREM1":{
+        "T22104":"Patented target"
+    },
+    "CCL22":{
+        "T22117":"Research target"
+    },
+    "DRD1":{
+        "T22118":"Successful target"
+    },
+    "DCE2":{
+        "T22128":"Clinical Trial target"
+    },
+    "FCG2A":{
+        "T52629":"Research target"
+    },
+    "HDAC6":{
+        "T22274":"Clinical Trial target"
+    },
+    "ICA69":{
+        "T22284":"Research target"
+    },
+    "NMDE1":{
+        "T22285":"Successful target"
+    },
+    "S12A5":{
+        "T22302":"Research target"
+    },
+    "FANCJ":{
+        "T22335":"Research target"
+    },
+    "EGLN":{
+        "T22350":"Clinical Trial target"
+    },
+    "NELL1":{
+        "T22368":"Research target"
+    },
+    "HD":{
+        "T22496":"Research target"
+    },
+    "MFGM":{
+        "T22538":"Research target"
+    },
+    "REL":{
+        "T22547":"Research target"
+    },
+    "SC5A4":{
+        "T22583":"Clinical Trial target"
+    },
+    "MADCA":{
+        "T22655":"Clinical Trial target"
+    },
+    "IL8":{
+        "T22658":"Successful target"
+    },
+    "NRAM2":{
+        "T22717":"Research target"
+    },
+    "TEP1":{
+        "T22769":"Research target"
+    },
+    "CELA1":{
+        "T22839":"Successful target"
+    },
+    "PRGR":{
+        "T22939":"Successful target"
+    },
+    "TAP1":{
+        "T22945":"Research target"
+    },
+    "CDK3":{
+        "T22956":"Clinical Trial target"
+    },
+    "KITM":{
+        "T22976":"Clinical Trial target"
+    },
+    "SODC":{
+        "T22977":"Clinical Trial target"
+    },
+    "TGFB3":{
+        "T22978":"Clinical Trial target"
+    },
+    "HEPC":{
+        "T22995":"Clinical Trial target"
+    },
+    "GELS":{
+        "T23000":"Research target"
+    },
+    "CP11A":{
+        "T23145":"Successful target"
+    },
+    "JAK3":{
+        "T23172":"Successful target"
+    },
+    "ITB6":{
+        "T23178":"Clinical Trial target"
+    },
+    "NR0B1":{
+        "T23191":"Research target"
+    },
+    "CD14":{
+        "T23212":"Clinical Trial target"
+    },
+    "MK03":{
+        "T23276":"Clinical Trial target"
+    },
+    "GALNS":{
+        "T23292":"Successful target"
+    },
+    "GBRE":{
+        "T23311":"Research target"
+    },
+    "IL1R2":{
+        "T23347":"Clinical Trial target"
+    },
+    "VWF":{
+        "T23348":"Successful target"
+    },
+    "GA45A":{
+        "T23409":"Research target"
+    },
+    "PERM":{
+        "T23471":"Clinical Trial target"
+    },
+    "STEA2":{
+        "T23485":"Research target"
+    },
+    "EDNRA":{
+        "T23499":"Successful target"
+    },
+    "GPC5D":{
+        "T23519":"Clinical Trial target"
+    },
+    "KGP2":{
+        "T23606":"Research target"
+    },
+    "MTA1":{
+        "T23619":"Research target"
+    },
+    "WISP3":{
+        "T23655":"Research target"
+    },
+    "AHR":{
+        "T23666":"Successful target"
+    },
+    "RAF1":{
+        "T23673":"Clinical Trial target"
+    },
+    "BKRB2":{
+        "T23714":"Successful target"
+    },
+    "ROBO4":{
+        "T23763":"Research target"
+    },
+    "TESK2":{
+        "T23785":"Research target"
+    },
+    "F263":{
+        "T23787":"Clinical Trial target"
+    },
+    "IL33":{
+        "T23797":"Clinical Trial target"
+    },
+    "CCL23":{
+        "T23934":"Research target"
+    },
+    "PSCA":{
+        "T23953":"Clinical Trial target"
+    },
+    "BRD7":{
+        "T23984":"Research target"
+    },
+    "KPCT":{
+        "T23995":"Clinical Trial target"
+    },
+    "CCKN":{
+        "T24089":"Research target"
+    },
+    "PYY":{
+        "T24127":"Clinical Trial target"
+    },
+    "IC1":{
+        "T24211":"Successful target"
+    },
+    "LICH":{
+        "T24373":"Successful target"
+    },
+    "PAR3":{
+        "T24542":"Research target"
+    },
+    "PYR1":{
+        "T24548":"Research target"
+    },
+    "MGMT":{
+        "T24587":"Clinical Trial target"
+    },
+    "RENBP":{
+        "T24588":"Research target"
+    },
+    "ACRO":{
+        "T24595":"Research target"
+    },
+    "PTBP1":{
+        "T24609":"Research target"
+    },
+    "TRIPC":{
+        "T24714":"Research target"
+    },
+    "CAC1D":{
+        "T24793":"Clinical Trial target"
+    },
+    "CXB6":{
+        "T24820":"Research target"
+    },
+    "KDM1B":{
+        "T24823":"Patented target"
+    },
+    "PROC":{
+        "T24836":"Successful target"
+    },
+    "CAC1S":{
+        "T24965":"Research target"
+    },
+    "NTCP2":{
+        "T24982":"Clinical Trial target"
+    },
+    "DRD4":{
+        "T24983":"Successful target"
+    },
+    "BTK":{
+        "T25005":"Successful target"
+    },
+    "EDN1":{
+        "T25076":"Research target"
+    },
+    "GGT7":{
+        "T25122":"Research target"
+    },
+    "CPSM":{
+        "T25163":"Successful target"
+    },
+    "RN5A":{
+        "T25200":"Research target"
+    },
+    "MDR1":{
+        "T25258":"Successful target"
+    },
+    "RORG":{
+        "T25307":"Clinical Trial target"
+    },
+    "CBL":{
+        "T25309":"Research target"
+    },
+    "CXCR3":{
+        "T25315":"Preclinical target"
+    },
+    "EBP":{
+        "T25317":"Clinical Trial target"
+    },
+    "KDM3A":{
+        "T25362":"Research target"
+    },
+    "KMT2A":{
+        "T25462":"Research target"
+    },
+    "PP2BA":{
+        "T25464":"Successful target"
+    },
+    "FFAR1":{
+        "T25608":"Clinical Trial target"
+    },
+    "LOXL2":{
+        "T25637":"Clinical Trial target"
+    },
+    "TNNI1":{
+        "T25670":"Research target"
+    },
+    "HXA13":{
+        "T25675":"Research target"
+    },
+    "CISY":{
+        "T25690":"Research target"
+    },
+    "HMOX1":{
+        "T25703":"Clinical Trial target"
+    },
+    "FPR3":{
+        "T25705":"Research target"
+    },
+    "GPC3":{
+        "T25726":"Clinical Trial target"
+    },
+    "S29A4":{
+        "T25728":"Research target"
+    },
+    "S39A6":{
+        "T25739":"Clinical Trial target"
+    },
+    "PPIB":{
+        "T25847":"Successful target"
+    },
+    "TRPC3":{
+        "T25861":"Research target"
+    },
+    "GRHL2":{
+        "T25924":"Research target"
+    },
+    "EP300":{
+        "T25956":"Clinical Trial target"
+    },
+    "GPR87":{
+        "T26073":"Research target"
+    },
+    "FIBG":{
+        "T26144":"Research target"
+    },
+    "TNR25":{
+        "T26170":"Clinical Trial target"
+    },
+    "ICAM1":{
+        "T26203":"Successful target"
+    },
+    "PRLR":{
+        "T26226":"Clinical Trial target"
+    },
+    "PGS1":{
+        "T26304":"Research target"
+    },
+    "HXA7":{
+        "T26338":"Research target"
+    },
+    "GBRA5":{
+        "T26368":"Successful target"
+    },
+    "ITB3":{
+        "T26457":"Research target"
+    },
+    "DPOLA":{
+        "T26463":"Discontinued target"
+    },
+    "BC11A":{
+        "T26470":"Clinical Trial target"
+    },
+    "HRH4":{
+        "T26500":"Clinical Trial target"
+    },
+    "LPH":{
+        "T26617":"Research target"
+    },
+    "ALDR":{
+        "T26623":"Successful target"
+    },
+    "TBX21":{
+        "T26741":"Research target"
+    },
+    "NUDT3":{
+        "T26748":"Research target"
+    },
+    "NCOA3":{
+        "T26774":"Research target"
+    },
+    "PLCB1":{
+        "T26846":"Research target"
+    },
+    "CO3":{
+        "T26851":"Clinical Trial target"
+    },
+    "DCE1":{
+        "T26900":"Research target"
+    },
+    "Q2L8D9":{
+        "T26923":"Research target"
+    },
+    "TP53B":{
+        "T26983":"Research target"
+    },
+    "GRM1":{
+        "T27137":"Discontinued target"
+    },
+    "SCUB2":{
+        "T27170":"Research target"
+    },
+    "S5A1":{
+        "T70309":"Clinical Trial target"
+    },
+    "CRK":{
+        "T27297":"Research target"
+    },
+    "GBRD":{
+        "T27376":"Successful target"
+    },
+    "S10A8":{
+        "T27402":"Research target"
+    },
+    "APCL":{
+        "T27418":"Research target"
+    },
+    "ACTG":{
+        "T27457":"Research target"
+    },
+    "BRPF3":{
+        "T27466":"Research target"
+    },
+    "CDK18":{
+        "T27577":"Research target"
+    },
+    "TACC3":{
+        "T27600":"Research target"
+    },
+    "TRY1":{
+        "T27602":"Successful target"
+    },
+    "GDF2":{
+        "T27611":"Clinical Trial target"
+    },
+    "CXL13":{
+        "T27700":"Research target"
+    },
+    "PDCD2":{
+        "T27736":"Clinical Trial target"
+    },
+    "PIGL":{
+        "T27747":"Research target"
+    },
+    "SC6A4":{
+        "T27812":"Successful target"
+    },
+    "MD1L1":{
+        "T27819":"Research target"
+    },
+    "SPTB2":{
+        "T27826":"Clinical Trial target"
+    },
+    "CRBN":{
+        "T27861":"Clinical Trial target"
+    },
+    "ACE2":{
+        "T27889":"Clinical Trial target"
+    },
+    "DDX5":{
+        "T93061":"Clinical Trial target"
+    },
+    "NPY4R":{
+        "T27944":"Clinical Trial target"
+    },
+    "CA2D3":{
+        "T27954":"Research target"
+    },
+    "RECK":{
+        "T28012":"Research target"
+    },
+    "FOS":{
+        "T28025":"Research target"
+    },
+    "KS6A2":{
+        "T28043":"Research target"
+    },
+    "KDM5A":{
+        "T28052":"Patented target"
+    },
+    "FGF4":{
+        "T28076":"Successful target"
+    },
+    "FAF1":{
+        "T28093":"Clinical Trial target"
+    },
+    "CA2D2":{
+        "T28132":"Research target"
+    },
+    "FFAR2":{
+        "T28213":"Clinical Trial target"
+    },
+    "KI3L2":{
+        "T28217":"Clinical Trial target"
+    },
+    "GCH1":{
+        "T28226":"Clinical Trial target"
+    },
+    "A1AT":{
+        "T28265":"Successful target"
+    },
+    "MCLN1":{
+        "T28309":"Preclinical target"
+    },
+    "CCKAR":{
+        "T28330":"Clinical Trial target"
+    },
+    "CAD11":{
+        "T28385":"Clinical Trial target"
+    },
+    "EPHA3":{
+        "T28413":"Clinical Trial target"
+    },
+    "EPHA1":{
+        "T28418":"Research target"
+    },
+    "KIF11":{
+        "T28484":"Clinical Trial target"
+    },
+    "RPP14":{
+        "T28532":"Discontinued target"
+    },
+    "EGFL6":{
+        "T28620":"Research target"
+    },
+    "TBB2A":{
+        "T28661":"Successful target"
+    },
+    "LIPL":{
+        "T28692":"Successful target"
+    },
+    "CHK2":{
+        "T28713":"Clinical Trial target"
+    },
+    "TNR12":{
+        "T28717":"Clinical Trial target"
+    },
+    "GBRG3":{
+        "T28722":"Successful target"
+    },
+    "DEK":{
+        "T28758":"Research target"
+    },
+    "KCNC3":{
+        "T28858":"Research target"
+    },
+    "HDAC8":{
+        "T28887":"Clinical Trial target"
+    },
+    "ACM1":{
+        "T28893":"Successful target"
+    },
+    "IDS":{
+        "T28993":"Successful target"
+    },
+    "FES":{
+        "T29083":"Research target"
+    },
+    "STAT3":{
+        "T29130":"Successful target"
+    },
+    "IL13":{
+        "T29143":"Clinical Trial target"
+    },
+    "ARGI1":{
+        "T29144":"Clinical Trial target"
+    },
+    "POSTN":{
+        "T29187":"Research target"
+    },
+    "DDX58":{
+        "T29339":"Clinical Trial target"
+    },
+    "MUC17":{
+        "T29345":"Clinical Trial target"
+    },
+    "DNM3A":{
+        "T29355":"Patented target"
+    },
+    "TXND6":{
+        "T29363":"Research target"
+    },
+    "FGF14":{
+        "T29481":"Research target"
+    },
+    "ADA1B":{
+        "T29500":"Successful target"
+    },
+    "BI1":{
+        "T29594":"Research target"
+    },
+    "RUNX3":{
+        "T29630":"Research target"
+    },
+    "KCNC4":{
+        "T29635":"Research target"
+    },
+    "SCN2A":{
+        "T29678":"Research target"
+    },
+    "NK3R":{
+        "T29683":"Clinical Trial target"
+    },
+    "PLAC1":{
+        "T29712":"Research target"
+    },
+    "KC1G3":{
+        "T29728":"Research target"
+    },
+    "LAMB3":{
+        "T29736":"Clinical Trial target"
+    },
+    "NOX4":{
+        "T29741":"Clinical Trial target"
+    },
+    "MAPK5":{
+        "T29754":"Discontinued target"
+    },
+    "LIF":{
+        "T29774":"Clinical Trial target"
+    },
+    "PAX5":{
+        "T29818":"Research target"
+    },
+    "ITA5":{
+        "T88806":"Clinical Trial target"
+    },
+    "WT1":{
+        "T29960":"Clinical Trial target"
+    },
+    "VAMP1":{
+        "T30028":"Successful target"
+    },
+    "STC1":{
+        "T30035":"Research target"
+    },
+    "VEGFB":{
+        "T30040":"Successful target"
+    },
+    "KITH":{
+        "T30081":"Successful target"
+    },
+    "ACES":{
+        "T30082":"Successful target"
+    },
+    "SC5A2":{
+        "T30085":"Successful target"
+    },
+    "EAA4":{
+        "T30163":"Research target"
+    },
+    "C3AR":{
+        "T30219":"Research target"
+    },
+    "INGR2":{
+        "T30284":"Successful target"
+    },
+    "HCN4":{
+        "T30286":"Research target"
+    },
+    "RHD":{
+        "T30356":"Clinical Trial target"
+    },
+    "PAR4":{
+        "T30414":"Research target"
+    },
+    "KMT5A":{
+        "T30420":"Preclinical target"
+    },
+    "SIK2":{
+        "T30495":"Research target"
+    },
+    "MCM6":{
+        "T30502":"Research target"
+    },
+    "LT4R2":{
+        "T30563":"Clinical Trial target"
+    },
+    "CXA3":{
+        "T30614":"Research target"
+    },
+    "CXL10":{
+        "T30635":"Clinical Trial target"
+    },
+    "PCAT1":{
+        "T30653":"Successful target"
+    },
+    "CASP4":{
+        "T53469":"Patented target"
+    },
+    "KNG1":{
+        "T30731":"Clinical Trial target"
+    },
+    "AIF1":{
+        "T30777":"Research target"
+    },
+    "TSP1":{
+        "T30784":"Clinical Trial target"
+    },
+    "CRCM1":{
+        "T30790":"Clinical Trial target"
+    },
+    "CALY":{
+        "T30802":"Discontinued target"
+    },
+    "GSHR":{
+        "T30803":"Patented target"
+    },
+    "SPTC1":{
+        "T30817":"Research target"
+    },
+    "MPIP1":{
+        "T40569":"Research target"
+    },
+    "PLF4":{
+        "T30827":"Clinical Trial target"
+    },
+    "NEK6":{
+        "T78992":"Research target"
+    },
+    "CALCR":{
+        "T32247":"Successful target"
+    },
+    "S38A1":{
+        "T30844":"Research target"
+    },
+    "LIRB4":{
+        "T30846":"Clinical Trial target"
+    },
+    "CH10":{
+        "T30940":"Clinical Trial target"
+    },
+    "HRH2":{
+        "T30985":"Successful target"
+    },
+    "O51E2":{
+        "T31060":"Research target"
+    },
+    "LAMP1":{
+        "T31145":"Research target"
+    },
+    "IF4E":{
+        "T31186":"Research target"
+    },
+    "5HT2B":{
+        "T31204":"Successful target"
+    },
+    "GPR3":{
+        "T31227":"Research target"
+    },
+    "BCL2":{
+        "T31309":"Successful target"
+    },
+    "DPP4":{
+        "T31391":"Successful target"
+    },
+    "HCK":{
+        "T31406":"Patented target"
+    },
+    "PA21B":{
+        "T31479":"Successful target"
+    },
+    "LYAG":{
+        "T61339":"Clinical Trial target"
+    },
+    "APOC3":{
+        "T31518":"Clinical Trial target"
+    },
+    "ST14":{
+        "T31543":"Patented target"
+    },
+    "SG2A2":{
+        "T31577":"Research target"
+    },
+    "PKN3":{
+        "T31600":"Clinical Trial target"
+    },
+    "LAP4B":{
+        "T31603":"Research target"
+    },
+    "FGF2":{
+        "T31621":"Successful target"
+    },
+    "EAA3":{
+        "T31721":"Research target"
+    },
+    "MOT4":{
+        "T31788":"Research target"
+    },
+    "ADAM2":{
+        "T31808":"Research target"
+    },
+    "HBB":{
+        "T31825":"Clinical Trial target"
+    },
+    "KCA10":{
+        "T31882":"Research target"
+    },
+    "ADA10":{
+        "T31902":"Clinical Trial target"
+    },
+    "S36A1":{
+        "T31935":"Research target"
+    },
+    "AMPE":{
+        "T31956":"Clinical Trial target"
+    },
+    "SPHK2":{
+        "T31989":"Clinical Trial target"
+    },
+    "CAH14":{
+        "T31992":"Successful target"
+    },
+    "5HT2A":{
+        "T32060":"Successful target"
+    },
+    "CNGB3":{
+        "T32227":"Clinical Trial target"
+    },
+    "NCLX":{
+        "T32232":"Research target"
+    },
+    "IL15":{
+        "T32240":"Clinical Trial target"
+    },
+    "CALRL":{
+        "T32262":"Successful target"
+    },
+    "PRL":{
+        "T32282":"Discontinued target"
+    },
+    "EGR1":{
+        "T32348":"Clinical Trial target"
+    },
+    "MRC2":{
+        "T32386":"Research target"
+    },
+    "CTSR1":{
+        "T32434":"Research target"
+    },
+    "IL6":{
+        "T32578":"Successful target"
+    },
+    "TXK":{
+        "T32590":"Research target"
+    },
+    "FOSL2":{
+        "T32600":"Research target"
+    },
+    "MBL2":{
+        "T32699":"Research target"
+    },
+    "KI2S1":{
+        "T32720":"Clinical Trial target"
+    },
+    "AAK1":{
+        "T32764":"Clinical Trial target"
+    },
+    "ASGR1":{
+        "T32780":"Clinical Trial target"
+    },
+    "PLCB":{
+        "T32821":"Research target"
+    },
+    "NTF3":{
+        "T32855":"Discontinued target"
+    },
+    "EGLN1":{
+        "T32880":"Patented target"
+    },
+    "CTCFL":{
+        "T32912":"Research target"
+    },
+    "S36A2":{
+        "T32938":"Research target"
+    },
+    "CP51A":{
+        "T32972":"Clinical Trial target"
+    },
+    "LGMN":{
+        "T32973":"Clinical Trial target"
+    },
+    "STAR":{
+        "T33063":"Research target"
+    },
+    "OXDA":{
+        "T33124":"Clinical Trial target"
+    },
+    "PCSK7":{
+        "T33211":"Research target"
+    },
+    "GDF15":{
+        "T33245":"Research target"
+    },
+    "MAS":{
+        "T91894":"Clinical Trial target"
+    },
+    "AATC":{
+        "T33367":"Research target"
+    },
+    "EGF":{
+        "T33425":"Successful target"
+    },
+    "IBP3":{
+        "T33455":"Clinical Trial target"
+    },
+    "STS":{
+        "T33489":"Successful target"
+    },
+    "TYDP1":{
+        "T33492":"Patented target"
+    },
+    "GRIA1":{
+        "T33584":"Successful target"
+    },
+    "TRPC1":{
+        "T33586":"Research target"
+    },
+    "CP46A":{
+        "T64242":"Discontinued target"
+    },
+    "I17RA":{
+        "T33846":"Successful target"
+    },
+    "MTDC":{
+        "T33895":"Research target"
+    },
+    "NPCL1":{
+        "T33901":"Successful target"
+    },
+    "GPR17":{
+        "T33902":"Research target"
+    },
+    "RGS6":{
+        "T33909":"Research target"
+    },
+    "LMBL3":{
+        "T33931":"Research target"
+    },
+    "CBPA1":{
+        "T33966":"Research target"
+    },
+    "ABCBB":{
+        "T33969":"Research target"
+    },
+    "TFR1":{
+        "T33976":"Clinical Trial target"
+    },
+    "CSF1":{
+        "T33990":"Clinical Trial target"
+    },
+    "SO2B1":{
+        "T34064":"Research target"
+    },
+    "SCNBA":{
+        "T34123":"Successful target"
+    },
+    "CNGA2":{
+        "T34204":"Clinical Trial target"
+    },
+    "VDR":{
+        "T34234":"Successful target"
+    },
+    "PPOX":{
+        "T34239":"Successful target"
+    },
+    "MMP13":{
+        "T34296":"Clinical Trial target"
+    },
+    "CAMP":{
+        "T34318":"Successful target"
+    },
+    "AGR2":{
+        "T34352":"Research target"
+    },
+    "FAAH1":{
+        "T34389":"Patented target"
+    },
+    "X3CL1":{
+        "T34405":"Research target"
+    },
+    "ACHA7":{
+        "T34429":"Successful target"
+    },
+    "CBPN":{
+        "T34471":"Research target"
+    },
+    "PON1":{
+        "T34562":"Research target"
+    },
+    "DYSF":{
+        "T34601":"Research target"
+    },
+    "MBNL2":{
+        "T34708":"Research target"
+    },
+    "GLP2R":{
+        "T34843":"Successful target"
+    },
+    "CAC1A":{
+        "T34949":"Successful target"
+    },
+    "BASI":{
+        "T35040":"Clinical Trial target"
+    },
+    "GEM":{
+        "T35063":"Clinical Trial target"
+    },
+    "VDAC2":{
+        "T35158":"Research target"
+    },
+    "HSPB8":{
+        "T35161":"Research target"
+    },
+    "BIRC3":{
+        "T35173":"Clinical Trial target"
+    },
+    "DUS1":{
+        "T35194":"Clinical Trial target"
+    },
+    "TNF15":{
+        "T35212":"Research target"
+    },
+    "IL7":{
+        "T35232":"Clinical Trial target"
+    },
+    "S10A4":{
+        "T35265":"Research target"
+    },
+    "M3K6":{
+        "T35283":"Research target"
+    },
+    "NKG2D":{
+        "T97960":"Research target"
+    },
+    "PAHO":{
+        "T35303":"Clinical Trial target"
+    },
+    "VTCN1":{
+        "T35423":"Research target"
+    },
+    "SMAD3":{
+        "T35445":"Successful target"
+    },
+    "S19A1":{
+        "T35465":"Successful target"
+    },
+    "RASN":{
+        "T35486":"Clinical Trial target"
+    },
+    "LOX12":{
+        "T35527":"Research target"
+    },
+    "PPBN":{
+        "T35565":"Research target"
+    },
+    "NECT4":{
+        "T35591":"Successful target"
+    },
+    "ITAL":{
+        "T35640":"Successful target"
+    },
+    "P2Y13":{
+        "T35664":"Research target"
+    },
+    "HYES":{
+        "T35734":"Clinical Trial target"
+    },
+    "SMYD3":{
+        "T35792":"Preclinical target"
+    },
+    "MLH1":{
+        "T35799":"Research target"
+    },
+    "BRD1":{
+        "T35809":"Research target"
+    },
+    "MSI2H":{
+        "T35817":"Discontinued target"
+    },
+    "MMP16":{
+        "T35824":"Research target"
+    },
+    "MSHR":{
+        "T35842":"Successful target"
+    },
+    "SFTPD":{
+        "T35862":"Research target"
+    },
+    "MP2K1":{
+        "T35940":"Clinical Trial target"
+    },
+    "PDX1":{
+        "T35983":"Research target"
+    },
+    "SO4C1":{
+        "T36053":"Successful target"
+    },
+    "AA3R":{
+        "T36059":"Clinical Trial target"
+    },
+    "GLP1R":{
+        "T36075":"Successful target"
+    },
+    "MYC":{
+        "T36121":"Research target"
+    },
+    "UPAR":{
+        "T74363":"Successful target"
+    },
+    "KCNU1":{
+        "T36292":"Research target"
+    },
+    "H13":{
+        "T36325":"Research target"
+    },
+    "TXD12":{
+        "T36419":"Research target"
+    },
+    "CRHBP":{
+        "T36423":"Research target"
+    },
+    "AMHR2":{
+        "T36440":"Research target"
+    },
+    "NEC1":{
+        "T36445":"Research target"
+    },
+    "HUTH":{
+        "T36456":"Research target"
+    },
+    "AICDA":{
+        "T36467":"Clinical Trial target"
+    },
+    "TACT":{
+        "T36479":"Clinical Trial target"
+    },
+    "PAR1":{
+        "T36483":"Successful target"
+    },
+    "PPARD":{
+        "T36557":"Clinical Trial target"
+    },
+    "C163A":{
+        "T36576":"Research target"
+    },
+    "MAPK3":{
+        "T36581":"Research target"
+    },
+    "PADI3":{
+        "T36612":"Research target"
+    },
+    "CP2A7":{
+        "T36657":"Research target"
+    },
+    "CBPB1":{
+        "T36725":"Patented target"
+    },
+    "CY24B":{
+        "T36729":"Research target"
+    },
+    "MDM4":{
+        "T36741":"Clinical Trial target"
+    },
+    "ARGI2":{
+        "T36806":"Clinical Trial target"
+    },
+    "KLK3":{
+        "T36935":"Clinical Trial target"
+    },
+    "ACVL1":{
+        "T36959":"Clinical Trial target"
+    },
+    "GFRAL":{
+        "T37012":"Clinical Trial target"
+    },
+    "BIEA":{
+        "T37046":"Successful target"
+    },
+    "PPGB":{
+        "T37154":"Clinical Trial target"
+    },
+    "SIAT9":{
+        "T37271":"Research target"
+    },
+    "GPR12":{
+        "T37360":"Research target"
+    },
+    "PASK":{
+        "T37371":"Research target"
+    },
+    "S23A1":{
+        "T37382":"Successful target"
+    },
+    "ST38L":{
+        "T37417":"Research target"
+    },
+    "RBX2":{
+        "T37428":"Research target"
+    },
+    "PROM1":{
+        "T37434":"Clinical Trial target"
+    },
+    "GPR88":{
+        "T37505":"Research target"
+    },
+    "FA5":{
+        "T37510":"Successful target"
+    },
+    "CD22":{
+        "T37539":"Successful target"
+    },
+    "CAH7":{
+        "T37541":"Patented target"
+    },
+    "CNR2":{
+        "T37693":"Successful target"
+    },
+    "GLNA":{
+        "T73557":"Research target"
+    },
+    "SAMP":{
+        "T37742":"Clinical Trial target"
+    },
+    "ANPRB":{
+        "T37808":"Clinical Trial target"
+    },
+    "CP3A4":{
+        "T37848":"Clinical Trial target"
+    },
+    "PAK1":{
+        "T37961":"Research target"
+    },
+    "KCNJ3":{
+        "T38012":"Research target"
+    },
+    "IRF3":{
+        "T38017":"Research target"
+    },
+    "CSPG4":{
+        "T38041":"Research target"
+    },
+    "TNKS2":{
+        "T38087":"Clinical Trial target"
+    },
+    "RET5":{
+        "T38093":"Research target"
+    },
+    "KKCC1":{
+        "T38134":"Research target"
+    },
+    "SO1C1":{
+        "T38157":"Research target"
+    },
+    "TFF1":{
+        "T38159":"Clinical Trial target"
+    },
+    "ANXA1":{
+        "T38161":"Successful target"
+    },
+    "PLPL6":{
+        "T38166":"Research target"
+    },
+    "VANG1":{
+        "T38183":"Research target"
+    },
+    "MRGX2":{
+        "T38187":"Research target"
+    },
+    "PARPT":{
+        "T38201":"Clinical Trial target"
+    },
+    "PTEN":{
+        "T38257":"Research target"
+    },
+    "RIR2":{
+        "T38301":"Successful target"
+    },
+    "RGS2":{
+        "T38325":"Research target"
+    },
+    "CAC1B":{
+        "T38338":"Successful target"
+    },
+    "FOXQ1":{
+        "T38428":"Research target"
+    },
+    "S10A9":{
+        "T38431":"Clinical Trial target"
+    },
+    "ZEB2":{
+        "T38453":"Research target"
+    },
+    "LY9":{
+        "T38464":"Research target"
+    },
+    "FA12":{
+        "T38509":"Clinical Trial target"
+    },
+    "PE2R2":{
+        "T38529":"Successful target"
+    },
+    "PCSK5":{
+        "T38581":"Research target"
+    },
+    "HGFA":{
+        "T38584":"Research target"
+    },
+    "CRYAA":{
+        "T38610":"Research target"
+    },
+    "CRBB1":{
+        "T38622":"Research target"
+    },
+    "DFFA":{
+        "T38745":"Research target"
+    },
+    "CXB7":{
+        "T38772":"Research target"
+    },
+    "AAPK1":{
+        "T38875":"Clinical Trial target"
+    },
+    "CD33":{
+        "T38950":"Successful target"
+    },
+    "ETS1":{
+        "T38983":"Research target"
+    },
+    "PLD1":{
+        "T38996":"Patented target"
+    },
+    "LAIR1":{
+        "T39047":"Clinical Trial target"
+    },
+    "DUT":{
+        "T39054":"Clinical Trial target"
+    },
+    "KISSR":{
+        "T39123":"Discontinued target"
+    },
+    "KLK14":{
+        "T39195":"Patented target"
+    },
+    "TNKS1":{
+        "T39231":"Clinical Trial target"
+    },
+    "G3P":{
+        "T39321":"Clinical Trial target"
+    },
+    "LPAR2":{
+        "T39380":"Research target"
+    },
+    "DYRK2":{
+        "T39486":"Patented target"
+    },
+    "SUV91":{
+        "T39519":"Research target"
+    },
+    "PDE7A":{
+        "T73019":"Clinical Trial target"
+    },
+    "CALM1":{
+        "T39610":"Successful target"
+    },
+    "S47A1":{
+        "T39676":"Successful target"
+    },
+    "CEL":{
+        "T39677":"Clinical Trial target"
+    },
+    "DQB2":{
+        "T39684":"Research target"
+    },
+    "NEK7":{
+        "T39698":"Research target"
+    },
+    "SCN5A":{
+        "T39716":"Successful target"
+    },
+    "CUL7":{
+        "T39738":"Research target"
+    },
+    "FZD7":{
+        "T39797":"Clinical Trial target"
+    },
+    "DHSD":{
+        "T39811":"Research target"
+    },
+    "CDN1A":{
+        "T39855":"Research target"
+    },
+    "MRP4":{
+        "T39919":"Research target"
+    },
+    "HSPB1":{
+        "T39921":"Clinical Trial target"
+    },
+    "MIF":{
+        "T39977":"Clinical Trial target"
+    },
+    "EHMT1":{
+        "T39996":"Research target"
+    },
+    "KLK1":{
+        "T40000":"Research target"
+    },
+    "EGFL7":{
+        "T40010":"Clinical Trial target"
+    },
+    "GCR":{
+        "T40016":"Successful target"
+    },
+    "MK08":{
+        "T85421":"Clinical Trial target"
+    },
+    "CATH":{
+        "T40103":"Research target"
+    },
+    "IMDH1":{
+        "T40111":"Successful target"
+    },
+    "NFKB1":{
+        "T83145":"Successful target"
+    },
+    "CERK1":{
+        "T40243":"Research target"
+    },
+    "KPCB":{
+        "T40276":"Clinical Trial target"
+    },
+    "ATG2B":{
+        "T40299":"Research target"
+    },
+    "ELNE":{
+        "T40332":"Clinical Trial target"
+    },
+    "I13R2":{
+        "T40459":"Clinical Trial target"
+    },
+    "MET":{
+        "T40474":"Successful target"
+    },
+    "MMP10":{
+        "T40488":"Patented target"
+    },
+    "NCTR1":{
+        "T40490":"Research target"
+    },
+    "PP2AA":{
+        "T40491":"Clinical Trial target"
+    },
+    "S27A4":{
+        "T40545":"Research target"
+    },
+    "BRD4":{
+        "T40556":"Clinical Trial target"
+    },
+    "3BHS1":{
+        "T40628":"Research target"
+    },
+    "PLK1":{
+        "T40694":"Clinical Trial target"
+    },
+    "FA83D":{
+        "T40698":"Research target"
+    },
+    "LEG2":{
+        "T40728":"Research target"
+    },
+    "MTAP":{
+        "T40787":"Research target"
+    },
+    "PARP2":{
+        "T40812":"Clinical Trial target"
+    },
+    "TIGIT":{
+        "T40874":"Clinical Trial target"
+    },
+    "GLI1":{
+        "T40890":"Patented target"
+    },
+    "XDH":{
+        "T40954":"Successful target"
+    },
+    "AGRB1":{
+        "T41036":"Research target"
+    },
+    "RABL3":{
+        "T41075":"Research target"
+    },
+    "NR4A1":{
+        "T41119":"Research target"
+    },
+    "CATL1":{
+        "T41141":"Clinical Trial target"
+    },
+    "BRPF1":{
+        "T41145":"Research target"
+    },
+    "IL17D":{
+        "T41171":"Clinical Trial target"
+    },
+    "HMCS1":{
+        "T41195":"Research target"
+    },
+    "DPEP1":{
+        "T41201":"Successful target"
+    },
+    "TS1R1":{
+        "T41263":"Successful target"
+    },
+    "LRC32":{
+        "T41380":"Clinical Trial target"
+    },
+    "ADA2B":{
+        "T41580":"Successful target"
+    },
+    "ARRB1":{
+        "T41646":"Research target"
+    },
+    "KC1G1":{
+        "T41702":"Research target"
+    },
+    "GIPR":{
+        "T41750":"Clinical Trial target"
+    },
+    "TRPM8":{
+        "T41955":"Successful target"
+    },
+    "NKX31":{
+        "T41988":"Research target"
+    },
+    "IL1B":{
+        "T42000":"Successful target"
+    },
+    "SGPP1":{
+        "T42014":"Research target"
+    },
+    "ERR2":{
+        "T42025":"Research target"
+    },
+    "BRD3":{
+        "T42048":"Clinical Trial target"
+    },
+    "GLCNE":{
+        "T42065":"Clinical Trial target"
+    },
+    "M3K19":{
+        "T42157":"Patented target"
+    },
+    "BIRC7":{
+        "T42247":"Patented target"
+    },
+    "PERE":{
+        "T42319":"Research target"
+    },
+    "MAP11":{
+        "T42337":"Research target"
+    },
+    "GRIA2":{
+        "T90897":"Research target"
+    },
+    "GABR1":{
+        "T42446":"Successful target"
+    },
+    "DCLK1":{
+        "T42447":"Research target"
+    },
+    "NDKA":{
+        "T42533":"Research target"
+    },
+    "UBP7":{
+        "T42658":"Preclinical target"
+    },
+    "KCNN4":{
+        "T42724":"Clinical Trial target"
+    },
+    "KS6B2":{
+        "T42760":"Clinical Trial target"
+    },
+    "HEMH":{
+        "T42822":"Successful target"
+    },
+    "MAGA1":{
+        "T42854":"Clinical Trial target"
+    },
+    "GP101":{
+        "T42884":"Research target"
+    },
+    "CASL":{
+        "T42890":"Research target"
+    },
+    "FGF21":{
+        "T42928":"Clinical Trial target"
+    },
+    "GAS6":{
+        "T42974":"Clinical Trial target"
+    },
+    "GSTA3":{
+        "T42976":"Research target"
+    },
+    "NEK1":{
+        "T43031":"Research target"
+    },
+    "DPP10":{
+        "T43102":"Research target"
+    },
+    "PTPRC":{
+        "T43115":"Clinical Trial target"
+    },
+    "RORA":{
+        "T43206":"Preclinical target"
+    },
+    "KLK8":{
+        "T43289":"Research target"
+    },
+    "FA7":{
+        "T43332":"Successful target"
+    },
+    "I12R2":{
+        "T43524":"Research target"
+    },
+    "CLCN7":{
+        "T43531":"Research target"
+    },
+    "BCL6":{
+        "T43548":"Research target"
+    },
+    "CTR1":{
+        "T43589":"Research target"
+    },
+    "FGFP1":{
+        "T43605":"Research target"
+    },
+    "RUNX1":{
+        "T43711":"Research target"
+    },
+    "TLR5":{
+        "T43718":"Clinical Trial target"
+    },
+    "DHI2":{
+        "T43721":"Clinical Trial target"
+    },
+    "SCNAA":{
+        "T43739":"Successful target"
+    },
+    "PHLB3":{
+        "T43778":"Research target"
+    },
+    "C1QB":{
+        "T43793":"Research target"
+    },
+    "TIRAP":{
+        "T43814":"Patented target"
+    },
+    "GLMN":{
+        "T43817":"Research target"
+    },
+    "DFB4A":{
+        "T43881":"Research target"
+    },
+    "FST":{
+        "T43901":"Research target"
+    },
+    "TR11B":{
+        "T43928":"Research target"
+    },
+    "ILDR2":{
+        "T43980":"Clinical Trial target"
+    },
+    "DHB1":{
+        "T44011":"Clinical Trial target"
+    },
+    "AQP1":{
+        "T44057":"Clinical Trial target"
+    },
+    "ADRB1":{
+        "T44068":"Successful target"
+    },
+    "ANGP1":{
+        "T44141":"Clinical Trial target"
+    },
+    "TCAM1":{
+        "T44190":"Patented target"
+    },
+    "ALDH2":{
+        "T44282":"Clinical Trial target"
+    },
+    "S17A5":{
+        "T44305":"Research target"
+    },
+    "CDKL2":{
+        "T44341":"Research target"
+    },
+    "MUSK":{
+        "T44387":"Research target"
+    },
+    "CDK9":{
+        "T81386":"Clinical Trial target"
+    },
+    "CXA1":{
+        "T44479":"Clinical Trial target"
+    },
+    "CEAM6":{
+        "T44513":"Clinical Trial target"
+    },
+    "KCNB1":{
+        "T44516":"Research target"
+    },
+    "IL19":{
+        "T44584":"Research target"
+    },
+    "SH2B3":{
+        "T44585":"Research target"
+    },
+    "IL3RB":{
+        "T44589":"Clinical Trial target"
+    },
+    "TISB":{
+        "T44658":"Research target"
+    },
+    "IL22":{
+        "T44682":"Clinical Trial target"
+    },
+    "NOTC3":{
+        "T44684":"Clinical Trial target"
+    },
+    "T23O":{
+        "T44818":"Clinical Trial target"
+    },
+    "KPCD":{
+        "T44861":"Clinical Trial target"
+    },
+    "EED":{
+        "T44916":"Clinical Trial target"
+    },
+    "RIC8B":{
+        "T44961":"Research target"
+    },
+    "VCAM1":{
+        "T44991":"Research target"
+    },
+    "SPB3":{
+        "T45034":"Research target"
+    },
+    "CACP":{
+        "T45074":"Discontinued target"
+    },
+    "TREM2":{
+        "T45086":"Research target"
+    },
+    "GRN":{
+        "T93830":"Research target"
+    },
+    "MBOA4":{
+        "T45228":"Patented target"
+    },
+    "CRFR1":{
+        "T45262":"Successful target"
+    },
+    "DNPEP":{
+        "T45287":"Clinical Trial target"
+    },
+    "FETUA":{
+        "T97036":"Clinical Trial target"
+    },
+    "TPA":{
+        "T45299":"Successful target"
+    },
+    "BTG1":{
+        "T45357":"Research target"
+    },
+    "NPM":{
+        "T45591":"Clinical Trial target"
+    },
+    "PEPC":{
+        "T45601":"Research target"
+    },
+    "CD276":{
+        "T45612":"Clinical Trial target"
+    },
+    "SGMR2":{
+        "T45674":"Clinical Trial target"
+    },
+    "FCAR":{
+        "T45737":"Discontinued target"
+    },
+    "CDN2C":{
+        "T45755":"Research target"
+    },
+    "TNR5":{
+        "T45758":"Clinical Trial target"
+    },
+    "PMS1":{
+        "T45779":"Research target"
+    },
+    "NCOA4":{
+        "T45794":"Research target"
+    },
+    "RNF43":{
+        "T45968":"Clinical Trial target"
+    },
+    "M4K3":{
+        "T46000":"Research target"
+    },
+    "FA11":{
+        "T46040":"Clinical Trial target"
+    },
+    "LAMP2":{
+        "T46052":"Clinical Trial target"
+    },
+    "TNF10":{
+        "T46084":"Clinical Trial target"
+    },
+    "FOXC2":{
+        "T46092":"Research target"
+    },
+    "PMEL":{
+        "T46208":"Research target"
+    },
+    "ACM2":{
+        "T46185":"Successful target"
+    },
+    "BRD9":{
+        "T46216":"Research target"
+    },
+    "QPCT":{
+        "T46245":"Clinical Trial target"
+    },
+    "4F2":{
+        "T46263":"Clinical Trial target"
+    },
+    "AOAH":{
+        "T46318":"Research target"
+    },
+    "SGMR1":{
+        "T46360":"Successful target"
+    },
+    "MPIP2":{
+        "T46365":"Clinical Trial target"
+    },
+    "CXE1":{
+        "T46395":"Research target"
+    },
+    "RXRG":{
+        "T46456":"Successful target"
+    },
+    "TLR7":{
+        "T46482":"Successful target"
+    },
+    "SYIC":{
+        "T46515":"Research target"
+    },
+    "TNF12":{
+        "T46524":"Clinical Trial target"
+    },
+    "3HAO":{
+        "T46527":"Research target"
+    },
+    "BOREA":{
+        "T46541":"Research target"
+    },
+    "CBPE":{
+        "T46546":"Research target"
+    },
+    "MTP":{
+        "T46628":"Successful target"
+    },
+    "AL5AP":{
+        "T46642":"Discontinued target"
+    },
+    "CLK1":{
+        "T51468":"Clinical Trial target"
+    },
+    "PLA2R":{
+        "T46702":"Patented target"
+    },
+    "AURKB":{
+        "T46781":"Clinical Trial target"
+    },
+    "SHPS1":{
+        "T46789":"Clinical Trial target"
+    },
+    "SO1B1":{
+        "T46814":"Research target"
+    },
+    "SG1D2":{
+        "T46824":"Research target"
+    },
+    "DRD5":{
+        "T46828":"Successful target"
+    },
+    "MSH2":{
+        "T46849":"Research target"
+    },
+    "SHIP1":{
+        "T46871":"Clinical Trial target"
+    },
+    "SECR":{
+        "T46904":"Successful target"
+    },
+    "IF5A1":{
+        "T46929":"Research target"
+    },
+    "P2Y12":{
+        "T46937":"Successful target"
+    },
+    "PPIA":{
+        "T47081":"Successful target"
+    },
+    "NK1R":{
+        "T47094":"Successful target"
+    },
+    "ABCG1":{
+        "T47098":"Research target"
+    },
+    "FGFR1":{
+        "T47101":"Successful target"
+    },
+    "KPCG":{
+        "T47107":"Successful target"
+    },
+    "STK4":{
+        "T47164":"Research target"
+    },
+    "SRBP1":{
+        "T47236":"Research target"
+    },
+    "G6PT1":{
+        "T47306":"Research target"
+    },
+    "ARF1":{
+        "T47351":"Research target"
+    },
+    "1B07":{
+        "T47415":"Clinical Trial target"
+    },
+    "HEM3":{
+        "T47466":"Clinical Trial target"
+    },
+    "NCF1":{
+        "T47492":"Research target"
+    },
+    "EAA5":{
+        "T47498":"Research target"
+    },
+    "AMOT":{
+        "T47510":"Research target"
+    },
+    "WRN":{
+        "T47583":"Research target"
+    },
+    "ACV1B":{
+        "T47594":"Patented target"
+    },
+    "I11RA":{
+        "T47610":"Successful target"
+    },
+    "HPSE":{
+        "T47623":"Successful target"
+    },
+    "LTK":{
+        "T47657":"Research target"
+    },
+    "CUBN":{
+        "T47721":"Research target"
+    },
+    "CHM4B":{
+        "T47731":"Research target"
+    },
+    "OPRM":{
+        "T47768":"Successful target"
+    },
+    "S6A14":{
+        "T47818":"Research target"
+    },
+    "EPCAM":{
+        "T47863":"Clinical Trial target"
+    },
+    "TDGF1":{
+        "T47864":"Clinical Trial target"
+    },
+    "KPCD1":{
+        "T47885":"Research target"
+    },
+    "S1PR2":{
+        "T47888":"Patented target"
+    },
+    "GBG7":{
+        "T47966":"Research target"
+    },
+    "CXA5":{
+        "T47988":"Research target"
+    },
+    "CLCA1":{
+        "T47995":"Research target"
+    },
+    "XPA":{
+        "T48040":"Research target"
+    },
+    "IGF1R":{
+        "T48069":"Successful target"
+    },
+    "HMGA2":{
+        "T48166":"Research target"
+    },
+    "MTR1B":{
+        "T48268":"Successful target"
+    },
+    "LAT1":{
+        "T48330":"Research target"
+    },
+    "EDN2":{
+        "T48358":"Research target"
+    },
+    "I15RA":{
+        "T48429":"Clinical Trial target"
+    },
+    "CR1":{
+        "T48457":"Clinical Trial target"
+    },
+    "SPDEF":{
+        "T48518":"Research target"
+    },
+    "TLR8":{
+        "T48703":"Clinical Trial target"
+    },
+    "CD69":{
+        "T48780":"Research target"
+    },
+    "RORB":{
+        "T48812":"Patented target"
+    },
+    "VMAT2":{
+        "T48873":"Successful target"
+    },
+    "TNF14":{
+        "T48881":"Research target"
+    },
+    "PSB5":{
+        "T49031":"Patented target"
+    },
+    "LIPG":{
+        "T49064":"Clinical Trial target"
+    },
+    "UR2R":{
+        "T49072":"Clinical Trial target"
+    },
+    "KCNC1":{
+        "T49080":"Research target"
+    },
+    "SOX5":{
+        "T49085":"Research target"
+    },
+    "NEK2":{
+        "T49102":"Research target"
+    },
+    "PVRIG":{
+        "T49105":"Clinical Trial target"
+    },
+    "DRA":{
+        "T49146":"Clinical Trial target"
+    },
+    "PTN2":{
+        "T49156":"Clinical Trial target"
+    },
+    "GBRP":{
+        "T49208":"Research target"
+    },
+    "ABCA4":{
+        "T49327":"Clinical Trial target"
+    },
+    "NOTC4":{
+        "T49453":"Clinical Trial target"
+    },
+    "HBA":{
+        "T49493":"Successful target"
+    },
+    "EPHB4":{
+        "T49507":"Clinical Trial target"
+    },
+    "PTN":{
+        "T49522":"Research target"
+    },
+    "KCNQ1":{
+        "T49526":"Successful target"
+    },
+    "TESK1":{
+        "T49542":"Research target"
+    },
+    "LN28A":{
+        "T49593":"Research target"
+    },
+    "OLR1":{
+        "T49630":"Discontinued target"
+    },
+    "HS71A":{
+        "T49639":"Clinical Trial target"
+    },
+    "CD6":{
+        "T49736":"Clinical Trial target"
+    },
+    "LRP6":{
+        "T49755":"Clinical Trial target"
+    },
+    "ELP1":{
+        "T49888":"Research target"
+    },
+    "CDK1":{
+        "T49898":"Clinical Trial target"
+    },
+    "FGR":{
+        "T49925":"Research target"
+    },
+    "TGFR2":{
+        "T49989":"Clinical Trial target"
+    },
+    "ARY1":{
+        "T49995":"Research target"
+    },
+    "MSRE":{
+        "T50007":"Research target"
+    },
+    "PD1L2":{
+        "T50035":"Patented target"
+    },
+    "CLCN2":{
+        "T50066":"Successful target"
+    },
+    "PLP2":{
+        "T50072":"Research target"
+    },
+    "S1PR5":{
+        "T50089":"Clinical Trial target"
+    },
+    "KS6A5":{
+        "T50224":"Patented target"
+    },
+    "GLRA1":{
+        "T55285":"Successful target"
+    },
+    "BMP7":{
+        "T50289":"Clinical Trial target"
+    },
+    "PADI4":{
+        "T50429":"Research target"
+    },
+    "CTGF":{
+        "T50444":"Clinical Trial target"
+    },
+    "CD9":{
+        "T50574":"Research target"
+    },
+    "BPI":{
+        "T50584":"Clinical Trial target"
+    },
+    "PIM1":{
+        "T50594":"Clinical Trial target"
+    },
+    "ITA2B":{
+        "T50688":"Successful target"
+    },
+    "TNR3":{
+        "T50699":"Clinical Trial target"
+    },
+    "DQA1":{
+        "T50768":"Research target"
+    },
+    "DPP2":{
+        "T50773":"Patented target"
+    },
+    "SEM4D":{
+        "T50823":"Clinical Trial target"
+    },
+    "CD86":{
+        "T50912":"Successful target"
+    },
+    "PPM1D":{
+        "T50914":"Research target"
+    },
+    "TNR16":{
+        "T50942":"Successful target"
+    },
+    "ECE1":{
+        "T50970":"Research target"
+    },
+    "KMO":{
+        "T50973":"Clinical Trial target"
+    },
+    "NTRK3":{
+        "T51076":"Successful target"
+    },
+    "CAC1C":{
+        "T51115":"Successful target"
+    },
+    "PERT":{
+        "T51120":"Successful target"
+    },
+    "FUT4":{
+        "T51146":"Successful target"
+    },
+    "HDAC2":{
+        "T51191":"Clinical Trial target"
+    },
+    "IL21":{
+        "T51223":"Clinical Trial target"
+    },
+    "CLD4":{
+        "T51270":"Research target"
+    },
+    "ROCK1":{
+        "T51282":"Successful target"
+    },
+    "FFAR4":{
+        "T51385":"Research target"
+    },
+    "XPO1":{
+        "T51407":"Clinical Trial target"
+    },
+    "ADRB3":{
+        "T51408":"Successful target"
+    },
+    "VEGFC":{
+        "T51425":"Clinical Trial target"
+    },
+    "NR1H4":{
+        "T51426":"Successful target"
+    },
+    "GBRA2":{
+        "T51452":"Successful target"
+    },
+    "CN37":{
+        "T51464":"Research target"
+    },
+    "GBRA1":{
+        "T51487":"Successful target"
+    },
+    "SAP3":{
+        "T51499":"Clinical Trial target"
+    },
+    "CSK21":{
+        "T51565":"Clinical Trial target"
+    },
+    "MUC18":{
+        "T51569":"Research target"
+    },
+    "TPH1":{
+        "T78915":"Clinical Trial target"
+    },
+    "CHIA":{
+        "T51597":"Research target"
+    },
+    "ATP4A":{
+        "T92687":"Successful target"
+    },
+    "NPY":{
+        "T51671":"Research target"
+    },
+    "IKBA":{
+        "T51672":"Clinical Trial target"
+    },
+    "MAGA3":{
+        "T51693":"Clinical Trial target"
+    },
+    "IL16":{
+        "T51698":"Research target"
+    },
+    "CEBPB":{
+        "T51734":"Research target"
+    },
+    "GATA4":{
+        "T51817":"Research target"
+    },
+    "ARAF":{
+        "T51883":"Clinical Trial target"
+    },
+    "CRY2":{
+        "T51908":"Preclinical target"
+    },
+    "UBP20":{
+        "T52036":"Preclinical target"
+    },
+    "TLR6":{
+        "T52037":"Clinical Trial target"
+    },
+    "S15A2":{
+        "T52067":"Research target"
+    },
+    "OTC":{
+        "T52098":"Clinical Trial target"
+    },
+    "LBP":{
+        "T52110":"Research target"
+    },
+    "Q9UK79":{
+        "T52112":"Research target"
+    },
+    "S26A9":{
+        "T52116":"Research target"
+    },
+    "ASPH":{
+        "T52133":"Research target"
+    },
+    "SCNNA":{
+        "T52173":"Successful target"
+    },
+    "ACLY":{
+        "T52189":"Successful target"
+    },
+    "NR1H3":{
+        "T52297":"Patented target"
+    },
+    "LY96":{
+        "T52382":"Research target"
+    },
+    "NQO1":{
+        "T52389":"Clinical Trial target"
+    },
+    "MTM1":{
+        "T52409":"Research target"
+    },
+    "PPID":{
+        "T52447":"Patented target"
+    },
+    "MMP1":{
+        "T52450":"Successful target"
+    },
+    "RPGF3":{
+        "T52489":"Clinical Trial target"
+    },
+    "ADRB2":{
+        "T52522":"Successful target"
+    },
+    "LYRIC":{
+        "T52547":"Research target"
+    },
+    "CHIO":{
+        "T52566":"Research target"
+    },
+    "MTF1":{
+        "T52595":"Research target"
+    },
+    "WNK1":{
+        "T52638":"Research target"
+    },
+    "MAP4":{
+        "T52651":"Research target"
+    },
+    "APOA":{
+        "T52671":"Clinical Trial target"
+    },
+    "PAGE5":{
+        "T52719":"Research target"
+    },
+    "NK2R":{
+        "T52790":"Clinical Trial target"
+    },
+    "1433F":{
+        "T52886":"Research target"
+    },
+    "RGS16":{
+        "T52888":"Patented target"
+    },
+    "UBP30":{
+        "T52910":"Preclinical target"
+    },
+    "OPRX":{
+        "T52921":"Clinical Trial target"
+    },
+    "CXB1":{
+        "T52936":"Research target"
+    },
+    "AGRP":{
+        "T52937":"Clinical Trial target"
+    },
+    "S52A2":{
+        "T52946":"Research target"
+    },
+    "SSR2":{
+        "T53024":"Successful target"
+    },
+    "TNR1B":{
+        "T53033":"Research target"
+    },
+    "UN13B":{
+        "T53070":"Research target"
+    },
+    "ANAG":{
+        "T53103":"Successful target"
+    },
+    "MTMR1":{
+        "T53124":"Research target"
+    },
+    "ANGL3":{
+        "T53139":"Successful target"
+    },
+    "MP2K7":{
+        "T53159":"Research target"
+    },
+    "KCNJ9":{
+        "T53186":"Research target"
+    },
+    "EHMT2":{
+        "T53251":"Preclinical target"
+    },
+    "ATF4":{
+        "T53270":"Research target"
+    },
+    "BMP1":{
+        "T53350":"Research target"
+    },
+    "CAH4":{
+        "T53378":"Successful target"
+    },
+    "ADA1D":{
+        "T53381":"Successful target"
+    },
+    "TGFR1":{
+        "T53389":"Clinical Trial target"
+    },
+    "WNK3":{
+        "T53468":"Research target"
+    },
+    "KI2L3":{
+        "T53472":"Clinical Trial target"
+    },
+    "GSTA2":{
+        "T53510":"Research target"
+    },
+    "PGFRA":{
+        "T53524":"Successful target"
+    },
+    "XRCC5":{
+        "T53562":"Research target"
+    },
+    "HMDH":{
+        "T53585":"Successful target"
+    },
+    "KLK6":{
+        "T53612":"Research target"
+    },
+    "CRLF2":{
+        "T53669":"Research target"
+    },
+    "SEPR":{
+        "T53764":"Clinical Trial target"
+    },
+    "H2AZ":{
+        "T53766":"Research target"
+    },
+    "PSD10":{
+        "T53890":"Research target"
+    },
+    "PMVK":{
+        "T53892":"Research target"
+    },
+    "EGLN2":{
+        "T53904":"Clinical Trial target"
+    },
+    "HIPK2":{
+        "T53952":"Research target"
+    },
+    "CXCR6":{
+        "T53975":"Research target"
+    },
+    "XLRS1":{
+        "T54031":"Clinical Trial target"
+    },
+    "LYVE1":{
+        "T54055":"Successful target"
+    },
+    "TBXT":{
+        "T54093":"Clinical Trial target"
+    },
+    "KCNQ3":{
+        "T54132":"Clinical Trial target"
+    },
+    "MMP9":{
+        "T54156":"Clinical Trial target"
+    },
+    "ANGI":{
+        "T54229":"Research target"
+    },
+    "G6PI":{
+        "T54316":"Research target"
+    },
+    "PEDF":{
+        "T54447":"Clinical Trial target"
+    },
+    "SLAF6":{
+        "T54460":"Research target"
+    },
+    "K1C19":{
+        "T54461":"Research target"
+    },
+    "S15A3":{
+        "T54473":"Research target"
+    },
+    "NAMPT":{
+        "T54582":"Clinical Trial target"
+    },
+    "CAC1H":{
+        "T54644":"Successful target"
+    },
+    "TF7L2":{
+        "T54646":"Research target"
+    },
+    "MBP":{
+        "T54761":"Clinical Trial target"
+    },
+    "SC5A1":{
+        "T54771":"Clinical Trial target"
+    },
+    "RPGR":{
+        "T54789":"Clinical Trial target"
+    },
+    "KI2L2":{
+        "T54902":"Clinical Trial target"
+    },
+    "ACHA2":{
+        "T55815":"Successful target"
+    },
+    "PSB6":{
+        "T54973":"Patented target"
+    },
+    "SC6A7":{
+        "T54982":"Research target"
+    },
+    "NUAK2":{
+        "T55005":"Research target"
+    },
+    "KCNQ5":{
+        "T55068":"Research target"
+    },
+    "ASIC1":{
+        "T55094":"Successful target"
+    },
+    "IFNL3":{
+        "T55242":"Research target"
+    },
+    "H2AX":{
+        "T55244":"Research target"
+    },
+    "PPM1A":{
+        "T55260":"Clinical Trial target"
+    },
+    "DLL4":{
+        "T55273":"Clinical Trial target"
+    },
+    "ITA2":{
+        "T97353":"Clinical Trial target"
+    },
+    "ANFB":{
+        "T55302":"Research target"
+    },
+    "IRAK4":{
+        "T55398":"Clinical Trial target"
+    },
+    "SAA1":{
+        "T55447":"Research target"
+    },
+    "NRN1":{
+        "T55465":"Research target"
+    },
+    "HIF1A":{
+        "T55610":"Clinical Trial target"
+    },
+    "MMP17":{
+        "T55616":"Research target"
+    },
+    "CFTR":{
+        "T97621":"Successful target"
+    },
+    "PKHA5":{
+        "T55667":"Research target"
+    },
+    "LIPS":{
+        "T55689":"Successful target"
+    },
+    "RET4":{
+        "T55703":"Patented target"
+    },
+    "CHKA":{
+        "T55709":"Clinical Trial target"
+    },
+    "MK11":{
+        "T55729":"Clinical Trial target"
+    },
+    "MERTK":{
+        "T55781":"Clinical Trial target"
+    },
+    "TNFL4":{
+        "T55860":"Clinical Trial target"
+    },
+    "KCNQ4":{
+        "T55916":"Research target"
+    },
+    "DCAM":{
+        "T55922":"Successful target"
+    },
+    "S19A3":{
+        "T55932":"Research target"
+    },
+    "S22A3":{
+        "T55948":"Research target"
+    },
+    "GRM6":{
+        "T55956":"Research target"
+    },
+    "SC6A3":{
+        "T55959":"Successful target"
+    },
+    "PSB7":{
+        "T55986":"Patented target"
+    },
+    "KGP1":{
+        "T78543":"Research target"
+    },
+    "UCHL1":{
+        "T56051":"Preclinical target"
+    },
+    "KDM6B":{
+        "T56057":"Research target"
+    },
+    "SERPH":{
+        "T56104":"Research target"
+    },
+    "TIF1A":{
+        "T56108":"Research target"
+    },
+    "EPHB3":{
+        "T56121":"Research target"
+    },
+    "GPR35":{
+        "T56143":"Research target"
+    },
+    "ERG7":{
+        "T56175":"Research target"
+    },
+    "ASAP3":{
+        "T56207":"Research target"
+    },
+    "TPP1":{
+        "T56262":"Successful target"
+    },
+    "IAPP":{
+        "T56269":"Research target"
+    },
+    "HCAR1":{
+        "T56272":"Research target"
+    },
+    "HXA11":{
+        "T56290":"Research target"
+    },
+    "IL11":{
+        "T56308":"Clinical Trial target"
+    },
+    "CXCL9":{
+        "T56349":"Clinical Trial target"
+    },
+    "CTL4":{
+        "T56362":"Clinical Trial target"
+    },
+    "CD19":{
+        "T56365":"Successful target"
+    },
+    "ALK":{
+        "T56418":"Successful target"
+    },
+    "TNAP3":{
+        "T56474":"Research target"
+    },
+    "PNMT":{
+        "T56496":"Research target"
+    },
+    "CCN1":{
+        "T56505":"Research target"
+    },
+    "B2CL1":{
+        "T56510":"Clinical Trial target"
+    },
+    "APOA1":{
+        "T56545":"Clinical Trial target"
+    },
+    "ABCG2":{
+        "T56556":"Successful target"
+    },
+    "NMDE4":{
+        "T56588":"Research target"
+    },
+    "TPP2":{
+        "T56625":"Discontinued target"
+    },
+    "DKK1":{
+        "T56697":"Clinical Trial target"
+    },
+    "KDM5B":{
+        "T56871":"Research target"
+    },
+    "CXCR2":{
+        "T56923":"Successful target"
+    },
+    "GPA33":{
+        "T57001":"Clinical Trial target"
+    },
+    "EPHA7":{
+        "T57006":"Research target"
+    },
+    "PTPRB":{
+        "T57034":"Clinical Trial target"
+    },
+    "ZUP1":{
+        "T57050":"Patented target"
+    },
+    "E2F1":{
+        "T57059":"Clinical Trial target"
+    },
+    "ARBK2":{
+        "T57174":"Research target"
+    },
+    "MRGX1":{
+        "T57253":"Research target"
+    },
+    "EPHA2":{
+        "T57278":"Clinical Trial target"
+    },
+    "2A5A":{
+        "T57291":"Research target"
+    },
+    "SLK":{
+        "T57307":"Research target"
+    },
+    "NSMA":{
+        "T57316":"Research target"
+    },
+    "GEMI":{
+        "T57387":"Research target"
+    },
+    "CP2D6":{
+        "T57392":"Successful target"
+    },
+    "ACPH":{
+        "T57421":"Research target"
+    },
+    "CNTN2":{
+        "T57582":"Research target"
+    },
+    "KCNK9":{
+        "T57613":"Research target"
+    },
+    "GCYA1":{
+        "T57680":"Successful target"
+    },
+    "KIT":{
+        "T88451":"Research target"
+    },
+    "MAGC2":{
+        "T57718":"Clinical Trial target"
+    },
+    "AMPB":{
+        "T57818":"Research target"
+    },
+    "LY6K":{
+        "T57843":"Research target"
+    },
+    "BY55":{
+        "T57907":"Research target"
+    },
+    "FIP1":{
+        "T57923":"Research target"
+    },
+    "MAGA6":{
+        "T57941":"Clinical Trial target"
+    },
+    "CASP3":{
+        "T57943":"Clinical Trial target"
+    },
+    "LIRA5":{
+        "T58028":"Research target"
+    },
+    "B2MG":{
+        "T58080":"Research target"
+    },
+    "LPAR4":{
+        "T58130":"Research target"
+    },
+    "GRIK2":{
+        "T58178":"Research target"
+    },
+    "MUC15":{
+        "T58216":"Research target"
+    },
+    "TPC1":{
+        "T58264":"Research target"
+    },
+    "EPHA8":{
+        "T58266":"Research target"
+    },
+    "ENTP1":{
+        "T58298":"Clinical Trial target"
+    },
+    "PPME1":{
+        "T58307":"Patented target"
+    },
+    "RHOB":{
+        "T58361":"Research target"
+    },
+    "CNTN1":{
+        "T58393":"Research target"
+    },
+    "CDK7":{
+        "T58449":"Clinical Trial target"
+    },
+    "FGFR2":{
+        "T58454":"Successful target"
+    },
+    "ENSA":{
+        "T58460":"Research target"
+    },
+    "CCNA2":{
+        "T58470":"Research target"
+    },
+    "TRPV3":{
+        "T58496":"Clinical Trial target"
+    },
+    "OLFM4":{
+        "T58513":"Research target"
+    },
+    "STC2":{
+        "T58548":"Research target"
+    },
+    "BKRB1":{
+        "T58589":"Clinical Trial target"
+    },
+    "APEL":{
+        "T58674":"Research target"
+    },
+    "PABP1":{
+        "T58679":"Clinical Trial target"
+    },
+    "NSMA3":{
+        "T58716":"Discontinued target"
+    },
+    "SCN8A":{
+        "T58741":"Clinical Trial target"
+    },
+    "MTOR":{
+        "T75243":"Successful target"
+    },
+    "S12A4":{
+        "T58890":"Research target"
+    },
+    "TRH":{
+        "T58920":"Clinical Trial target"
+    },
+    "PPARG":{
+        "T58921":"Successful target"
+    },
+    "SRPK2":{
+        "T58924":"Research target"
+    },
+    "SC6A5":{
+        "T58937":"Research target"
+    },
+    "5HT3B":{
+        "T58940":"Discontinued target"
+    },
+    "MK01":{
+        "T58970":"Clinical Trial target"
+    },
+    "OPRD":{
+        "T58992":"Successful target"
+    },
+    "FCG3A":{
+        "T82240":"Successful target"
+    },
+    "GABT":{
+        "T59045":"Successful target"
+    },
+    "C11B2":{
+        "T59056":"Research target"
+    },
+    "CD209":{
+        "T59082":"Research target"
+    },
+    "PGFRB":{
+        "T59102":"Successful target"
+    },
+    "LFA3":{
+        "T59122":"Successful target"
+    },
+    "PINX1":{
+        "T59136":"Research target"
+    },
+    "KPCZ":{
+        "T59190":"Patented target"
+    },
+    "DHB4":{
+        "T59230":"Research target"
+    },
+    "SGCB":{
+        "T59382":"Clinical Trial target"
+    },
+    "TVB79":{
+        "T59432":"Research target"
+    },
+    "DHSO":{
+        "T59445":"Research target"
+    },
+    "JIP1":{
+        "T59459":"Patented target"
+    },
+    "ZFAN5":{
+        "T59486":"Research target"
+    },
+    "AAAT":{
+        "T59493":"Research target"
+    },
+    "PDGFC":{
+        "T59510":"Research target"
+    },
+    "PMYT1":{
+        "T59537":"Research target"
+    },
+    "MPRI":{
+        "T59550":"Clinical Trial target"
+    },
+    "GP183":{
+        "T59577":"Research target"
+    },
+    "GHSR":{
+        "T59604":"Successful target"
+    },
+    "LT4R1":{
+        "T59626":"Clinical Trial target"
+    },
+    "PLK2":{
+        "T59654":"Patented target"
+    },
+    "5HT4R":{
+        "T59679":"Successful target"
+    },
+    "MECP2":{
+        "T59686":"Research target"
+    },
+    "FZD10":{
+        "T59702":"Clinical Trial target"
+    },
+    "FHIT":{
+        "T59720":"Successful target"
+    },
+    "PP1A":{
+        "T59845":"Successful target"
+    },
+    "GPNMB":{
+        "T59856":"Research target"
+    },
+    "ERR3":{
+        "T59875":"Research target"
+    },
+    "V1BR":{
+        "T59881":"Successful target"
+    },
+    "TYPH":{
+        "T59929":"Successful target"
+    },
+    "PKN1":{
+        "T60003":"Research target"
+    },
+    "MAZ":{
+        "T60042":"Research target"
+    },
+    "RXRB":{
+        "T60077":"Successful target"
+    },
+    "GTR12":{
+        "T60156":"Research target"
+    },
+    "GLR":{
+        "T60182":"Successful target"
+    },
+    "BMPR2":{
+        "T60213":"Research target"
+    },
+    "KCNH1":{
+        "T60254":"Research target"
+    },
+    "P2RX4":{
+        "T60330":"Clinical Trial target"
+    },
+    "TAAR5":{
+        "T60362":"Research target"
+    },
+    "DCOR":{
+        "T60366":"Successful target"
+    },
+    "CD1A":{
+        "T60433":"Successful target"
+    },
+    "GPVI":{
+        "T60514":"Clinical Trial target"
+    },
+    "LYAM1":{
+        "T60526":"Clinical Trial target"
+    },
+    "TSHR":{
+        "T60606":"Successful target"
+    },
+    "ODO1":{
+        "T60636":"Clinical Trial target"
+    },
+    "CLCN3":{
+        "T60671":"Research target"
+    },
+    "OPRK":{
+        "T60693":"Successful target"
+    },
+    "CO5":{
+        "T60708":"Successful target"
+    },
+    "SOST":{
+        "T60724":"Successful target"
+    },
+    "OREX":{
+        "T60744":"Research target"
+    },
+    "AK1C3":{
+        "T60857":"Successful target"
+    },
+    "TP4A2":{
+        "T60897":"Research target"
+    },
+    "IGF1":{
+        "T60930":"Clinical Trial target"
+    },
+    "TRPM6":{
+        "T61029":"Research target"
+    },
+    "CNTFR":{
+        "T61033":"Clinical Trial target"
+    },
+    "ITPR1":{
+        "T82624":"Successful target"
+    },
+    "GRM7":{
+        "T61243":"Research target"
+    },
+    "CXB4":{
+        "T61316":"Research target"
+    },
+    "PYRD":{
+        "T61400":"Successful target"
+    },
+    "MELK":{
+        "T96892":"Clinical Trial target"
+    },
+    "SP1":{
+        "T61544":"Clinical Trial target"
+    },
+    "GCYB1":{
+        "T61581":"Clinical Trial target"
+    },
+    "RENI":{
+        "T61622":"Successful target"
+    },
+    "RARB":{
+        "T61657":"Successful target"
+    },
+    "IL2":{
+        "T61698":"Successful target"
+    },
+    "PD2R2":{
+        "T61722":"Clinical Trial target"
+    },
+    "P4HA1":{
+        "T61729":"Clinical Trial target"
+    },
+    "PDE4A":{
+        "T61744":"Successful target"
+    },
+    "CATB":{
+        "T61746":"Preclinical target"
+    },
+    "MRP2":{
+        "T61792":"Research target"
+    },
+    "IBP6":{
+        "T61800":"Research target"
+    },
+    "DAAM2":{
+        "T61909":"Research target"
+    },
+    "PSA1":{
+        "T61997":"Successful target"
+    },
+    "OAT":{
+        "T62073":"Research target"
+    },
+    "SC6A1":{
+        "T62184":"Successful target"
+    },
+    "DDC":{
+        "T62193":"Successful target"
+    },
+    "PCSK9":{
+        "T62206":"Successful target"
+    },
+    "IL25":{
+        "T62241":"Clinical Trial target"
+    },
+    "DHYS":{
+        "T62265":"Research target"
+    },
+    "I23O2":{
+        "T62266":"Patented target"
+    },
+    "NMDZ1":{
+        "T62276":"Successful target"
+    },
+    "GBRA3":{
+        "T62292":"Successful target"
+    },
+    "MTLR":{
+        "T62306":"Clinical Trial target"
+    },
+    "TY3H":{
+        "T62390":"Successful target"
+    },
+    "GRIA3":{
+        "T62391":"Successful target"
+    },
+    "MANF":{
+        "T62415":"Research target"
+    },
+    "KSYK":{
+        "T62431":"Successful target"
+    },
+    "CHK1":{
+        "T62449":"Clinical Trial target"
+    },
+    "JAK1":{
+        "T62460":"Successful target"
+    },
+    "ARBK1":{
+        "T62548":"Patented target"
+    },
+    "KCNH3":{
+        "T62643":"Research target"
+    },
+    "ICOS":{
+        "T62705":"Clinical Trial target"
+    },
+    "PPIF":{
+        "T62746":"Research target"
+    },
+    "FGF10":{
+        "T62763":"Discontinued target"
+    },
+    "UD2B7":{
+        "T62815":"Research target"
+    },
+    "GRM2":{
+        "T62820":"Clinical Trial target"
+    },
+    "PAR2":{
+        "T62841":"Patented target"
+    },
+    "SC5A6":{
+        "T62905":"Successful target"
+    },
+    "COLI":{
+        "T62912":"Research target"
+    },
+    "YYAP1":{
+        "T62936":"Research target"
+    },
+    "SSR4":{
+        "T62974":"Clinical Trial target"
+    },
+    "SCRB1":{
+        "T62998":"Research target"
+    },
+    "TBK1":{
+        "T63024":"Patented target"
+    },
+    "ALBU":{
+        "T63068":"Successful target"
+    },
+    "RAD51":{
+        "T63083":"Clinical Trial target"
+    },
+    "MCR":{
+        "T72168":"Successful target"
+    },
+    "ACK1":{
+        "T63220":"Patented target"
+    },
+    "DCLK2":{
+        "T63298":"Research target"
+    },
+    "MMP2":{
+        "T68251":"Successful target"
+    },
+    "OXGR1":{
+        "T63393":"Research target"
+    },
+    "P2RX7":{
+        "T63414":"Clinical Trial target"
+    },
+    "GP132":{
+        "T63465":"Research target"
+    },
+    "G6PD":{
+        "T63484":"Successful target"
+    },
+    "ENPP2":{
+        "T63512":"Patented target"
+    },
+    "PLDX1":{
+        "T63580":"Research target"
+    },
+    "HMGB1":{
+        "T63595":"Research target"
+    },
+    "ADCY1":{
+        "T63609":"Successful target"
+    },
+    "TAOK3":{
+        "T63682":"Research target"
+    },
+    "SMC2":{
+        "T63743":"Research target"
+    },
+    "VEGFD":{
+        "T63803":"Clinical Trial target"
+    },
+    "HDAC4":{
+        "T63816":"Clinical Trial target"
+    },
+    "IRAK1":{
+        "T63846":"Patented target"
+    },
+    "CDKL1":{
+        "T63851":"Research target"
+    },
+    "DAG1":{
+        "T63883":"Research target"
+    },
+    "IFNA2":{
+        "T63934":"Successful target"
+    },
+    "VGFR1":{
+        "T63966":"Successful target"
+    },
+    "ACHA4":{
+        "T70967":"Successful target"
+    },
+    "IMB1":{
+        "T64022":"Research target"
+    },
+    "DCPS":{
+        "T64074":"Clinical Trial target"
+    },
+    "SGK1":{
+        "T64682":"Clinical Trial target"
+    },
+    "CRF":{
+        "T64137":"Research target"
+    },
+    "STAT1":{
+        "T64205":"Patented target"
+    },
+    "TRPV4":{
+        "T64213":"Clinical Trial target"
+    },
+    "TNFL6":{
+        "T64245":"Research target"
+    },
+    "MAP1A":{
+        "T64258":"Successful target"
+    },
+    "IBP2":{
+        "T64268":"Research target"
+    },
+    "ANGT":{
+        "T64485":"Research target"
+    },
+    "ZAP70":{
+        "T64553":"Patented target"
+    },
+    "CAH9":{
+        "T64567":"Clinical Trial target"
+    },
+    "5HT3A":{
+        "T64591":"Successful target"
+    },
+    "ITB8":{
+        "T64597":"Patented target"
+    },
+    "IMP3":{
+        "T64642":"Research target"
+    },
+    "SPHM":{
+        "T64645":"Clinical Trial target"
+    },
+    "FADS2":{
+        "T64725":"Research target"
+    },
+    "TNR21":{
+        "T64744":"Research target"
+    },
+    "HRH3":{
+        "T64765":"Successful target"
+    },
+    "VDAC3":{
+        "T64774":"Clinical Trial target"
+    },
+    "CAC1G":{
+        "T64795":"Successful target"
+    },
+    "SSR5":{
+        "T64830":"Successful target"
+    },
+    "HCN2":{
+        "T65005":"Research target"
+    },
+    "MMP14":{
+        "T65019":"Clinical Trial target"
+    },
+    "OTU1":{
+        "T65084":"Research target"
+    },
+    "5NTD":{
+        "T65116":"Clinical Trial target"
+    },
+    "TSN7":{
+        "T65161":"Research target"
+    },
+    "EPOR":{
+        "T65197":"Successful target"
+    },
+    "NRG1":{
+        "T65198":"Clinical Trial target"
+    },
+    "DHI1":{
+        "T65200":"Clinical Trial target"
+    },
+    "GPER1":{
+        "T65236":"Successful target"
+    },
+    "RHAG":{
+        "T65239":"Research target"
+    },
+    "AL3A2":{
+        "T65291":"Successful target"
+    },
+    "GPR20":{
+        "T65429":"Clinical Trial target"
+    },
+    "CBPM":{
+        "T65483":"Research target"
+    },
+    "DNM3B":{
+        "T65501":"Clinical Trial target"
+    },
+    "KCNA6":{
+        "T65561":"Research target"
+    },
+    "ADH1A":{
+        "T65570":"Successful target"
+    },
+    "CXG2":{
+        "T65626":"Research target"
+    },
+    "NISCH":{
+        "T78943":"Research target"
+    },
+    "RAC1":{
+        "T88752":"Research target"
+    },
+    "APJ":{
+        "T65783":"Clinical Trial target"
+    },
+    "ERAP2":{
+        "T65818":"Research target"
+    },
+    "MK14":{
+        "T65864":"Clinical Trial target"
+    },
+    "IKKA":{
+        "T65879":"Research target"
+    },
+    "CLD18":{
+        "T65883":"Clinical Trial target"
+    },
+    "KPYM":{
+        "T65889":"Clinical Trial target"
+    },
+    "CD24":{
+        "T65906":"Research target"
+    },
+    "KCNB2":{
+        "T65932":"Research target"
+    },
+    "CFAB":{
+        "T66011":"Clinical Trial target"
+    },
+    "MMP3":{
+        "T86702":"Patented target"
+    },
+    "FLNA":{
+        "T66161":"Clinical Trial target"
+    },
+    "PEMT":{
+        "T66206":"Research target"
+    },
+    "V2R":{
+        "T66237":"Successful target"
+    },
+    "DPP9":{
+        "T66252":"Clinical Trial target"
+    },
+    "CD7":{
+        "T66266":"Clinical Trial target"
+    },
+    "RAB9A":{
+        "T66350":"Successful target"
+    },
+    "CFAD":{
+        "T66383":"Clinical Trial target"
+    },
+    "E2AK4":{
+        "T66396":"Research target"
+    },
+    "CD34":{
+        "T66426":"Clinical Trial target"
+    },
+    "LIRA3":{
+        "T66479":"Research target"
+    },
+    "KCMA1":{
+        "T66538":"Research target"
+    },
+    "PGH2":{
+        "T66665":"Successful target"
+    },
+    "TNR17":{
+        "T66693":"Successful target"
+    },
+    "MUTYH":{
+        "T66743":"Research target"
+    },
+    "FSCN1":{
+        "T66903":"Clinical Trial target"
+    },
+    "F13A":{
+        "T66925":"Patented target"
+    },
+    "PARG":{
+        "T66935":"Research target"
+    },
+    "KCMB4":{
+        "T67063":"Clinical Trial target"
+    },
+    "IL9":{
+        "T67079":"Clinical Trial target"
+    },
+    "CATD":{
+        "T67102":"Clinical Trial target"
+    },
+    "ITAV":{
+        "T93548":"Clinical Trial target"
+    },
+    "DRD2":{
+        "T67162":"Successful target"
+    },
+    "NR4A2":{
+        "T67163":"Research target"
+    },
+    "FCER2":{
+        "T67207":"Clinical Trial target"
+    },
+    "MBTP1":{
+        "T67231":"Research target"
+    },
+    "STAB1":{
+        "T67246":"Research target"
+    },
+    "HEP2":{
+        "T67258":"Research target"
+    },
+    "AMPN":{
+        "T67272":"Clinical Trial target"
+    },
+    "PRSS8":{
+        "T67339":"Research target"
+    },
+    "SYEP":{
+        "T67416":"Clinical Trial target"
+    },
+    "GLUT4":{
+        "T67658":"Clinical Trial target"
+    },
+    "ACM3":{
+        "T67684":"Successful target"
+    },
+    "PTH1R":{
+        "T67710":"Successful target"
+    },
+    "TRYD":{
+        "T67730":"Research target"
+    },
+    "TKT":{
+        "T67754":"Research target"
+    },
+    "TRFL":{
+        "T67801":"Clinical Trial target"
+    },
+    "CD70":{
+        "T67805":"Clinical Trial target"
+    },
+    "MGAT2":{
+        "T67812":"Patented target"
+    },
+    "P2RY1":{
+        "T67818":"Research target"
+    },
+    "STK39":{
+        "T67837":"Research target"
+    },
+    "PK3CD":{
+        "T67849":"Successful target"
+    },
+    "GALA":{
+        "T67877":"Research target"
+    },
+    "PGS2":{
+        "T67883":"Research target"
+    },
+    "TLR3":{
+        "T67894":"Clinical Trial target"
+    },
+    "BTLA":{
+        "T68001":"Clinical Trial target"
+    },
+    "CADH5":{
+        "T68009":"Research target"
+    },
+    "ERR1":{
+        "T72841":"Successful target"
+    },
+    "LYN":{
+        "T68163":"Clinical Trial target"
+    },
+    "BTNL3":{
+        "T68206":"Research target"
+    },
+    "ADM2":{
+        "T68208":"Research target"
+    },
+    "HMGA1":{
+        "T68211":"Research target"
+    },
+    "RNF34":{
+        "T68265":"Research target"
+    },
+    "CATS":{
+        "T68290":"Clinical Trial target"
+    },
+    "XPP2":{
+        "T68320":"Research target"
+    },
+    "FSHR":{
+        "T68334":"Successful target"
+    },
+    "BMP2":{
+        "T68383":"Clinical Trial target"
+    },
+    "MMP21":{
+        "T68443":"Research target"
+    },
+    "ADT1":{
+        "T68461":"Successful target"
+    },
+    "CXL11":{
+        "T68465":"Research target"
+    },
+    "UBP1":{
+        "T68470":"Research target"
+    },
+    "KMT5C":{
+        "T68490":"Preclinical target"
+    },
+    "S10A6":{
+        "T68513":"Research target"
+    },
+    "HSPB3":{
+        "T68517":"Clinical Trial target"
+    },
+    "PTK7":{
+        "T68525":"Clinical Trial target"
+    },
+    "HDAC1":{
+        "T68547":"Successful target"
+    },
+    "TRBR1":{
+        "T68596":"Research target"
+    },
+    "MA2A1":{
+        "T68668":"Discontinued target"
+    },
+    "SAHH":{
+        "T68698":"Research target"
+    },
+    "FURIN":{
+        "T68706":"Preclinical target"
+    },
+    "NSD1":{
+        "T68777":"Research target"
+    },
+    "PD2R":{
+        "T68782":"Clinical Trial target"
+    },
+    "APOA4":{
+        "T68829":"Research target"
+    },
+    "OXER1":{
+        "T68834":"Research target"
+    },
+    "GRIK3":{
+        "T68876":"Research target"
+    },
+    "ID2":{
+        "T68877":"Research target"
+    },
+    "NMBR":{
+        "T68887":"Clinical Trial target"
+    },
+    "SMS1":{
+        "T68967":"Clinical Trial target"
+    },
+    "JUN":{
+        "T69085":"Discontinued target"
+    },
+    "P2RX1":{
+        "T69091":"Research target"
+    },
+    "ITA6":{
+        "T69121":"Research target"
+    },
+    "ROS1":{
+        "T69128":"Successful target"
+    },
+    "UCP3":{
+        "T69146":"Clinical Trial target"
+    },
+    "TRPM3":{
+        "T69184":"Research target"
+    },
+    "C1QBP":{
+        "T69192":"Research target"
+    },
+    "SMCA4":{
+        "T69200":"Research target"
+    },
+    "PHKG2":{
+        "T69208":"Research target"
+    },
+    "IBP7":{
+        "T69271":"Research target"
+    },
+    "S22AG":{
+        "T69336":"Research target"
+    },
+    "MK09":{
+        "T69375":"Preclinical target"
+    },
+    "GPR63":{
+        "T69393":"Research target"
+    },
+    "SOS1":{
+        "T69413":"Research target"
+    },
+    "GSHB":{
+        "T69420":"Research target"
+    },
+    "CTSR2":{
+        "T69476":"Research target"
+    },
+    "OX2R":{
+        "T69485":"Successful target"
+    },
+    "NR1I3":{
+        "T69506":"Successful target"
+    },
+    "FGF8":{
+        "T69580":"Research target"
+    },
+    "GRK5":{
+        "T69612":"Patented target"
+    },
+    "AOC3":{
+        "T69619":"Successful target"
+    },
+    "SC6A9":{
+        "T69685":"Clinical Trial target"
+    },
+    "PAFA":{
+        "T69912":"Clinical Trial target"
+    },
+    "PGTA":{
+        "T69984":"Research target"
+    },
+    "WEE1":{
+        "T69991":"Clinical Trial target"
+    },
+    "CXA10":{
+        "T70012":"Research target"
+    },
+    "TOR1A":{
+        "T70027":"Research target"
+    },
+    "NALD2":{
+        "T70036":"Research target"
+    },
+    "RTN4":{
+        "T72236":"Research target"
+    },
+    "TR10B":{
+        "T70067":"Clinical Trial target"
+    },
+    "PYRG1":{
+        "T70101":"Clinical Trial target"
+    },
+    "TBA1A":{
+        "T70119":"Research target"
+    },
+    "CDK2":{
+        "T70176":"Clinical Trial target"
+    },
+    "GLIP1":{
+        "T70201":"Clinical Trial target"
+    },
+    "EPHA4":{
+        "T70234":"Research target"
+    },
+    "RXLT1":{
+        "T70332":"Research target"
+    },
+    "GHRHR":{
+        "T70449":"Successful target"
+    },
+    "CATC":{
+        "T70490":"Clinical Trial target"
+    },
+    "CLC9A":{
+        "T70513":"Research target"
+    },
+    "CBR1":{
+        "T70518":"Clinical Trial target"
+    },
+    "NCK1":{
+        "T70532":"Clinical Trial target"
+    },
+    "MCHR2":{
+        "T70539":"Research target"
+    },
+    "SUCR1":{
+        "T70633":"Research target"
+    },
+    "GPX1":{
+        "T70654":"Research target"
+    },
+    "S22A8":{
+        "T70680":"Successful target"
+    },
+    "MOBP":{
+        "T70685":"Research target"
+    },
+    "PLGF":{
+        "T70792":"Successful target"
+    },
+    "GA45B":{
+        "T70797":"Research target"
+    },
+    "LIMK1":{
+        "T70840":"Research target"
+    },
+    "MK07":{
+        "T70851":"Patented target"
+    },
+    "GSK3B":{
+        "T70977":"Clinical Trial target"
+    },
+    "SNP25":{
+        "T71023":"Successful target"
+    },
+    "HOIL1":{
+        "T71055":"Research target"
+    },
+    "RASH":{
+        "T71081":"Research target"
+    },
+    "CFAH":{
+        "T71086":"Clinical Trial target"
+    },
+    "STMN1":{
+        "T71190":"Research target"
+    },
+    "CLTR1":{
+        "T71192":"Successful target"
+    },
+    "CL12A":{
+        "T71205":"Clinical Trial target"
+    },
+    "ANPRA":{
+        "T71230":"Successful target"
+    },
+    "AKT3":{
+        "T71266":"Clinical Trial target"
+    },
+    "AP2A":{
+        "T71317":"Research target"
+    },
+    "I18RA":{
+        "T71362":"Research target"
+    },
+    "M4K4":{
+        "T71367":"Patented target"
+    },
+    "PLK4":{
+        "T71374":"Research target"
+    },
+    "IL3RA":{
+        "T71377":"Successful target"
+    },
+    "S5A2":{
+        "T71390":"Successful target"
+    },
+    "NHRF3":{
+        "T71492":"Research target"
+    },
+    "HEXI1":{
+        "T71525":"Research target"
+    },
+    "GGH":{
+        "T71646":"Research target"
+    },
+    "WISP1":{
+        "T71859":"Research target"
+    },
+    "SMN":{
+        "T71907":"Successful target"
+    },
+    "KI2L1":{
+        "T71928":"Clinical Trial target"
+    },
+    "KDM2A":{
+        "T71949":"Research target"
+    },
+    "NGAL":{
+        "T72010":"Research target"
+    },
+    "GALC":{
+        "T72024":"Research target"
+    },
+    "GPC6A":{
+        "T72032":"Research target"
+    },
+    "LEG3":{
+        "T72038":"Clinical Trial target"
+    },
+    "PUR2":{
+        "T89918":"Clinical Trial target"
+    },
+    "UTRO":{
+        "T72120":"Clinical Trial target"
+    },
+    "ANXA5":{
+        "T72195":"Clinical Trial target"
+    },
+    "CASP7":{
+        "T72252":"Clinical Trial target"
+    },
+    "GPR18":{
+        "T72267":"Research target"
+    },
+    "EF1A1":{
+        "T72269":"Research target"
+    },
+    "DLL1":{
+        "T72274":"Research target"
+    },
+    "CBX7":{
+        "T72319":"Research target"
+    },
+    "GLRX1":{
+        "T72405":"Research target"
+    },
+    "MC4R":{
+        "T72458":"Successful target"
+    },
+    "CLCN1":{
+        "T72467":"Research target"
+    },
+    "KEAP1":{
+        "T83198":"Clinical Trial target"
+    },
+    "CCND3":{
+        "T72507":"Research target"
+    },
+    "IL36G":{
+        "T72514":"Clinical Trial target"
+    },
+    "IL1R1":{
+        "T90835":"Clinical Trial target"
+    },
+    "TNIK":{
+        "T72534":"Research target"
+    },
+    "NMDE3":{
+        "T72595":"Research target"
+    },
+    "TF":{
+        "T72702":"Clinical Trial target"
+    },
+    "EPHB6":{
+        "T72732":"Research target"
+    },
+    "SPB5":{
+        "T72779":"Research target"
+    },
+    "LYAM2":{
+        "T72835":"Clinical Trial target"
+    },
+    "ERAP1":{
+        "T72849":"Research target"
+    },
+    "FOXO1":{
+        "T72850":"Research target"
+    },
+    "LTC4S":{
+        "T72881":"Patented target"
+    },
+    "ROBO1":{
+        "T72944":"Research target"
+    },
+    "PGBM":{
+        "T73075":"Discontinued target"
+    },
+    "CSF2R":{
+        "T73097":"Successful target"
+    },
+    "BGAL":{
+        "T73134":"Preclinical target"
+    },
+    "MMP11":{
+        "T73180":"Research target"
+    },
+    "SETD7":{
+        "T73184":"Research target"
+    },
+    "CD20":{
+        "T73215":"Successful target"
+    },
+    "RL15":{
+        "T73230":"Research target"
+    },
+    "RIR1":{
+        "T73342":"Successful target"
+    },
+    "CD166":{
+        "T73404":"Clinical Trial target"
+    },
+    "KI67":{
+        "T73414":"Research target"
+    },
+    "HEPS":{
+        "T73471":"Patented target"
+    },
+    "MMP7":{
+        "T73475":"Successful target"
+    },
+    "ANT3":{
+        "T73476":"Successful target"
+    },
+    "OX1R":{
+        "T73482":"Clinical Trial target"
+    },
+    "GRIK1":{
+        "T73495":"Successful target"
+    },
+    "KAAG1":{
+        "T73533":"Research target"
+    },
+    "SETD2":{
+        "T73551":"Research target"
+    },
+    "UBP10":{
+        "T73582":"Preclinical target"
+    },
+    "SV2A":{
+        "T73676":"Successful target"
+    },
+    "PTK6":{
+        "T73694":"Clinical Trial target"
+    },
+    "RXFP1":{
+        "T73696":"Clinical Trial target"
+    },
+    "NRP2":{
+        "T73708":"Research target"
+    },
+    "FABPL":{
+        "T73712":"Successful target"
+    },
+    "ACHB4":{
+        "T73724":"Clinical Trial target"
+    },
+    "CLK2":{
+        "T73725":"Patented target"
+    },
+    "EPHB2":{
+        "T73756":"Clinical Trial target"
+    },
+    "GPR34":{
+        "T73859":"Research target"
+    },
+    "KDM4C":{
+        "T73863":"Patented target"
+    },
+    "WNT7A":{
+        "T73908":"Research target"
+    },
+    "CAC1E":{
+        "T73977":"Research target"
+    },
+    "CSF2":{
+        "T74002":"Successful target"
+    },
+    "BMI1":{
+        "T74066":"Research target"
+    },
+    "ACHA3":{
+        "T74166":"Successful target"
+    },
+    "CLTR2":{
+        "T74238":"Clinical Trial target"
+    },
+    "BLK":{
+        "T74307":"Patented target"
+    },
+    "FLT3":{
+        "T74312":"Successful target"
+    },
+    "KI26B":{
+        "T74371":"Research target"
+    },
+    "MAGC1":{
+        "T74381":"Clinical Trial target"
+    },
+    "GLRX2":{
+        "T74425":"Research target"
+    },
+    "CD97":{
+        "T74448":"Research target"
+    },
+    "AGTR1":{
+        "T74456":"Successful target"
+    },
+    "KCNQ2":{
+        "T74483":"Research target"
+    },
+    "KCND3":{
+        "T74500":"Successful target"
+    },
+    "KCNJ2":{
+        "T74570":"Research target"
+    },
+    "RPGF4":{
+        "T74607":"Research target"
+    },
+    "CDK13":{
+        "T74839":"Research target"
+    },
+    "DOPO":{
+        "T74937":"Clinical Trial target"
+    },
+    "KAP3":{
+        "T74952":"Research target"
+    },
+    "TTK":{
+        "T74977":"Clinical Trial target"
+    },
+    "SMAD9":{
+        "T75077":"Research target"
+    },
+    "LYOX":{
+        "T75152":"Research target"
+    },
+    "LRP2":{
+        "T75210":"Research target"
+    },
+    "MAR1":{
+        "T75256":"Clinical Trial target"
+    },
+    "S38A3":{
+        "T75351":"Research target"
+    },
+    "FANCF":{
+        "T75419":"Research target"
+    },
+    "TSPO":{
+        "T75440":"Successful target"
+    },
+    "MYD88":{
+        "T75476":"Research target"
+    },
+    "NQO2":{
+        "T75498":"Successful target"
+    },
+    "GUAA":{
+        "T75517":"Research target"
+    },
+    "S12A6":{
+        "T75545":"Research target"
+    },
+    "YES":{
+        "T75570":"Clinical Trial target"
+    },
+    "MAP2":{
+        "T75596":"Clinical Trial target"
+    },
+    "LAMC2":{
+        "T75613":"Research target"
+    },
+    "NOD2":{
+        "T75643":"Clinical Trial target"
+    },
+    "SGT1":{
+        "T75644":"Research target"
+    },
+    "APOA2":{
+        "T75655":"Research target"
+    },
+    "DLL3":{
+        "T75716":"Clinical Trial target"
+    },
+    "ENTK":{
+        "T75772":"Patented target"
+    },
+    "COIA1":{
+        "T75788":"Clinical Trial target"
+    },
+    "JHD2C":{
+        "T75792":"Research target"
+    },
+    "PF2R":{
+        "T75797":"Successful target"
+    },
+    "FBX3":{
+        "T75819":"Preclinical target"
+    },
+    "CPT1B":{
+        "T75888":"Successful target"
+    },
+    "DPYD":{
+        "T75890":"Successful target"
+    },
+    "ADIP":{
+        "T75947":"Research target"
+    },
+    "STML2":{
+        "T75962":"Research target"
+    },
+    "IMPA2":{
+        "T76012":"Research target"
+    },
+    "C1S":{
+        "T76024":"Successful target"
+    },
+    "FKB1A":{
+        "T76059":"Successful target"
+    },
+    "CXB5":{
+        "T76062":"Research target"
+    },
+    "HBEGF":{
+        "T76093":"Clinical Trial target"
+    },
+    "TA2R":{
+        "T76198":"Successful target"
+    },
+    "PH4H":{
+        "T76213":"Successful target"
+    },
+    "HAVR2":{
+        "T76233":"Clinical Trial target"
+    },
+    "ENPP3":{
+        "T76285":"Clinical Trial target"
+    },
+    "CD36":{
+        "T76286":"Research target"
+    },
+    "EST1":{
+        "T76369":"Successful target"
+    },
+    "PGTB1":{
+        "T76396":"Clinical Trial target"
+    },
+    "NMDE2":{
+        "T76414":"Successful target"
+    },
+    "6PGD":{
+        "T76497":"Successful target"
+    },
+    "M3K2":{
+        "T76508":"Clinical Trial target"
+    },
+    "PDXK":{
+        "T76522":"Research target"
+    },
+    "SPY1":{
+        "T76540":"Research target"
+    },
+    "CD52":{
+        "T76630":"Successful target"
+    },
+    "ITPR2":{
+        "T76678":"Research target"
+    },
+    "CNR1":{
+        "T76685":"Successful target"
+    },
+    "ANM3":{
+        "T76723":"Research target"
+    },
+    "MC3R":{
+        "T76846":"Research target"
+    },
+    "PRDX4":{
+        "T76888":"Research target"
+    },
+    "RECO":{
+        "T76894":"Research target"
+    },
+    "COMT":{
+        "T76904":"Successful target"
+    },
+    "GSK3A":{
+        "T76910":"Successful target"
+    },
+    "KCNA3":{
+        "T76914":"Clinical Trial target"
+    },
+    "SCN3A":{
+        "T76937":"Successful target"
+    },
+    "PRDX5":{
+        "T77009":"Successful target"
+    },
+    "DCLK3":{
+        "T77061":"Research target"
+    },
+    "PCSK4":{
+        "T77063":"Research target"
+    },
+    "S26A4":{
+        "T77099":"Research target"
+    },
+    "TXNIP":{
+        "T77127":"Research target"
+    },
+    "M3K3":{
+        "T77139":"Research target"
+    },
+    "UCHL3":{
+        "T77181":"Research target"
+    },
+    "SLIK6":{
+        "T77190":"Clinical Trial target"
+    },
+    "NU3M":{
+        "T77195":"Successful target"
+    },
+    "CATF":{
+        "T77236":"Patented target"
+    },
+    "LSM1":{
+        "T77344":"Research target"
+    },
+    "PSB8":{
+        "T77350":"Clinical Trial target"
+    },
+    "AA2AR":{
+        "T77365":"Successful target"
+    },
+    "WDR5":{
+        "T77393":"Research target"
+    },
+    "PDE2A":{
+        "T77400":"Clinical Trial target"
+    },
+    "BMP4":{
+        "T77410":"Research target"
+    },
+    "TCTP":{
+        "T77473":"Discontinued target"
+    },
+    "KI2S2":{
+        "T77515":"Clinical Trial target"
+    },
+    "ITK":{
+        "T91761":"Clinical Trial target"
+    },
+    "AOC1":{
+        "T77546":"Research target"
+    },
+    "GRM8":{
+        "T77548":"Research target"
+    },
+    "BIP":{
+        "T77594":"Clinical Trial target"
+    },
+    "PDE1B":{
+        "T77613":"Patented target"
+    },
+    "AGK":{
+        "T77616":"Research target"
+    },
+    "TR10A":{
+        "T77645":"Clinical Trial target"
+    },
+    "IFNG":{
+        "T77664":"Successful target"
+    },
+    "GPDA":{
+        "T77721":"Research target"
+    },
+    "BST2":{
+        "T77745":"Research target"
+    },
+    "TRFR":{
+        "T77796":"Successful target"
+    },
+    "HRH1":{
+        "T77913":"Successful target"
+    },
+    "TP4A3":{
+        "T78019":"Research target"
+    },
+    "DAF":{
+        "T78114":"Clinical Trial target"
+    },
+    "S47A2":{
+        "T78127":"Research target"
+    },
+    "DBLOH":{
+        "T78150":"Research target"
+    },
+    "RICTR":{
+        "T78181":"Research target"
+    },
+    "PNPH":{
+        "T78198":"Clinical Trial target"
+    },
+    "TRPM2":{
+        "T78205":"Research target"
+    },
+    "ASGL1":{
+        "T78277":"Successful target"
+    },
+    "NACC1":{
+        "T78311":"Research target"
+    },
+    "KCNT2":{
+        "T78318":"Clinical Trial target"
+    },
+    "CD44":{
+        "T78319":"Clinical Trial target"
+    },
+    "NAAA":{
+        "T78326":"Research target"
+    },
+    "FOLR3":{
+        "T78332":"Research target"
+    },
+    "ELAV1":{
+        "T78349":"Research target"
+    },
+    "MIA":{
+        "T78350":"Research target"
+    },
+    "CXD4":{
+        "T78355":"Research target"
+    },
+    "THAS":{
+        "T78356":"Clinical Trial target"
+    },
+    "IFNL1":{
+        "T78381":"Clinical Trial target"
+    },
+    "IKKB":{
+        "T78429":"Clinical Trial target"
+    },
+    "M3K4":{
+        "T78492":"Research target"
+    },
+    "CNGA3":{
+        "T78510":"Clinical Trial target"
+    },
+    "CD59":{
+        "T78552":"Clinical Trial target"
+    },
+    "OSMR":{
+        "T78567":"Research target"
+    },
+    "PPCEL":{
+        "T78575":"Research target"
+    },
+    "GALR1":{
+        "T98494":"Clinical Trial target"
+    },
+    "IL5":{
+        "T78585":"Successful target"
+    },
+    "PLTP":{
+        "T78650":"Research target"
+    },
+    "5HT1F":{
+        "T78656":"Successful target"
+    },
+    "KCNJ5":{
+        "T78692":"Clinical Trial target"
+    },
+    "5HT1A":{
+        "T78709":"Successful target"
+    },
+    "KCNJ1":{
+        "T78710":"Patented target"
+    },
+    "CLCKB":{
+        "T78758":"Research target"
+    },
+    "CHSS2":{
+        "T78865":"Research target"
+    },
+    "TFPI1":{
+        "T78890":"Clinical Trial target"
+    },
+    "TYK2":{
+        "T78932":"Clinical Trial target"
+    },
+    "CDD":{
+        "T79027":"Clinical Trial target"
+    },
+    "BACE1":{
+        "T79031":"Clinical Trial target"
+    },
+    "5HT7R":{
+        "T79062":"Clinical Trial target"
+    },
+    "KLK7":{
+        "T79155":"Patented target"
+    },
+    "EREG":{
+        "T79157":"Clinical Trial target"
+    },
+    "GDNF":{
+        "T79160":"Clinical Trial target"
+    },
+    "RSPO3":{
+        "T79162":"Clinical Trial target"
+    },
+    "V1AR":{
+        "T79232":"Successful target"
+    },
+    "ULK1":{
+        "T79307":"Research target"
+    },
+    "KHK":{
+        "T79326":"Research target"
+    },
+    "FAAH2":{
+        "T79332":"Research target"
+    },
+    "KLK4":{
+        "T79400":"Patented target"
+    },
+    "LSHR":{
+        "T79473":"Successful target"
+    },
+    "LEP":{
+        "T79485":"Research target"
+    },
+    "ANM7":{
+        "T79501":"Research target"
+    },
+    "AQP9":{
+        "T79566":"Research target"
+    },
+    "ATS4":{
+        "T79570":"Patented target"
+    },
+    "THA":{
+        "T79591":"Successful target"
+    },
+    "CAC1I":{
+        "T79694":"Research target"
+    },
+    "G6PC2":{
+        "T79726":"Research target"
+    },
+    "PORCN":{
+        "T79747":"Clinical Trial target"
+    },
+    "NPFF1":{
+        "T79780":"Research target"
+    },
+    "MK12":{
+        "T79798":"Successful target"
+    },
+    "CALR":{
+        "T79821":"Research target"
+    },
+    "STK36":{
+        "T79824":"Research target"
+    },
+    "ACM5":{
+        "T79961":"Successful target"
+    },
+    "LY75":{
+        "T80002":"Clinical Trial target"
+    },
+    "L1CAM":{
+        "T80020":"Clinical Trial target"
+    },
+    "GDF8":{
+        "T87749":"Clinical Trial target"
+    },
+    "TERF1":{
+        "T80042":"Research target"
+    },
+    "TRPC6":{
+        "T80165":"Research target"
+    },
+    "PK3CA":{
+        "T80276":"Successful target"
+    },
+    "SKP2":{
+        "T80306":"Research target"
+    },
+    "AVR2B":{
+        "T80338":"Research target"
+    },
+    "GBRB2":{
+        "T80387":"Successful target"
+    },
+    "KHDR1":{
+        "T80395":"Research target"
+    },
+    "VHL":{
+        "T80423":"Patented target"
+    },
+    "TIAM1":{
+        "T80454":"Research target"
+    },
+    "DNM3L":{
+        "T80487":"Patented target"
+    },
+    "FFAR3":{
+        "T80513":"Research target"
+    },
+    "CSK22":{
+        "T80526":"Patented target"
+    },
+    "SDC2":{
+        "T80848":"Research target"
+    },
+    "RSSA":{
+        "T80853":"Patented target"
+    },
+    "GPR31":{
+        "T80858":"Research target"
+    },
+    "BACH1":{
+        "T80886":"Patented target"
+    },
+    "ESR2":{
+        "T80896":"Successful target"
+    },
+    "VPP3":{
+        "T80912":"Research target"
+    },
+    "AX2R":{
+        "T80966":"Research target"
+    },
+    "VGFR2":{
+        "T80975":"Successful target"
+    },
+    "FHL1":{
+        "T81135":"Research target"
+    },
+    "HV551":{
+        "T81227":"Research target"
+    },
+    "ITCH":{
+        "T81240":"Research target"
+    },
+    "DSG3":{
+        "T81281":"Research target"
+    },
+    "ENPL":{
+        "T81311":"Clinical Trial target"
+    },
+    "CDC7":{
+        "T81358":"Clinical Trial target"
+    },
+    "SEPT6":{
+        "T81409":"Research target"
+    },
+    "TLR4":{
+        "T81443":"Clinical Trial target"
+    },
+    "ABHD6":{
+        "T81452":"Patented target"
+    },
+    "S13A5":{
+        "T81547":"Research target"
+    },
+    "IKZF2":{
+        "T81569":"Clinical Trial target"
+    },
+    "DAPK3":{
+        "T81623":"Research target"
+    },
+    "PDE1A":{
+        "T81637":"Research target"
+    },
+    "MMP15":{
+        "T81658":"Research target"
+    },
+    "OX2G":{
+        "T81695":"Clinical Trial target"
+    },
+    "PRKDC":{
+        "T81735":"Clinical Trial target"
+    },
+    "UBA1":{
+        "T81780":"Patented target"
+    },
+    "SIK3":{
+        "T81830":"Research target"
+    },
+    "FDFT":{
+        "T81850":"Discontinued target"
+    },
+    "IDE":{
+        "T81900":"Successful target"
+    },
+    "OSCAR":{
+        "T81903":"Research target"
+    },
+    "KLF4":{
+        "T81916":"Clinical Trial target"
+    },
+    "SL9A1":{
+        "T82028":"Clinical Trial target"
+    },
+    "TLR2":{
+        "T82078":"Clinical Trial target"
+    },
+    "P2RY4":{
+        "T82083":"Discontinued target"
+    },
+    "CEAM1":{
+        "T82105":"Clinical Trial target"
+    },
+    "RARG":{
+        "T82146":"Successful target"
+    },
+    "BAK":{
+        "T82254":"Research target"
+    },
+    "KKCC2":{
+        "T82262":"Patented target"
+    },
+    "TRPV2":{
+        "T82267":"Research target"
+    },
+    "CTG1B":{
+        "T82277":"Clinical Trial target"
+    },
+    "FOLR2":{
+        "T82297":"Research target"
+    },
+    "KCNKI":{
+        "T82309":"Research target"
+    },
+    "UFO":{
+        "T82383":"Successful target"
+    },
+    "NDUAD":{
+        "T82391":"Clinical Trial target"
+    },
+    "ADA17":{
+        "T82393":"Clinical Trial target"
+    },
+    "ATAD2":{
+        "T82467":"Research target"
+    },
+    "ACHB2":{
+        "T82543":"Clinical Trial target"
+    },
+    "ACE":{
+        "T82577":"Successful target"
+    },
+    "KCJ18":{
+        "T82584":"Research target"
+    },
+    "CP4F2":{
+        "T82604":"Research target"
+    },
+    "ANM5":{
+        "T82665":"Clinical Trial target"
+    },
+    "AADAT":{
+        "T82668":"Preclinical target"
+    },
+    "PLAK":{
+        "T82685":"Research target"
+    },
+    "NR1I2":{
+        "T82702":"Research target"
+    },
+    "DYR1B":{
+        "T82720":"Patented target"
+    },
+    "KLKB1":{
+        "T82739":"Successful target"
+    },
+    "KC1G2":{
+        "T82773":"Research target"
+    },
+    "CTNB1":{
+        "T82795":"Successful target"
+    },
+    "INS":{
+        "T82841":"Successful target"
+    },
+    "PTN14":{
+        "T82848":"Research target"
+    },
+    "TAAR3":{
+        "T82922":"Research target"
+    },
+    "RB22A":{
+        "T82955":"Research target"
+    },
+    "ABL2":{
+        "T83009":"Research target"
+    },
+    "AOFB":{
+        "T83011":"Successful target"
+    },
+    "SC5A7":{
+        "T83143":"Research target"
+    },
+    "KPCI":{
+        "T83174":"Research target"
+    },
+    "CNTF":{
+        "T83192":"Clinical Trial target"
+    },
+    "TRPV1":{
+        "T83193":"Successful target"
+    },
+    "PSIP1":{
+        "T83196":"Patented target"
+    },
+    "KS6A1":{
+        "T83202":"Patented target"
+    },
+    "QOR":{
+        "T83284":"Research target"
+    },
+    "S12A7":{
+        "T83320":"Research target"
+    },
+    "FA9":{
+        "T83369":"Successful target"
+    },
+    "TUSC2":{
+        "T83376":"Clinical Trial target"
+    },
+    "NMUR1":{
+        "T83382":"Research target"
+    },
+    "FOLR1":{
+        "T83386":"Successful target"
+    },
+    "F16P1":{
+        "T83391":"Clinical Trial target"
+    },
+    "CO6A3":{
+        "T83450":"Research target"
+    },
+    "DDIT4":{
+        "T83561":"Clinical Trial target"
+    },
+    "WASP":{
+        "T83585":"Clinical Trial target"
+    },
+    "2B11":{
+        "T83611":"Successful target"
+    },
+    "TR13C":{
+        "T83687":"Clinical Trial target"
+    },
+    "HGF":{
+        "T83797":"Clinical Trial target"
+    },
+    "5HT2C":{
+        "T83813":"Successful target"
+    },
+    "AOFA":{
+        "T83875":"Successful target"
+    },
+    "SIR2":{
+        "T83904":"Patented target"
+    },
+    "CADH3":{
+        "T83905":"Clinical Trial target"
+    },
+    "PTGIS":{
+        "T83979":"Research target"
+    },
+    "UBP8":{
+        "T83982":"Preclinical target"
+    },
+    "CLCF1":{
+        "T84019":"Research target"
+    },
+    "HXB13":{
+        "T84032":"Research target"
+    },
+    "TRPA1":{
+        "T84040":"Successful target"
+    },
+    "5HT1E":{
+        "T84117":"Successful target"
+    },
+    "PDE10":{
+        "T84133":"Clinical Trial target"
+    },
+    "GLCM":{
+        "T84173":"Successful target"
+    },
+    "CA2D1":{
+        "T84316":"Successful target"
+    },
+    "HDGF":{
+        "T84341":"Research target"
+    },
+    "TBB1":{
+        "T84397":"Clinical Trial target"
+    },
+    "GP139":{
+        "T84439":"Clinical Trial target"
+    },
+    "OXYR":{
+        "T84486":"Successful target"
+    },
+    "AMPD1":{
+        "T84553":"Research target"
+    },
+    "UCP2":{
+        "T84560":"Clinical Trial target"
+    },
+    "TRXR1":{
+        "T84581":"Successful target"
+    },
+    "SGCA":{
+        "T84584":"Clinical Trial target"
+    },
+    "EI2BA":{
+        "T84591":"Clinical Trial target"
+    },
+    "IL31R":{
+        "T84614":"Clinical Trial target"
+    },
+    "BECN1":{
+        "T84616":"Research target"
+    },
+    "C11B1":{
+        "T84621":"Successful target"
+    },
+    "FA10":{
+        "T84631":"Successful target"
+    },
+    "CP26A":{
+        "T84634":"Clinical Trial target"
+    },
+    "TCL1A":{
+        "T84671":"Research target"
+    },
+    "NTRK2":{
+        "T84703":"Successful target"
+    },
+    "CD320":{
+        "T84706":"Research target"
+    },
+    "KCNA7":{
+        "T84737":"Research target"
+    },
+    "BIRC2":{
+        "T84780":"Clinical Trial target"
+    },
+    "CSN5":{
+        "T84791":"Research target"
+    },
+    "S12A3":{
+        "T84886":"Successful target"
+    },
+    "4EBP1":{
+        "T84941":"Research target"
+    },
+    "CCR7":{
+        "T84981":"Clinical Trial target"
+    },
+    "TYB4":{
+        "T85005":"Research target"
+    },
+    "IL7RA":{
+        "T85025":"Clinical Trial target"
+    },
+    "PPARA":{
+        "T86591":"Successful target"
+    },
+    "PKR1":{
+        "T85115":"Patented target"
+    },
+    "TNFB":{
+        "T85158":"Clinical Trial target"
+    },
+    "RTN4R":{
+        "T85188":"Research target"
+    },
+    "G6PC":{
+        "T85221":"Clinical Trial target"
+    },
+    "DNAS1":{
+        "T85223":"Research target"
+    },
+    "CDC20":{
+        "T85241":"Preclinical target"
+    },
+    "KCNA1":{
+        "T85272":"Research target"
+    },
+    "FOXM1":{
+        "T85273":"Research target"
+    },
+    "CYR61":{
+        "T85289":"Research target"
+    },
+    "CBS":{
+        "T85309":"Clinical Trial target"
+    },
+    "TP4A1":{
+        "T85328":"Research target"
+    },
+    "INSR":{
+        "T85435":"Successful target"
+    },
+    "PE2R3":{
+        "T85467":"Clinical Trial target"
+    },
+    "SIG15":{
+        "T85507":"Clinical Trial target"
+    },
+    "MYPC3":{
+        "T85523":"Clinical Trial target"
+    },
+    "CD28":{
+        "T85529":"Successful target"
+    },
+    "KDM5C":{
+        "T85540":"Research target"
+    },
+    "SIN1":{
+        "T85544":"Clinical Trial target"
+    },
+    "TRPM5":{
+        "T85545":"Research target"
+    },
+    "CD27":{
+        "T85554":"Clinical Trial target"
+    },
+    "S12A1":{
+        "T93878":"Successful target"
+    },
+    "THIO":{
+        "T85616":"Clinical Trial target"
+    },
+    "NGF":{
+        "T85670":"Clinical Trial target"
+    },
+    "CD5":{
+        "T85715":"Research target"
+    },
+    "TOP2B":{
+        "T85733":"Successful target"
+    },
+    "TNR11":{
+        "T85746":"Research target"
+    },
+    "CDK4":{
+        "T85799":"Successful target"
+    },
+    "SVIL":{
+        "T85823":"Research target"
+    },
+    "FGL2":{
+        "T85835":"Research target"
+    },
+    "TSLP":{
+        "T85857":"Clinical Trial target"
+    },
+    "TPH2":{
+        "T85915":"Research target"
+    },
+    "SRC":{
+        "T85943":"Successful target"
+    },
+    "SPHK1":{
+        "T86014":"Clinical Trial target"
+    },
+    "ANX10":{
+        "T86025":"Research target"
+    },
+    "H6ST2":{
+        "T86026":"Research target"
+    },
+    "TERT":{
+        "T86052":"Clinical Trial target"
+    },
+    "S22AC":{
+        "T86057":"Successful target"
+    },
+    "SCAP":{
+        "T86062":"Research target"
+    },
+    "LRP5":{
+        "T86072":"Clinical Trial target"
+    },
+    "PPCE":{
+        "T86161":"Clinical Trial target"
+    },
+    "AQP3":{
+        "T86226":"Research target"
+    },
+    "TENA":{
+        "T86254":"Clinical Trial target"
+    },
+    "S40A1":{
+        "T86264":"Clinical Trial target"
+    },
+    "SGO1":{
+        "T86265":"Research target"
+    },
+    "KCNN2":{
+        "T86271":"Clinical Trial target"
+    },
+    "GPBAR":{
+        "T86273":"Clinical Trial target"
+    },
+    "SULF2":{
+        "T86321":"Clinical Trial target"
+    },
+    "NCAM1":{
+        "T86323":"Clinical Trial target"
+    },
+    "ERBB3":{
+        "T86350":"Clinical Trial target"
+    },
+    "VIPR1":{
+        "T86364":"Clinical Trial target"
+    },
+    "CATG":{
+        "T86385":"Clinical Trial target"
+    },
+    "BRD2":{
+        "T86399":"Clinical Trial target"
+    },
+    "FNTB":{
+        "T86428":"Research target"
+    },
+    "OXSM":{
+        "T86454":"Research target"
+    },
+    "TTHY":{
+        "T86462":"Successful target"
+    },
+    "PCSK6":{
+        "T86503":"Research target"
+    },
+    "FPPS":{
+        "T86528":"Successful target"
+    },
+    "ASIC2":{
+        "T86541":"Research target"
+    },
+    "TNR1A":{
+        "T86552":"Clinical Trial target"
+    },
+    "EAA1":{
+        "T86582":"Research target"
+    },
+    "OZF":{
+        "T86587":"Research target"
+    },
+    "AA2BR":{
+        "T86679":"Successful target"
+    },
+    "AT1A2":{
+        "T86731":"Research target"
+    },
+    "GLSK":{
+        "T86734":"Clinical Trial target"
+    },
+    "CD248":{
+        "T86748":"Clinical Trial target"
+    },
+    "LONM":{
+        "T86773":"Research target"
+    },
+    "HMOX2":{
+        "T86808":"Research target"
+    },
+    "S38A5":{
+        "T86817":"Research target"
+    },
+    "MKRN1":{
+        "T86877":"Research target"
+    },
+    "APOH":{
+        "T86885":"Discontinued target"
+    },
+    "NLRP1":{
+        "T86910":"Research target"
+    },
+    "AMYP":{
+        "T86918":"Clinical Trial target"
+    },
+    "FKBP4":{
+        "T87020":"Research target"
+    },
+    "PTAFR":{
+        "T87023":"Successful target"
+    },
+    "A4":{
+        "T87024":"Successful target"
+    },
+    "CD3E":{
+        "T87075":"Successful target"
+    },
+    "MSLN":{
+        "T87108":"Clinical Trial target"
+    },
+    "KC1D":{
+        "T87109":"Preclinical target"
+    },
+    "HXK4":{
+        "T87166":"Clinical Trial target"
+    },
+    "S100B":{
+        "T87206":"Clinical Trial target"
+    },
+    "PDGFB":{
+        "T87350":"Clinical Trial target"
+    },
+    "UBE3A":{
+        "T87376":"Research target"
+    },
+    "ADA30":{
+        "T87381":"Research target"
+    },
+    "NODAL":{
+        "T87448":"Research target"
+    },
+    "GRIK4":{
+        "T87588":"Research target"
+    },
+    "GP174":{
+        "T87661":"Research target"
+    },
+    "GPR55":{
+        "T87670":"Successful target"
+    },
+    "AURKA":{
+        "T87675":"Clinical Trial target"
+    },
+    "DOT1L":{
+        "T87686":"Clinical Trial target"
+    },
+    "ANFC":{
+        "T87689":"Clinical Trial target"
+    },
+    "CLC6A":{
+        "T87719":"Research target"
+    },
+    "FPR1":{
+        "T87831":"Clinical Trial target"
+    },
+    "ROR1":{
+        "T87871":"Clinical Trial target"
+    },
+    "GRIK5":{
+        "T87930":"Research target"
+    },
+    "IRAK3":{
+        "T87981":"Research target"
+    },
+    "TNR8":{
+        "T88023":"Successful target"
+    },
+    "CXD2":{
+        "T88104":"Research target"
+    },
+    "VKGC":{
+        "T88182":"Successful target"
+    },
+    "HCAR2":{
+        "T88185":"Successful target"
+    },
+    "VIP":{
+        "T88213":"Research target"
+    },
+    "LGUL":{
+        "T88285":"Clinical Trial target"
+    },
+    "DNMT1":{
+        "T88304":"Clinical Trial target"
+    },
+    "RBTN2":{
+        "T88321":"Research target"
+    },
+    "SSRP1":{
+        "T88322":"Clinical Trial target"
+    },
+    "OPA1":{
+        "T88404":"Research target"
+    },
+    "PTPRZ":{
+        "T88415":"Research target"
+    },
+    "CBG":{
+        "T88452":"Successful target"
+    },
+    "NF2L2":{
+        "T88505":"Clinical Trial target"
+    },
+    "GPR39":{
+        "T88531":"Research target"
+    },
+    "CLM8":{
+        "T88567":"Research target"
+    },
+    "NOTC2":{
+        "T88656":"Clinical Trial target"
+    },
+    "PAOX":{
+        "T88699":"Research target"
+    },
+    "UCP1":{
+        "T88729":"Clinical Trial target"
+    },
+    "MYCN":{
+        "T88786":"Research target"
+    },
+    "ANK1":{
+        "T88920":"Research target"
+    },
+    "RL3R1":{
+        "T88944":"Research target"
+    },
+    "CXB2":{
+        "T88947":"Research target"
+    },
+    "PDE3A":{
+        "T88975":"Successful target"
+    },
+    "PLMN":{
+        "T89034":"Successful target"
+    },
+    "CP17A":{
+        "T89041":"Successful target"
+    },
+    "MP2K2":{
+        "T89055":"Clinical Trial target"
+    },
+    "PECA1":{
+        "T89056":"Research target"
+    },
+    "PLOD1":{
+        "T89065":"Clinical Trial target"
+    },
+    "HMCS2":{
+        "T89082":"Research target"
+    },
+    "SODM":{
+        "T89147":"Clinical Trial target"
+    },
+    "PM2P1":{
+        "T89185":"Research target"
+    },
+    "NPY1R":{
+        "T89213":"Clinical Trial target"
+    },
+    "RS12":{
+        "T89215":"Research target"
+    },
+    "BAX":{
+        "T89251":"Clinical Trial target"
+    },
+    "FOSL1":{
+        "T89299":"Research target"
+    },
+    "M3K10":{
+        "T89323":"Research target"
+    },
+    "KCNH5":{
+        "T89345":"Research target"
+    },
+    "FSTL3":{
+        "T89359":"Research target"
+    },
+    "IMDH2":{
+        "T89360":"Successful target"
+    },
+    "CDK6":{
+        "T89361":"Successful target"
+    },
+    "GTR1":{
+        "T89458":"Preclinical target"
+    },
+    "TRXR3":{
+        "T89466":"Research target"
+    },
+    "DEFM":{
+        "T89515":"Successful target"
+    },
+    "DTL":{
+        "T89521":"Research target"
+    },
+    "RPA1":{
+        "T89530":"Research target"
+    },
+    "ESR1":{
+        "T89534":"Successful target"
+    },
+    "STAB2":{
+        "T89560":"Research target"
+    },
+    "CASP5":{
+        "T89565":"Patented target"
+    },
+    "I23O1":{
+        "T89697":"Successful target"
+    },
+    "SBK3":{
+        "T89752":"Research target"
+    },
+    "VACHT":{
+        "T89772":"Discontinued target"
+    },
+    "TREM1":{
+        "T89780":"Research target"
+    },
+    "TBL1R":{
+        "T89793":"Research target"
+    },
+    "NR0B2":{
+        "T89859":"Research target"
+    },
+    "FRIH":{
+        "T89873":"Clinical Trial target"
+    },
+    "CCR2":{
+        "T89988":"Clinical Trial target"
+    },
+    "MYH2":{
+        "T90071":"Research target"
+    },
+    "SCF":{
+        "T90089":"Research target"
+    },
+    "UB2E2":{
+        "T90113":"Research target"
+    },
+    "UBC":{
+        "T90167":"Patented target"
+    },
+    "FGFR3":{
+        "T91331":"Successful target"
+    },
+    "SYUG":{
+        "T90360":"Research target"
+    },
+    "JAG2":{
+        "T90439":"Research target"
+    },
+    "PDGFD":{
+        "T90464":"Research target"
+    },
+    "MARK3":{
+        "T90553":"Clinical Trial target"
+    },
+    "IGF2":{
+        "T90572":"Clinical Trial target"
+    },
+    "RAE1":{
+        "T90628":"Clinical Trial target"
+    },
+    "SYRC":{
+        "T90652":"Research target"
+    },
+    "LGR4":{
+        "T90672":"Preclinical target"
+    },
+    "GBRR2":{
+        "T90682":"Research target"
+    },
+    "MGAT1":{
+        "T90751":"Patented target"
+    },
+    "H33":{
+        "T90766":"Research target"
+    },
+    "P2RY6":{
+        "T90782":"Clinical Trial target"
+    },
+    "NAPEP":{
+        "T90787":"Research target"
+    },
+    "CD83":{
+        "T90800":"Research target"
+    },
+    "NPFF2":{
+        "T90818":"Research target"
+    },
+    "IL5RA":{
+        "T90828":"Successful target"
+    },
+    "ENOX2":{
+        "T90843":"Research target"
+    },
+    "KCND1":{
+        "T90905":"Research target"
+    },
+    "DHC24":{
+        "T90935":"Research target"
+    },
+    "BMP2K":{
+        "T90961":"Research target"
+    },
+    "BRDT":{
+        "T90985":"Clinical Trial target"
+    },
+    "ATS1":{
+        "T90987":"Research target"
+    },
+    "FGFR4":{
+        "T90989":"Clinical Trial target"
+    },
+    "DFFB":{
+        "T91020":"Research target"
+    },
+    "RSPO1":{
+        "T91023":"Clinical Trial target"
+    },
+    "PA24C":{
+        "T91113":"Research target"
+    },
+    "S15A1":{
+        "T91180":"Research target"
+    },
+    "CXXC5":{
+        "T91259":"Research target"
+    },
+    "STEA1":{
+        "T91286":"Clinical Trial target"
+    },
+    "ST17A":{
+        "T91323":"Research target"
+    },
+    "DPM1":{
+        "T91373":"Research target"
+    },
+    "CTRO":{
+        "T91397":"Research target"
+    },
+    "ROR2":{
+        "T91435":"Clinical Trial target"
+    },
+    "UBE2T":{
+        "T91451":"Clinical Trial target"
+    },
+    "ABCC8":{
+        "T91480":"Successful target"
+    },
+    "TRPC4":{
+        "T91558":"Clinical Trial target"
+    },
+    "TNK1":{
+        "T91598":"Research target"
+    },
+    "TRI37":{
+        "T91605":"Research target"
+    },
+    "TRI27":{
+        "T91614":"Research target"
+    },
+    "TKTL1":{
+        "T91617":"Research target"
+    },
+    "TIF1B":{
+        "T91624":"Research target"
+    },
+    "P2RY8":{
+        "T91643":"Research target"
+    },
+    "ADK":{
+        "T91661":"Clinical Trial target"
+    },
+    "TDG":{
+        "T91681":"Research target"
+    },
+    "FINC":{
+        "T91696":"Clinical Trial target"
+    },
+    "STYK1":{
+        "T91786":"Research target"
+    },
+    "CRTC2":{
+        "T91842":"Research target"
+    },
+    "ELK3":{
+        "T91906":"Research target"
+    },
+    "SIR5":{
+        "T91940":"Research target"
+    },
+    "SIR3":{
+        "T91959":"Research target"
+    },
+    "REG3A":{
+        "T92030":"Clinical Trial target"
+    },
+    "GFRA3":{
+        "T92042":"Clinical Trial target"
+    },
+    "ERBB4":{
+        "T92057":"Successful target"
+    },
+    "AA1R":{
+        "T92072":"Successful target"
+    },
+    "CASR":{
+        "T92076":"Successful target"
+    },
+    "DPYL2":{
+        "T92078":"Successful target"
+    },
+    "INPP":{
+        "T92095":"Research target"
+    },
+    "CREB1":{
+        "T92098":"Research target"
+    },
+    "RNF6":{
+        "T92105":"Research target"
+    },
+    "TNR4":{
+        "T92124":"Clinical Trial target"
+    },
+    "TIE2":{
+        "T92144":"Clinical Trial target"
+    },
+    "PACR":{
+        "T92185":"Clinical Trial target"
+    },
+    "OGG1":{
+        "T92189":"Research target"
+    },
+    "NEK8":{
+        "T92208":"Research target"
+    },
+    "NPTX2":{
+        "T92281":"Clinical Trial target"
+    },
+    "MSRB1":{
+        "T92288":"Research target"
+    },
+    "FN3K":{
+        "T92296":"Research target"
+    },
+    "RYR1":{
+        "T92328":"Discontinued target"
+    },
+    "M3K21":{
+        "T92334":"Research target"
+    },
+    "SL9A3":{
+        "T92403":"Successful target"
+    },
+    "PDE1C":{
+        "T92439":"Research target"
+    },
+    "CP24A":{
+        "T92458":"Clinical Trial target"
+    },
+    "GUAD":{
+        "T92460":"Research target"
+    },
+    "SOCS3":{
+        "T92477":"Research target"
+    },
+    "EF2K":{
+        "T92494":"Successful target"
+    },
+    "CAN1":{
+        "T92517":"Patented target"
+    },
+    "CP1B1":{
+        "T92521":"Clinical Trial target"
+    },
+    "BCAT1":{
+        "T92557":"Research target"
+    },
+    "ADA1A":{
+        "T92609":"Successful target"
+    },
+    "BAP1":{
+        "T92628":"Research target"
+    },
+    "GATA3":{
+        "T92635":"Research target"
+    },
+    "ATAT":{
+        "T92639":"Research target"
+    },
+    "LPAR1":{
+        "T92640":"Clinical Trial target"
+    },
+    "MALT1":{
+        "T92678":"Clinical Trial target"
+    },
+    "P2Y11":{
+        "T92689":"Discontinued target"
+    },
+    "CFAI":{
+        "T92750":"Research target"
+    },
+    "AMACR":{
+        "T92768":"Research target"
+    },
+    "ZIK1":{
+        "T92770":"Research target"
+    },
+    "MGA":{
+        "T92777":"Successful target"
+    },
+    "UT1":{
+        "T92794":"Research target"
+    },
+    "DYR1A":{
+        "T92803":"Patented target"
+    },
+    "EDNRB":{
+        "T92828":"Successful target"
+    },
+    "AREG":{
+        "T92834":"Research target"
+    },
+    "KI20B":{
+        "T92865":"Research target"
+    },
+    "TRI59":{
+        "T92902":"Research target"
+    },
+    "ANPRC":{
+        "T92963":"Clinical Trial target"
+    },
+    "TPX2":{
+        "T92966":"Research target"
+    },
+    "ITA8":{
+        "T93033":"Research target"
+    },
+    "MDR3":{
+        "T93062":"Clinical Trial target"
+    },
+    "PSN1":{
+        "T93105":"Clinical Trial target"
+    },
+    "ETS2":{
+        "T93121":"Clinical Trial target"
+    },
+    "BDNF":{
+        "T93122":"Clinical Trial target"
+    },
+    "TAGL2":{
+        "T93147":"Research target"
+    },
+    "STRAP":{
+        "T93177":"Research target"
+    },
+    "SRGN":{
+        "T93223":"Research target"
+    },
+    "CCL21":{
+        "T93237":"Research target"
+    },
+    "SH3G1":{
+        "T93263":"Research target"
+    },
+    "HCN1":{
+        "T93266":"Research target"
+    },
+    "MRC1":{
+        "T93278":"Research target"
+    },
+    "PPAP":{
+        "T93283":"Clinical Trial target"
+    },
+    "TAGL":{
+        "T93292":"Research target"
+    },
+    "SF3B1":{
+        "T96723":"Clinical Trial target"
+    },
+    "SATB1":{
+        "T93331":"Research target"
+    },
+    "S38A7":{
+        "T93337":"Research target"
+    },
+    "ERG1":{
+        "T93344":"Successful target"
+    },
+    "IL6RA":{
+        "T93440":"Successful target"
+    },
+    "IL24":{
+        "T93450":"Clinical Trial target"
+    },
+    "UD11":{
+        "T93480":"Clinical Trial target"
+    },
+    "UTER":{
+        "T93484":"Research target"
+    },
+    "CALCA":{
+        "T93509":"Clinical Trial target"
+    },
+    "P2RY2":{
+        "T93515":"Clinical Trial target"
+    },
+    "S10A3":{
+        "T93537":"Research target"
+    },
+    "RGS4":{
+        "T93580":"Research target"
+    },
+    "RIPK4":{
+        "T93594":"Research target"
+    },
+    "CATL2":{
+        "T93653":"Patented target"
+    },
+    "RHDF2":{
+        "T93711":"Research target"
+    },
+    "RACK1":{
+        "T93712":"Research target"
+    },
+    "KIF5A":{
+        "T93716":"Research target"
+    },
+    "FNDC1":{
+        "T93722":"Research target"
+    },
+    "SFRP4":{
+        "T93727":"Research target"
+    },
+    "GP119":{
+        "T93788":"Successful target"
+    },
+    "CNGA1":{
+        "T93798":"Clinical Trial target"
+    },
+    "MAGA2":{
+        "T93848":"Research target"
+    },
+    "CASP9":{
+        "T93903":"Clinical Trial target"
+    },
+    "PEBP1":{
+        "T93904":"Research target"
+    },
+    "PALMD":{
+        "T93909":"Research target"
+    },
+    "PLCG1":{
+        "T93922":"Research target"
+    },
+    "TNR9":{
+        "T93923":"Clinical Trial target"
+    },
+    "CAV1":{
+        "T93945":"Research target"
+    },
+    "NR4A3":{
+        "T93949":"Research target"
+    },
+    "NLRC5":{
+        "T93951":"Research target"
+    },
+    "NEUM":{
+        "T93966":"Research target"
+    },
+    "NEDD8":{
+        "T93995":"Clinical Trial target"
+    },
+    "THRB":{
+        "T94033":"Successful target"
+    },
+    "YAP1":{
+        "T94048":"Research target"
+    },
+    "RARA":{
+        "T94085":"Clinical Trial target"
+    },
+    "SYN1":{
+        "T94115":"Research target"
+    },
+    "PKN2":{
+        "T94197":"Research target"
+    },
+    "SRPK1":{
+        "T94201":"Preclinical target"
+    },
+    "TRPM4":{
+        "T94255":"Clinical Trial target"
+    },
+    "LIPP":{
+        "T94309":"Successful target"
+    },
+    "CRLF1":{
+        "T94313":"Research target"
+    },
+    "HDA10":{
+        "T94324":"Patented target"
+    },
+    "CIP4":{
+        "T94364":"Research target"
+    },
+    "CDC37":{
+        "T94366":"Research target"
+    },
+    "AQP7":{
+        "T94438":"Research target"
+    },
+    "AOXA":{
+        "T94444":"Successful target"
+    },
+    "PTPRJ":{
+        "T94449":"Patented target"
+    },
+    "KS6B1":{
+        "T94479":"Clinical Trial target"
+    },
+    "IL20":{
+        "T94482":"Clinical Trial target"
+    },
+    "ANO7":{
+        "T94485":"Research target"
+    },
+    "REG4":{
+        "T94532":"Research target"
+    },
+    "PPLA":{
+        "T94593":"Research target"
+    },
+    "AKT2":{
+        "T94621":"Research target"
+    },
+    "S28A2":{
+        "T94627":"Research target"
+    },
+    "LDLR":{
+        "T94692":"Successful target"
+    },
+    "SMAD7":{
+        "T94695":"Clinical Trial target"
+    },
+    "LAG3":{
+        "T94718":"Clinical Trial target"
+    },
+    "BCAT2":{
+        "T94788":"Research target"
+    },
+    "PEPD":{
+        "T94823":"Research target"
+    },
+    "TYRO3":{
+        "T94880":"Clinical Trial target"
+    },
+    "PRG4":{
+        "T94942":"Research target"
+    },
+    "CTF1":{
+        "T94977":"Clinical Trial target"
+    },
+    "NEDD4":{
+        "T94980":"Research target"
+    },
+    "HTAI2":{
+        "T95033":"Research target"
+    },
+    "HLAG":{
+        "T95108":"Clinical Trial target"
+    },
+    "FMNL1":{
+        "T95154":"Research target"
+    },
+    "UBP2":{
+        "T95183":"Preclinical target"
+    },
+    "ENAH":{
+        "T95238":"Research target"
+    },
+    "MAG":{
+        "T95286":"Clinical Trial target"
+    },
+    "RPB1":{
+        "T95295":"Research target"
+    },
+    "MC5R":{
+        "T95302":"Clinical Trial target"
+    },
+    "INAR1":{
+        "T95371":"Clinical Trial target"
+    },
+    "IL12B":{
+        "T95385":"Successful target"
+    },
+    "PYGM":{
+        "T98062":"Patented target"
+    },
+    "FCERG":{
+        "T95400":"Successful target"
+    },
+    "EAA2":{
+        "T95438":"Research target"
+    },
+    "NCPR":{
+        "T95446":"Discontinued target"
+    },
+    "SMS":{
+        "T95479":"Successful target"
+    },
+    "ARL2":{
+        "T95553":"Research target"
+    },
+    "DGAT2":{
+        "T95558":"Successful target"
+    },
+    "NTR2":{
+        "T95605":"Research target"
+    },
+    "ITAM":{
+        "T95616":"Clinical Trial target"
+    },
+    "ZWINT":{
+        "T95621":"Research target"
+    },
+    "TWST1":{
+        "T95660":"Research target"
+    },
+    "TM6S2":{
+        "T95661":"Research target"
+    },
+    "BAZ2A":{
+        "T95682":"Research target"
+    },
+    "TFE2":{
+        "T95715":"Research target"
+    },
+    "SCG3":{
+        "T95730":"Research target"
+    },
+    "M3K14":{
+        "T95736":"Research target"
+    },
+    "MERL":{
+        "T95742":"Research target"
+    },
+    "ADAM8":{
+        "T95761":"Research target"
+    },
+    "RSF1":{
+        "T95783":"Research target"
+    },
+    "MOT1":{
+        "T95842":"Research target"
+    },
+    "FOXO4":{
+        "T95860":"Preclinical target"
+    },
+    "TAF2":{
+        "T95865":"Research target"
+    },
+    "KS6A6":{
+        "T95878":"Patented target"
+    },
+    "PK3CG":{
+        "T95913":"Successful target"
+    },
+    "RP3A":{
+        "T95922":"Research target"
+    },
+    "LPAR3":{
+        "T95923":"Clinical Trial target"
+    },
+    "ASIC3":{
+        "T95947":"Research target"
+    },
+    "I13R1":{
+        "T95961":"Research target"
+    },
+    "LASP1":{
+        "T95992":"Research target"
+    },
+    "S19A2":{
+        "T95997":"Research target"
+    },
+    "PCY1B":{
+        "T95998":"Clinical Trial target"
+    },
+    "GROA":{
+        "T96005":"Research target"
+    },
+    "GALE":{
+        "T96014":"Research target"
+    },
+    "IL32":{
+        "T96028":"Research target"
+    },
+    "CXCR4":{
+        "T96079":"Successful target"
+    },
+    "G137A":{
+        "T96179":"Research target"
+    },
+    "FOXP1":{
+        "T96232":"Research target"
+    },
+    "GRIA4":{
+        "T96235":"Successful target"
+    },
+    "FOXJ2":{
+        "T96236":"Research target"
+    },
+    "FAT1":{
+        "T96242":"Research target"
+    },
+    "EZRI":{
+        "T96256":"Research target"
+    },
+    "S38A2":{
+        "T96273":"Research target"
+    },
+    "DPTOR":{
+        "T96301":"Research target"
+    },
+    "GP182":{
+        "T96302":"Research target"
+    },
+    "UBA3":{
+        "T96311":"Research target"
+    },
+    "DEP1A":{
+        "T96365":"Research target"
+    },
+    "ARHG3":{
+        "T96393":"Research target"
+    },
+    "PHB":{
+        "T96396":"Research target"
+    },
+    "ARAID":{
+        "T96398":"Research target"
+    },
+    "BGLR":{
+        "T96413":"Successful target"
+    },
+    "SENP1":{
+        "T96435":"Research target"
+    },
+    "SHCBP":{
+        "T96542":"Research target"
+    },
+    "HS90B":{
+        "T96623":"Clinical Trial target"
+    },
+    "CXCL2":{
+        "T96627":"Clinical Trial target"
+    },
+    "CLUS":{
+        "T96669":"Research target"
+    },
+    "HXK2":{
+        "T96685":"Clinical Trial target"
+    },
+    "DNJB1":{
+        "T96704":"Research target"
+    },
+    "RHOA":{
+        "T96736":"Discontinued target"
+    },
+    "GDF5":{
+        "T96760":"Clinical Trial target"
+    },
+    "IGG1":{
+        "T96837":"Clinical Trial target"
+    },
+    "IL37":{
+        "T96845":"Successful target"
+    },
+    "TICN1":{
+        "T96859":"Research target"
+    },
+    "MVD1":{
+        "T96862":"Research target"
+    },
+    "CO7A1":{
+        "T96876":"Research target"
+    },
+    "LIFR":{
+        "T96894":"Clinical Trial target"
+    },
+    "DKK3":{
+        "T96916":"Clinical Trial target"
+    },
+    "MCM7":{
+        "T96972":"Research target"
+    },
+    "METK2":{
+        "T97008":"Clinical Trial target"
+    },
+    "TAOK1":{
+        "T97016":"Research target"
+    },
+    "TYRO":{
+        "T97035":"Successful target"
+    },
+    "FOLH1":{
+        "T97071":"Successful target"
+    },
+    "CD37":{
+        "T97111":"Clinical Trial target"
+    },
+    "NEST":{
+        "T97135":"Research target"
+    },
+    "MKNK1":{
+        "T97136":"Clinical Trial target"
+    },
+    "MYLK":{
+        "T97141":"Clinical Trial target"
+    },
+    "DYRK3":{
+        "T97149":"Patented target"
+    },
+    "ATR":{
+        "T97155":"Clinical Trial target"
+    },
+    "MPRD":{
+        "T97174":"Successful target"
+    },
+    "ATM":{
+        "T97196":"Clinical Trial target"
+    },
+    "LEUK":{
+        "T97201":"Research target"
+    },
+    "TGFB1":{
+        "T97257":"Successful target"
+    },
+    "NRG4":{
+        "T97314":"Research target"
+    },
+    "SO4A1":{
+        "T97322":"Research target"
+    },
+    "UPP1":{
+        "T97388":"Research target"
+    },
+    "BRS3":{
+        "T97413":"Research target"
+    },
+    "LCAP":{
+        "T97537":"Patented target"
+    },
+    "M3K5":{
+        "T97589":"Clinical Trial target"
+    },
+    "AURKC":{
+        "T97592":"Clinical Trial target"
+    },
+    "MTR1A":{
+        "T97613":"Successful target"
+    },
+    "LANC1":{
+        "T97637":"Research target"
+    },
+    "ADCY2":{
+        "T97655":"Research target"
+    },
+    "PUR1":{
+        "T97713":"Successful target"
+    },
+    "NETR":{
+        "T97731":"Research target"
+    },
+    "PPT1":{
+        "T97740":"Clinical Trial target"
+    },
+    "NEC2":{
+        "T97749":"Research target"
+    },
+    "TPC2":{
+        "T97754":"Research target"
+    },
+    "CCL3":{
+        "T97765":"Clinical Trial target"
+    },
+    "CD47":{
+        "T97766":"Clinical Trial target"
+    },
+    "M3K20":{
+        "T97821":"Research target"
+    },
+    "CCR9":{
+        "T97873":"Clinical Trial target"
+    },
+    "PLIN1":{
+        "T97897":"Research target"
+    },
+    "HDA11":{
+        "T97903":"Patented target"
+    },
+    "FPR2":{
+        "T97917":"Research target"
+    },
+    "GUC2C":{
+        "T97947":"Successful target"
+    },
+    "CBPB2":{
+        "T98022":"Clinical Trial target"
+    },
+    "CDK19":{
+        "T98034":"Clinical Trial target"
+    },
+    "SLAF7":{
+        "T98052":"Successful target"
+    },
+    "DCMC":{
+        "T98078":"Research target"
+    },
+    "DCK":{
+        "T98089":"Research target"
+    },
+    "KCRB":{
+        "T98090":"Research target"
+    },
+    "GPR84":{
+        "T98091":"Clinical Trial target"
+    },
+    "NUCB1":{
+        "T98134":"Research target"
+    },
+    "ARSA":{
+        "T98157":"Successful target"
+    },
+    "COASY":{
+        "T98179":"Research target"
+    },
+    "MOCS1":{
+        "T98196":"Clinical Trial target"
+    },
+    "MYLK2":{
+        "T98198":"Research target"
+    },
+    "CLK4":{
+        "T98225":"Research target"
+    },
+    "TRFM":{
+        "T98234":"Clinical Trial target"
+    },
+    "PTN6":{
+        "T98264":"Patented target"
+    },
+    "CASP1":{
+        "T98269":"Clinical Trial target"
+    },
+    "KAT6B":{
+        "T98275":"Research target"
+    },
+    "PAK4":{
+        "T98293":"Clinical Trial target"
+    },
+    "FKBP5":{
+        "T98337":"Research target"
+    },
+    "UBP44":{
+        "T98352":"Research target"
+    },
+    "PRGC2":{
+        "T98395":"Research target"
+    },
+    "TYSY":{
+        "T98397":"Clinical Trial target"
+    },
+    "IDUA":{
+        "T98430":"Clinical Trial target"
+    },
+    "CCNB1":{
+        "T98459":"Patented target"
+    },
+    "TIE1":{
+        "T98539":"Research target"
+    },
+    "AIMP2":{
+        "T98569":"Research target"
+    },
+    "ITA11":{
+        "T98577":"Research target"
+    },
+    "CXG3":{
+        "T98633":"Research target"
+    },
+    "ANGL4":{
+        "T98635":"Research target"
+    },
+    "TOPK":{
+        "T98642":"Research target"
+    },
+    "HDAC7":{
+        "T98698":"Patented target"
+    },
+    "PTHY":{
+        "T98708":"Successful target"
+    },
+    "NPT2B":{
+        "T98798":"Clinical Trial target"
+    },
+    "ATS5":{
+        "T98896":"Clinical Trial target"
+    },
+    "CSF3R":{
+        "T98913":"Successful target"
+    },
+    "MRM2":{
+        "T98917":"Successful target"
+    },
+    "THB":{
+        "T98933":"Successful target"
+    },
+    "PDK3":{
+        "T99029":"Research target"
+    },
+    "BRAF":{
+        "T99089":"Successful target"
+    },
+    "CLIC1":{
+        "T99092":"Research target"
+    },
+    "MKNK2":{
+        "T99160":"Clinical Trial target"
+    },
+    "NTCP":{
+        "T99189":"Successful target"
+    },
+    "PSN2":{
+        "T99204":"Clinical Trial target"
+    },
+    "SO3A1":{
+        "T99255":"Research target"
+    },
+    "PI4KA":{
+        "T99295":"Research target"
+    },
+    "RGMA":{
+        "T99313":"Clinical Trial target"
+    },
+    "CAC1F":{
+        "T99333":"Research target"
+    },
+    "STING":{
+        "T99338":"Clinical Trial target"
+    },
+    "RIPK1":{
+        "T99340":"Clinical Trial target"
+    },
+    "GRM5":{
+        "T99347":"Clinical Trial target"
+    },
+    "SPI2":{
+        "T99351":"Research target"
+    },
+    "TPO":{
+        "T99379":"Clinical Trial target"
+    },
+    "TR13B":{
+        "T99394":"Clinical Trial target"
+    },
+    "VDAC1":{
+        "T99397":"Clinical Trial target"
+    },
+    "GRM4":{
+        "T99402":"Research target"
+    },
+    "TAAR1":{
+        "T99524":"Successful target"
+    },
+    "2B1A":{
+        "T99532":"Clinical Trial target"
+    },
+    "TRBC1":{
+        "T99557":"Clinical Trial target"
+    },
+    "AL1A1":{
+        "T99641":"Successful target"
+    },
+    "GBRR1":{
+        "T99665":"Research target"
+    },
+    "VISTA":{
+        "T99704":"Clinical Trial target"
+    },
+    "FGF18":{
+        "T99732":"Clinical Trial target"
+    },
+    "SUMO1":{
+        "T99765":"Preclinical target"
+    },
+    "CHLE":{
+        "T99799":"Successful target"
+    },
+    "PDE11":{
+        "T99802":"Research target"
+    },
+    "GRPR":{
+        "T99816":"Clinical Trial target"
+    },
+    "FOXC1":{
+        "T99829":"Research target"
+    },
+    "GRP75":{
+        "T99909":"Clinical Trial target"
+    },
+    "KYNU":{
+        "T99912":"Preclinical target"
+    },
+    "PD1L1":{
+        "T99948":"Successful target"
+    },
+    "PI2R":{
+        "T99954":"Successful target"
+    },
+    "KC1E":{
+        "T99989":"Successful target"
+    },
+    "BMX":{
+        "T99990":"Patented target"
+    }
+}

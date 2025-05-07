@@ -2,6 +2,11 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/TCM-VOTER/Data/ABS" />
+      <excludeFolder url="file://$MODULE_DIR$/TCM-VOTER/Data/Drug" />
+      <excludeFolder url="file://$MODULE_DIR$/TCM-VOTER/Data/ID_Transformed" />
+      <excludeFolder url="file://$MODULE_DIR$/TCM-VOTER/Data/PPI" />
+      <excludeFolder url="file://$MODULE_DIR$/TCM-VOTER/Data/Toxicity" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
