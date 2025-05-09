@@ -149,7 +149,6 @@ def classify_targets_html(target_have_drug, target_no_drug, target_FDA_approved,
         config = json.load(f)
 
     disease_name = config['disease_name']
-    reported_number = config['reported_number']
 
     text_html = open(r'Template/target_pie_template.html',
                      'r', encoding='utf-8').read()

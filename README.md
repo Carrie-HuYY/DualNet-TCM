@@ -5,8 +5,8 @@
 
 从网络药理学和中医理论视角出发，构建"辩证-方剂-中药-成分-靶点"网络，同时开发多种分析功能的网络药理学数据库。
 - 1.基于文本挖掘对候选蛋白或基因进行筛选和分类，缩小实验验证范围。 
-- 2.纳入中药毒理学的安全性评估筛选算法，辅助构建中药毒理学网络。
-- 3.基于大量病历数据的中医辩证预测，中医角度辅助老药新用和靶点寻找。
+- 2.纳入中药毒理学的安全性评估算法，辅助构建中药毒理学网络。
+- 3.基于大量病历将中医辩证同方剂进行结合，辅助老药新用和靶点寻找。
 - 4.开发组方优化算法/成分评价算法/可视化方案
 
 - [1. 简介](#简介)
@@ -128,17 +128,19 @@ chem_protein_links和proteins，它们均为pd.DataFrame类型，分别存储了
 
 ### out_for_excel
 
-输出一个名为`results.xlsx`的文件，按照不同的文件名分为函数得到的数据，
+将分析结果导出为名为results.xlsx的Excel文件，并按数据类别分别存储在不同的工作表(sheet)中，
+包括：辩证分型数据、方剂信息、中药成分、有效成分及作用靶点等五个数据表。
 
 ### research_status_test
 
-从差异表达蛋白(DEPs)中筛选出已有FDA批准或临床试验药物的靶点，
-排除无对应药物的候选蛋白，最后给出药物推荐表格，
-以及两种可视化方案：[图1](README_pictures/Reasearch_0.png)，[图2](README_pictures/Reasearch_1.png)
+从中药网络药理学(TCM-NP)中筛选出已有FDA批准或临床试验药物的靶点，
+排除无对应药物的候选蛋白，最后给出药物推荐表格，以及两种可视化方案：
+[图1](README_pictures/Reasearch_0.png)，[图2](README_pictures/Reasearch_1.png)
 
 ### safety_research
 
-
+根据网药各节点的毒理学信息，生成一份[毒性报表](README_pictures/report.png)，主要包含毒性程度、
+功效、毒性效应（中英文）的信息
 
 ## Star History
 
@@ -165,8 +167,6 @@ def score(weights: Union[dict, None] = None) -> Tuple[pd.DataFrame, pd.DataFrame
 ### 2.关于数据下载
 整体大小为9个G，由于百度网盘限制，所以拆分成三个压缩包，解压后放data/文件夹即可
 
-[下载链接1](https://pan.baidu.com/s/1zIlTjstJMscKdZnP30wc1g?pwd=2n2t) 
+[下载链接1](https://pan.baidu.com/s/1sJePTNxbFhvrXXNNiocHVg?pwd=vtn4) 
 
-[下载链接2](https://pan.baidu.com/s/1tg8WQtJiJi70A8HIRYG_PA?pwd=9bvh) 
-
-[下载链接3](https://pan.baidu.com/s/1tg8WQtJiJi70A8HIRYG_PA?pwd=9bvh)
+[下载链接2](https://pan.baidu.com/s/1d96IvF8vkPagw_Ey_hpEAA?pwd=182x)

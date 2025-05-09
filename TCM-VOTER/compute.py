@@ -139,10 +139,8 @@ def component(items_and_score: pd.DataFrame, random_state=None, num=1000, c=10) 
     """
     if 'DNFID' in items_and_score.columns:
         by = 'DNFID'
-        name = 'name'
     else:
         by = 'DNHID'
-        name = 'cn_name'
 
     dps = []
     items_ls = []
